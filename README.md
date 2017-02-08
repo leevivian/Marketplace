@@ -1,2 +1,2 @@
-# csc648team12
-CSC 648 Spring 2017 - Team 12
+# CSC 658 TEAM 12
+Repo for our SFSU Buy/Sell web app
