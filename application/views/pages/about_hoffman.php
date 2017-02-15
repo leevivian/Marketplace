@@ -11,7 +11,7 @@
         <title>About Nicholas Hoffman</title>
     </head>
     <body>
-        <h1 style="text-align: center;">Nicholas Hoffman</h1>
+        <h1 style="text-align: center;">Nicholas Hoffman etc</h1>
         <p>TODO - Insert Picture</p>
     </body>
 </html>
