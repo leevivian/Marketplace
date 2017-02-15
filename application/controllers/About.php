@@ -15,7 +15,7 @@ class About extends CI_Controller {
                     $this->load->view('pages/about');
                     break;
                 case('nhoffman'):
-                    $this->load->view('pages/about');
+                    $this->load->view('pages/about_hoffman');
                     break;
                 case('vlee'):
                     $this->load->view('pages/about');
