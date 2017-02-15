@@ -4,12 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class About extends CI_Controller {
 	public function index()
 	{
-                $this->load->helper('url');
 		$this->load->view('pages/about');
 	}
         
         public function members($page) {
-            $this->load->helper('url');
             switch($page) {
                 case('aculanay'):
                     $this->load->view('pages/about');
@@ -30,5 +28,11 @@ class About extends CI_Controller {
                     $this->load->view('pages/about');
                     break;
             }
+        }
+        
+        public function bootstrap() {
+            $this->load->helper('html');
+            $this->load->helper('url');
+            $this->load->view('pages/about_bootstrap_template');
         }
 }
