@@ -21,7 +21,7 @@ class About extends CI_Controller {
                     $this->load->view('pages/about');
                     break;
                 case('mserna'):
-                    $this->load->view('pages/about');
+                    $this->load->view('pages/about_mserna');
                     break;
                 case('ssoult'):
                     $this->load->view('pages/about_soult');
