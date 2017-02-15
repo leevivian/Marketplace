@@ -13,5 +13,6 @@
         <p><a href="index.php/about/members/mserna">Matthew Serna</a></p>
         <p><a href="index.php/about/members/ssoult">Steven Soult</a></p>
         <p><a href="index.php/about/members/jvinter-jensen">Jonas Vinter-Jensen</a></p>
+        <p><a href="index.php/about/bootstrap">Bootstrap Template</a></p>
     </body>
 </html>
