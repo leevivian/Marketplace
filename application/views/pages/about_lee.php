@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Base theme taken from www.w3schools.com - No Copyright -->
-    <title>About Steven Soult</title>
+    <title>About Vivian Lee</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css');?>">
@@ -55,7 +55,6 @@
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-    <h3 class="margin">Steven Soult</h3>
-    <img src="<?php echo base_url('images/soult.jpg'); ?>" class="img-responsive img-circle margin" style="display:inline" alt="Picture" width="350" height="350">
-    <h3>Team CTO</h3>
+    <h3 class="margin">Vivian Lee</h3>
+    <img src="<?php echo base_url('images/lee.JPG'); ?>" class="img-responsive img-circle margin" style="display:inline" alt="Picture" width="350" height="350">
 </div>
