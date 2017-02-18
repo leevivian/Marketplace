@@ -51,7 +51,7 @@
         }
     </style>
 </head>
-<body>
+<body> 
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
