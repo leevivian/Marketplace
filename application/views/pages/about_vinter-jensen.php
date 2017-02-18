@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Base theme taken from www.w3schools.com - No Copyright -->
-    <title>About Jonas Vinter-Jensen</title>
+    <title>About AJ Culanay</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css');?>">
@@ -51,10 +51,11 @@
         }
     </style>
 </head>
-<body> 
+<body>
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
     <h3 class="margin">Jonas Vinter-Jensen</h3>
-    <img src="<?php echo base_url('images/public_domain_photo.jpg'); ?>" class="img-responsive img-circle margin" style="display:inline" alt="Snowy Mountain" width="350" height="350">
+    <img src="<?php echo base_url('images/aculanay.jpg'); ?>" class="img-responsive img-circle margin" style="display:inline" alt="Picture" width="350" height="350">
+
 </div>
