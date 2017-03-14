@@ -8,6 +8,7 @@ class Search_model extends CI_Model {
 
 
     public function get_items($keyword){
+        $keyword = trim($keyword);
 
         //searches the database's 'items' table for similarity in 'name' and 'category' columns
         $this->db->select('*');
