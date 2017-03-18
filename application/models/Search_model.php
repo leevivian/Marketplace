@@ -21,7 +21,7 @@ class Search_model extends CI_Model {
 
         //returns query results in an array
         return $query->result_array();
-        echo "Testing branch location.";
+
     }
 
 }
