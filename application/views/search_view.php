@@ -1,4 +1,4 @@
-<?php //echo form_open('search/execute_search');          ?>
+
 
 <html>
     <body>
@@ -6,7 +6,8 @@
             <div class="dropdown" name="category">
 
             </div>
-            <form action="execute_search" method="post">
+	   <?php echo form_open('search/execute_search'); ?>
+            <form>
                 <select name="Category" size="1" >
                     <option selected value="<?php if (isset($category)){echo $category;} 
                     else {echo "All";}?>" >
