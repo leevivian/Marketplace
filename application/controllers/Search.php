@@ -15,7 +15,7 @@ class Search extends CI_Controller{
         $this->load->helper('url');
     }
 
-    /** For the functions below, the real page is located in the search_viw file. The header and footer are
+    /** For the functions below, the real page is located in the search_view file. The header and footer are
      *  placed on each side, sandwiching the content in the middle. header.php will load bootstrap, and takes the
      *  title of the page as an argument. footer.php includes the legal stuff at the bottom of the page. */
 
