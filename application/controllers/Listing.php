@@ -12,7 +12,7 @@ class Listing extends CI_Controller
     {
         $title = array('title' => 'Search Listing');
         $this->load->view('header', $title);
-        //Specific page
+        $this->load->view('listing_view');
         $this->load->view('footer');
     }
 
