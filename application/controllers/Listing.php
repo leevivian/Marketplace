@@ -24,9 +24,4 @@ class Listing extends CI_Controller
         $this->load->helper('url');
     }
 
-    public function show_listing()
-    {
-        $this->load->view('listing_view');
-    }
-
 }
