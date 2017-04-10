@@ -8,6 +8,6 @@
     <div class="btn-group-vertical">
         <a href="index.php/about" class="btn btn-primary">About Page</a>
         <a href="index.php/search" class="btn btn-primary">Vertical Prototype</a>
-        <a href="index.php/listings" class="btn btn-primary">Search Listing</a>
+        <a href="index.php/listing" class="btn btn-primary">Search Listing</a>
     </div>
 </div>
