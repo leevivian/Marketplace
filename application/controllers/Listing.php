@@ -20,6 +20,7 @@ class Listing extends CI_Controller
     {
         $title = array('title' => 'Search Listing');
         $this->load->view('header', $title);
+        $this->load->view('menu_bar');
         $this->load->view('listing_view');
         $this->load->view('footer');
     }
