@@ -4,6 +4,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Nav bar was used from W3Schools and modified by Matthew Serna
+ https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_theme_me_complete&stacked=h -->
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
      and jquery are loaded. It also has the different backgrounds we are using for the site. This will be loaded by
      the controller as the head part of a page, along with the opening body tag. The footer file will close the body.-->
