@@ -64,15 +64,15 @@
         <div class="photobanner">
             <img class="first" src="http://sfsuse.com/~vlee1/images/placeholder.png">
             <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
+            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
             <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
+            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
             <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
+            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
             <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
+            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
             <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
+            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
         </div>
 
     </div>
