@@ -11,7 +11,7 @@ class Home extends CI_Controller
     public function index()
     {
         $title = array('title' => 'Home Page');
-        $this->load->view('header', $title);
+        $this->load->view('header');
         $this->load->view('home_view');
         $this->load->view('footer');
     }
