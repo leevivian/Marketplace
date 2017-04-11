@@ -1,18 +1,12 @@
-/**
- * Created by PhpStorm.
- * User: matthewserna
- * Date: 4/8/17
- * Time: 1:29 PM
- */
-
 <html>
 
 <style>
-    p{
-        color: black;  
+    body{
+        color: black;
     }
-</style>
 
+</style>
+<body>
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-2 sidenav">
@@ -52,5 +46,5 @@
         </div>
     </div>
 </div>
-
+</body>
 </html>
