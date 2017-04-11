@@ -1,8 +1,10 @@
 <html>
 
-    <b>Turn to page three hundred and ninety four</b>
-
     <head>
+        <h1 style="text-align: center;">
+            <p>Welcome to SFSUMarketplace!</p>
+            <p>A place to buy and sell goods with other SFSU connections!</p>
+        </h1>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -11,8 +13,8 @@
         <style>
             .carousel-inner > .item > img,
             .carousel-inner > .item > a > img {
-                width: 600px;
-                height: 400px;
+                width: 750px;
+                height: 380px;
                 margin: auto;
             }
         </style>
@@ -21,7 +23,7 @@
 
     <div class="container">
         <br>
-        <div id="myCarousel" class="carousel slide" style="width:800px; margin:auto;" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide" style="width: 750px; margin:auto;" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -57,6 +59,8 @@
             </a>
         </div>
     </div>
+
+    <p></p>
 
     </body>
 

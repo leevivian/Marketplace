@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container-fluid" style="padding: 0px">
     <div class="row">
         <div class="col-sm-12" style="text-align: center">
-            <a href="<?php echo base_url() ?>"><h1>Home</h1></a>
+            <a href="<?php echo base_url() ?>"><h1>SFSUMarketplace</h1></a>
         </div>
     </div>
 
