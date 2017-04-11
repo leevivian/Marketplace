@@ -6,9 +6,7 @@
             <div class="dropdown" name="category">
 
             </div>
-	   <?php
-       $this->load->helper('form');
-       echo form_open('search/execute_search'); ?>
+	   <?php echo form_open('search/execute_search'); ?>
             <form>
                 <select name="Category" size="1" >
                     <option selected value="<?php if (isset($category)){echo $category;} 
