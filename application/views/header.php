@@ -10,7 +10,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <nav class="navbar navbar-default">
 
     <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="row">
+        <div class="col-sm-2">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -44,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="text" name="searchquery"/>
                 <input type="submit" name="submit" value="Search for Items"/>
             </form>
-        <div class="col-sm-1" id="myNavbar">
+        <div class="col-sm-6" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Messages</a></li>
@@ -53,6 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
         <!-- Search Bar -->
+        </div>
     </div>
 </nav>
 
