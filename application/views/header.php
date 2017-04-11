@@ -10,12 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12" style="text-align: center">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="<?php echo base_url() ?>">Home</a>
+            <a href="<?php echo base_url() ?>"><h1>Home</h1></a>
         </div>
     </div>
 
