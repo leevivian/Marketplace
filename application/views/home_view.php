@@ -11,8 +11,8 @@
         <style>
             .carousel-inner > .item > img,
             .carousel-inner > .item > a > img {
-                width: 800px;
-                height: 500px;
+                width: 600px;
+                height: 400px;
                 margin: auto;
             }
         </style>
@@ -21,7 +21,7 @@
 
     <div class="container">
         <br>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide" style="width:800px; margin:auto;" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
