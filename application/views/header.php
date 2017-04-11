@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-1">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <!-- Search Bar -->
-        <div class="col-sm-4">
+        <div class="col-sm-8">
             <div class="dropdown" name="category">
 
             </div>
@@ -52,10 +52,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- Search Bar -->
 
-        <div class="col-sm-6" id="myNavbar">
-            <a href="#">Profile</a>
-            <a href="#">Messages</a>
-            <a href="#">Logout</a>
+        <div class="col-sm-3" id="myNavbar">
+            <a href="#" class="btn btn-primary">Profile</a>
+            <a href="#" class="btn btn-primary">Messages</a>
+            <a href="#" class="btn btn-primary">Logout</a>
         </div>
     </div>
 </div>
