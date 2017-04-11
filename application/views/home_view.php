@@ -11,7 +11,8 @@
         <style>
             .carousel-inner > .item > img,
             .carousel-inner > .item > a > img {
-                width: 100%;
+                width: 800px;
+                height: 500px;
                 margin: auto;
             }
         </style>
@@ -32,7 +33,7 @@
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <!-- <img src="http://localhost:8888/images/c1.jpg" alt="Picture" width="350" height="350"> -->
-                    <img src="http://sfsuse.com/~vlee1/images/c1.jpg" alt="Picture" width="350" height="350">
+                    <img src="http://sfsuse.com/~vlee1/images/c1.jpg" alt="Picture" width="460" height="350">
                 </div>
 
                 <div class="item">
