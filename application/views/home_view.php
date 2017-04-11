@@ -21,7 +21,7 @@
     </head>
     <body>
 
-    <div class="container">
+    <div class="container" style="padding-bottom: 30px;">
         <br>
         <div id="myCarousel" class="carousel slide" style="width: 750px; margin:auto;" data-ride="carousel">
             <!-- Indicators -->
