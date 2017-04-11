@@ -7,16 +7,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Nav bar was used from W3Schools and modified by Matthew Serna
  https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_theme_me_complete&stacked=h -->
 
-<div class="container-fluid" style="padding: 0px">
-    <div class="row">
-        <div class="col-sm-12" style="text-align: center">
-            <a href="<?php echo base_url() ?>"><h1>SFSUMarketplace</h1></a>
-        </div>
-    </div>
+<div style="padding: 0px;">
+    <a style="text-align: center;" href="<?php echo base_url() ?>"><h1>SFSUMarketplace</h1></a>
 
     <!-- Search Bar and Menu Buttons-->
     <div class="row">
-        <div class="col-sm-8" style="text-align: right" style="color: black">
+        <div class="col-sm-8" style="position:relative; width:100%; color: black; text-align: center;">
             <div class="dropdown" name="category">
 
             </div>
@@ -43,15 +39,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <option value="Books">Books</option>
                     <option value="Other">Other</option>
                 </select>
-                <input type="text" name="searchquery"/>
+                <input type="text" style="width:400px;" name="searchquery"/>
                 <input type="submit" name="submit" value="Search for Items"/>
             </form>
-        </div>
-
-        <div class="col-sm-3" id="myNavbar" style="text-align: right">
-            <a href="#" class="btn btn-primary">Profile</a>
-            <a href="#" class="btn btn-primary">Messages</a>
-            <a href="#" class="btn btn-primary">Logout</a>
         </div>
 
     </div>

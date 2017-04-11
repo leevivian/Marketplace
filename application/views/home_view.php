@@ -3,7 +3,7 @@
     <head>
         <h1 style="text-align: center;">
             <p>Welcome to SFSUMarketplace!</p>
-            <p>A place to buy and sell goods with other SFSU connections!</p>
+            <p>A place to buy and sell goods with other SFSU connected people!</p>
         </h1>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
