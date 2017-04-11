@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Nav bar was used from W3Schools and modified by Matthew Serna
  https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_theme_me_complete&stacked=h -->
 
-<div class="container-fluid" style="padding: 0px" style="padding-bottom: 5px">
+<div class="container-fluid" style="padding: 0px">
     <div class="row">
         <div class="col-sm-12" style="text-align: center">
             <a href="<?php echo base_url() ?>"><h1>Home</h1></a>
@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Search Bar and Menu Buttons-->
     <div class="row">
-        <div class="col-sm-8" style="text-align: right">
+        <div class="col-sm-8" style="text-align: right" style="padding-bottom: 5px">
             <div class="dropdown" name="category">
 
             </div>
