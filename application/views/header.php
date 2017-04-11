@@ -5,12 +5,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 
 <div style="padding: 0px;">
-    <a style="text-align: center;" href="<?php echo base_url() ?>"><h1>SFSUMarketplace</h1></a>
+
     <div class="col-sm-3" id="myNavbar" style="position: relative; text-align: right; width: 100%;">
+        <a href="<?php echo base_url() ?>"> <b style="text-align: center; font-size: 30px; float: left">SFSUMarketplace</b></a>
         <a href="#" class="btn btn-primary">Profile</a>
         <a href="#" class="btn btn-primary">Messages</a>
         <a href="#" class="btn btn-primary">Sell</a>
         <a href="#" class="btn btn-primary">Logout</a>
+        <p></p>
     </div>
 
     <!-- Search Bar and Menu Buttons-->
