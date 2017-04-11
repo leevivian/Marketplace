@@ -8,8 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_theme_me_complete&stacked=h -->
 
 <nav class="navbar navbar-default">
-    <div class="container">
-        <div class="row">
+
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
@@ -53,7 +53,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
         <!-- Search Bar -->
-        </div>
     </div>
 </nav>
 
