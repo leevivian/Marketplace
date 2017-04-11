@@ -17,6 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </button>
             <a class="navbar-brand" href="<?php echo base_url() ?>">Home</a>
         </div>
+
+        <!-- Search Bar -->
         <div class="container-fluid bg-3 text-left">
             <div class="dropdown" name="category">
 

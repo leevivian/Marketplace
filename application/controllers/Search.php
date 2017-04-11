@@ -46,7 +46,7 @@ class Search extends CI_Controller{
         $title = array(
             'title' => 'Vertical Prototype');
         $this->load->view('header', $title);
-        $this->load->view('search_view', $data);
+        $this->load->view('listing_view', $data);
         $this->load->view('footer');
 
     }
