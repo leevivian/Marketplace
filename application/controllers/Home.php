@@ -8,9 +8,18 @@
  */
 class Home extends CI_Controller
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Listings_model');
+        $this->load->helper('form');
+        $this->load->helper('url');
+    }
+
     public function index()
     {
-        $title = array('title' => 'Search Listing');
+        $title = array('title' => 'Home Page');
         $this->load->view('header', $title);
         $this->load->view('home_view');
         $this->load->view('footer');
