@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<title>SFSUMarketplace</title>
 <div style="padding: 0px;">
 
     <p></p>

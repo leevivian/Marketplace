@@ -1,5 +1,5 @@
 <html>
-
+<title>SFSUMarketplace</title>
     <head>
         <h1 style="text-align: center;">
             <p>Welcome to SFSUMarketplace!</p>
