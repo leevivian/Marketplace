@@ -7,25 +7,56 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Nav bar was used from W3Schools and modified by Matthew Serna
  https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_theme_me_complete&stacked=h -->
 
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.php">Home</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
+<div class="container-fluid" style="padding: 0px">
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center">
+            <a href="<?php echo base_url() ?>"><h1>Home</h1></a>
         </div>
     </div>
-</nav>
+
+    <!-- Search Bar and Menu Buttons-->
+    <div class="row">
+        <div class="col-sm-8" style="text-align: right" style="color: black">
+            <div class="dropdown" name="category">
+
+            </div>
+            <?php
+            $this->load->helper('form');
+            echo form_open('search/execute_search'); ?>
+            <form>
+                <select name="Category" size="1">
+                    <option selected value="<?php if (isset($category)) {
+                        echo $category;
+                    } else {
+                        echo "All";
+                    } ?>">
+                        <?php
+                        if (isset($category)) {
+                            echo $category;
+                        } else {
+                            echo "All";
+                        } ?>
+                    </option>
+                    <option value="All">All</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Books">Books</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" name="searchquery"/>
+                <input type="submit" name="submit" value="Search for Items"/>
+            </form>
+        </div>
+
+        <div class="col-sm-3" id="myNavbar" style="text-align: right">
+            <a href="#" class="btn btn-primary">Profile</a>
+            <a href="#" class="btn btn-primary">Messages</a>
+            <a href="#" class="btn btn-primary">Logout</a>
+        </div>
+
+    </div>
+    <!-- Search Bar and Menu Buttons-->
+</div>
 
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
      and jquery are loaded. It also has the different backgrounds we are using for the site. This will be loaded by

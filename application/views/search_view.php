@@ -1,30 +1,6 @@
 
 
 <html>
-    <body>
-        <div class="container-fluid bg-3 text-left">
-            <div class="dropdown" name="category">
-
-            </div>
-	   <?php echo form_open('search/execute_search'); ?>
-            <form>
-                <select name="Category" size="1" >
-                    <option selected value="<?php if (isset($category)){echo $category;} 
-                    else {echo "All";}?>" >
-                        <?php
-                        if (isset($category)){echo $category;}
-                        else {echo "All";}?>
-                    </option>
-                    <option value="All">All</option>
-                    <option value="Furniture">Furniture</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Books">Books</option>
-                    <option value="Other">Other</option>
-                </select>
-                <input type="text" name="searchquery"/>
-                <input type="submit" name="submit" value="Search for Items"/>
-            </form>
-    </body>
 
     <?php
     if (isset($results))
@@ -43,5 +19,4 @@
     }
     ?>
 
-</div>
 </html>
