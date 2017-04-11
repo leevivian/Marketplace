@@ -1,6 +1,6 @@
 <?php
 
-class UploadItem extends CI_Controller{
+class Upload_item extends CI_Controller{
 
     public function __construct()
     {
