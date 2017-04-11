@@ -17,9 +17,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </button>
             <a class="navbar-brand" href="<?php echo base_url() ?>">Home</a>
         </div>
+    </div>
 
-        <!-- Search Bar -->
-        <div class="col-sm-8">
+    <!-- Search Bar and Menu Buttons-->
+    <div class="row">
+        <div class="col-sm-8" style="text-align: center">
             <div class="dropdown" name="category">
 
             </div>
@@ -50,14 +52,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="submit" name="submit" value="Search for Items"/>
             </form>
         </div>
-        <!-- Search Bar -->
 
         <div class="col-sm-3" id="myNavbar">
             <a href="#" class="btn btn-primary">Profile</a>
             <a href="#" class="btn btn-primary">Messages</a>
             <a href="#" class="btn btn-primary">Logout</a>
         </div>
+
     </div>
+    <!-- Search Bar and Menu Buttons-->
 </div>
 
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
