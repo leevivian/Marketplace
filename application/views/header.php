@@ -15,7 +15,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Home</a>
+            <a href="http://sfsuse.com/~vlee1/index.php">
+                <h1 style="text-align:center;"> SFSUMarketplace</h1>
+            </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -43,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         body {
             font: 20px Montserrat, sans-serif;
             line-height: 1.8;
-            color: #f5f6f7;
+            color: #26004d;
         }
 
         p {
