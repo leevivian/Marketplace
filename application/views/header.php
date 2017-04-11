@@ -46,11 +46,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="submit" name="submit" value="Search for Items"/>
             </form>
         <div class="col-sm-6" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
+                <a href="#">Profile</a>
+                <a href="#">Messages</a>
+                <a href="#">Logout</a>
         </div>
     </div>
         <!-- Search Bar -->
