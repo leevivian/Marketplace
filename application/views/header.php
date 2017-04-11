@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <!-- Search Bar -->
-        <div class="container-fluid bg-3 text-left">
+        <div class="col-sm-4">
             <div class="dropdown" name="category">
 
             </div>
@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </ul>
         </div>
     </div>
+        <!-- Search Bar -->
 </nav>
 
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
