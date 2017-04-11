@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Search Bar and Menu Buttons-->
     <div class="row">
-        <div class="col-sm-8" style="text-align: right" style="padding-bottom: 5px">
+        <div class="col-sm-8" style="text-align: right" style="color: black">
             <div class="dropdown" name="category">
 
             </div>
