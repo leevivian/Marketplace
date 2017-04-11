@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="col-sm-3" id="myNavbar" style="position: relative; text-align: right; width: 100%;">
         <a href="#" class="btn btn-primary">Profile</a>
         <a href="#" class="btn btn-primary">Messages</a>
+        <a href="#" class="btn btn-primary">Sell</a>
         <a href="#" class="btn btn-primary">Logout</a>
     </div>
 
