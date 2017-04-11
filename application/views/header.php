@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
         <!-- Search Bar -->
+    </div>
 </nav>
 
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
