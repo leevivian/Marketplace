@@ -4,11 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Nav bar was used from W3Schools and modified by Matthew Serna
- https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_theme_me_complete&stacked=h -->
-
 <div style="padding: 0px;">
     <a style="text-align: center;" href="<?php echo base_url() ?>"><h1>SFSUMarketplace</h1></a>
+    <div class="col-sm-3" id="myNavbar" style="position: relative; text-align: right; width: 100%;">
+        <a href="#" class="btn btn-primary">Profile</a>
+        <a href="#" class="btn btn-primary">Messages</a>
+        <a href="#" class="btn btn-primary">Logout</a>
+    </div>
 
     <!-- Search Bar and Menu Buttons-->
     <div class="row">
@@ -45,7 +47,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
     </div>
-    <!-- Search Bar and Menu Buttons-->
 </div>
 
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
