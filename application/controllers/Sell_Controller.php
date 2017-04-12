@@ -5,7 +5,8 @@ class Sell_Controller extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('sell_model');
+        // sell_model doesn't exist
+        // $this->load->model('sell_model');
 
         //Needed for Bootstrap
         $this->load->helper('form');
@@ -19,8 +20,6 @@ class Sell_Controller extends CI_Controller {
         $this->load->view('header', $title);
         $this->load->view('sell_view');
         $this->load->view('footer');
-        
-        
 
     }
 
