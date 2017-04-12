@@ -127,10 +127,10 @@
 
         </div>
 
-        <div class="container submitbuttons">
-            <button class="btn btn-default" type="button" id="preview" style="float:right;">Preview</button>
+        <div align="right "class="container submitbuttons">
+            <button class="btn btn-default" type="button" id="preview">Preview</button>
 
-            <button class="btn btn-primary" type="button" id="submit" style="float:right;">Submit</button>
+            <button class="btn btn-primary" type="button" id="submit">Submit</button>
 
         </div>
 
