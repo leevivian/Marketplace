@@ -121,3 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </style>
 </head>
 <body>
+    <div class="navbar bg-4 text-right" >
+        <a href="<?php echo base_url();?>index.php"><h1 style="text-align:center;">SFSU Marketplace</h1></a>
+        <a href="<?php echo base_url();?>index.php/messaging" class="btn btn-primary">Check Mail</a>
+    </div>
