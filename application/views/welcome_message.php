@@ -12,7 +12,7 @@
         <a href="index.php/listing" class="btn btn-primary">Search Listing</a>
         <a href="index.php/login" class="btn btn-primary">Login</a>
         <a href="index.php/upload_item" class="btn btn-primary">Upload Item/Sell</a>
-        <a href="index.php/Sell_Controller" class="btn btn-primary">Sell Controller/Sell</a>
+        <a href="index.php/sell_controller" class="btn btn-primary">Sell Controller/Sell</a>
         <a href="index.php/messaging" class="btn btn-primary">Messages</a>
 
     </div>
