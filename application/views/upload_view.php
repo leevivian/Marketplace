@@ -61,7 +61,7 @@
             <div class="row">
                 <h4>Describe your item:</h4>
 
-                <p> <span style="color:red">*</span> required field</p>
+                <p><span style="color:red">*required field</span></p>
             </div>
 
             <!--Form's first row, containing title, condition, and category -->
