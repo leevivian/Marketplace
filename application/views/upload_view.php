@@ -13,7 +13,7 @@
 
             padding: 25px;
             border: 1px solid black;
-            margin-top: 25px;
+            margin-top: 10px;
         }
 
         .payment{
@@ -28,34 +28,51 @@
             padding-bottom:10px;
         }
 
-        #submit{
-            margin: 10px;
+        #buttonrow{
+            padding: 25px;
         }
 
-        #preview{
-            margin:10px;
+        #title h3{
+            margin-bottom: 0px;
+            text-align: center;
+
+        }
+
+        #title p{
+            text-align: center;
         }
 
         label{
             font-size: 15px;
         }
+
+        .form-group.required .control-label:after{
+            content:"*";
+            color:red;
+        }
     </style>
 
      <body>
+        <div id="title">
+            <h3>Create A Listing</h3>
+            <p>Post an item to sell here!</p>
+        </div>
         <div class="itemdescription container">
             <div class="row">
                 <h4>Describe your item:</h4>
+
+                <p> <span style="color:red">*</span> required field</p>
             </div>
 
             <!--Form's first row, containing title, condition, and category -->
-            <div class="row form-group form-inline">
+            <div class="row form-group required form-inline">
                 <div class="col-sm-4">
-                    <label for="itemname">Title*: </label>
-                    <input type="text" class="form-control" id="itemName">
+                    <label class="control-label" for="itemname">Title </label>
+                    <input required=required type="text" class="form-control" id="itemName">
                 </div>
 
                 <div class ="col-sm-4">
-                    <label for="categoryselect">Category*:</label>
+                    <label class ="control-label" for="categoryselect">Category</label>
                     <select class="form-control" id="categoryselect">
                         <option value="" selected hidden>Select Category</option>
                         <option>Books</option>
@@ -67,7 +84,7 @@
                 </div>
 
                 <div class ="col-sm-4">
-                    <label for="itemcondition">Condition:</label>
+                    <label class="control-label" for="itemcondition">Condition</label>
                     <select class="form-control" id="itemcondition">
                         <option value="" selected hidden>Select Condition</option>
                         <option>Brand New</option>
@@ -80,8 +97,8 @@
             <!-- End first row -->
 
 
-            <div class="row form-group">
-                <label for="description">Item Description</label>
+            <div class="row form-group required">
+                <label class="control-label" for="description">Item Description</label>
                 <textarea class="form-control" rows="5" id="description"></textarea>
             </div>
 
@@ -100,18 +117,19 @@
             </div>
         </div>
 
+        <!-- lower box for payment -->
         <div class="container payment">
             <div class="row">
                 <h4>Payment:</h4>
             </div>
-            <div class="row form-group form-inline">
+            <div class="row form-group required form-inline">
                 <div class="col-sm-6">
-                    <label for="price">Price*:</label>
+                    <label class="control-label" for="price">Price</label>
                     <input type="text" class="form-control" id="price">
                 </div>
 
-                <div class ="col-sm-6">
-                    <label for="listingduration">Duration*:</label>
+                <div class ="form-group required col-sm-6">
+                    <label class="control-label" for="listingduration">Duration</label>
 
                     <select class="form-control" id="listingduration">
                         <option>1 Day</option>
@@ -124,16 +142,17 @@
                     </select>
                 </div>
             </div>
-
         </div>
+        <!-- end payment box -->
 
-        <div align="right "class="container submitbuttons">
-            <button class="btn btn-default" type="button" id="preview">Preview</button>
-
+        <!-- submit and cancel buttons -->
+        <div align="right" class="container submitbuttons">
+            <div class="row" id="buttonrow">
+            <button class="btn btn-danger pull-left" type="button" id="Cancel">Cancel</button>
             <button class="btn btn-primary" type="button" id="submit">Submit</button>
-
+            </div>
         </div>
-
+        <!-- end button row -->
     </body>
 
 </html>
