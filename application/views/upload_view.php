@@ -52,6 +52,13 @@
         }
     </style>
 
+
+    <head>
+        <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+        <script type="text/javascript">bkLib.onDomLoaded(function() {
+                new nicEditor({buttonList: ['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript']}).panelInstance('description');
+            });</script>
+    </head>
      <body>
         <div id="title">
             <h3>Create A Listing</h3>
@@ -61,7 +68,7 @@
             <div class="row">
                 <h4>Describe your item:</h4>
 
-                <p><span style="color:red">*required field</span></p>
+                <p><span style="color:red">* required field</span></p>
             </div>
 
             <!--Form's first row, containing title, condition, and category -->
