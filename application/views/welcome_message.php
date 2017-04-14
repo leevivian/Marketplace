@@ -14,6 +14,7 @@
         <a href="index.php/upload_item" class="btn btn-primary">Upload Item/Sell</a>
         <a href="index.php/sell_controller" class="btn btn-primary">Sell Controller/Sell</a>
         <a href="index.php/messaging" class="btn btn-primary">Messages</a>
+        <a href="index.php/registration" class="btn btn-primary">Registration</a>
 
     </div>
 </div>
