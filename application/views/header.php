@@ -40,9 +40,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <button type="button" class="btn btn-default">
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </button>
-                    <button type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                    </button>
 
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
