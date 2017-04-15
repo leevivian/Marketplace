@@ -7,8 +7,8 @@ class Search_model extends CI_Model {
     }
 
 
-    public function get_items($keyword, $category){
-        $keyword = trim($keyword);
+    public function get_items($search, $category){
+        $search = trim($search);
 
         //searches the database's 'items' table for similarity in 'name' and 'category' columns
         if($category=="All")
@@ -25,10 +25,11 @@ class Search_model extends CI_Model {
             $this->db->where('category', $category);
         }
         $this->db->from('Items');
-        if($keyword != "")
+        if(isset($search) && $search != "")
         {
-            $this->db->like('name', $keyword);
-            $this->db->or_like('category', $keyword);
+            $this->db->like('name', $search);
+            $this->db->or_like('description', $search);
+            $this->db->or_like('keywords', $search);
         }
         //gets results from above query
         $query = $this->db->get();
