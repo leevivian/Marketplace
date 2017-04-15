@@ -2,7 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+
+<!--
 <title>SFSUMarketplace</title>
 <div style="padding: 0px;">
 
@@ -15,6 +16,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <a href="#" class="btn btn-primary">Logout</a>
         <p></p>
     </div>
+-->
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SFSUMarketplace</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">Sell</button>
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                    </button>
+
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Dashboard</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
 
     <!-- Search Bar and Menu Buttons-->
     <div class="row">
@@ -98,11 +144,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         .bg-4 {
             background-color: #2f2f2f; /* Black Gray */
             color: #fff;
-        }
-
-        .container-fluid {
-            padding-top: 70px;
-            padding-bottom: 70px;
         }
 
         .navbar {

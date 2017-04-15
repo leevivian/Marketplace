@@ -5,7 +5,7 @@
         .container {
             width: 100%;
             overflow: hidden;
-            margin: 10px auto;
+            margin: 0px auto;
             background: white;
         }
 
@@ -112,6 +112,8 @@
             100% {margin-left: 0px;}
         }
     </style>
+
+
 <title>SFSUMarketplace</title>
     <head>
         <h1 style="text-align: center;">
