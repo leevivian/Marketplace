@@ -24,7 +24,7 @@ class Search_model extends CI_Model {
         {
             $this->db->where('category', $category);
         }
-        $this->db->from('search_test');
+        $this->db->from('Items');
         if($keyword != "")
         {
             $this->db->like('name', $keyword);
