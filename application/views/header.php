@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">SFSUMarketplace</a>
+            <a class="navbar-brand" href="<?php echo base_url()?>">SFSUMarketplace</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="dropdown-menu">
                             <li><a href="#">Dashboard</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="<?php echo base_url()?>index.php/login">Login</a></li>
                         </ul>
                     </div>
                 </div>
