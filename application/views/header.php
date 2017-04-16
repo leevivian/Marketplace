@@ -2,21 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
-
-<!--
 <title>SFSUMarketplace</title>
-<div style="padding: 0px;">
-
-    <p></p>
-    <div class="col-sm-3" id="myNavbar" style="position: relative; text-align: right; width: 100%;">
-        <a href="<?php echo base_url() ?>"> <b style="text-align: center; font-size: 30px; float: left">SFSUMarketplace</b></a>
-        <a href="#" class="btn btn-primary">Profile</a>
-        <a href="#" class="btn btn-primary">Messages</a>
-        <a href="#" class="btn btn-primary">Sell</a>
-        <a href="#" class="btn btn-primary">Logout</a>
-        <p></p>
-    </div>
--->
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
