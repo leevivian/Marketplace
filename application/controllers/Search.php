@@ -48,6 +48,14 @@ class Search extends CI_Controller{
         $this->load->view('header', $title);
         $this->load->view('search_view', $data);
         $this->load->view('footer');
-
+    }
+    
+    public function load_description(){
+        //loads the view for the item description
+        $title = array(
+            'title' => 'Description');
+        $this->load->view('header', $title);
+        $this->load->view('listingPage_view');
+        $this->load->view('footer');
     }
 }
