@@ -68,6 +68,123 @@
     </div>
 </div>
 
+    <div id="container-me">
+        <header>
+            <p style="color: black">Recent Listings</p>
+        </header>
+        
+        <!-- Each image is 350px by 233px -->
+        <div class="photobanner">
+            <img class="first" src="<?php echo base_url()?>images/placeholder.png" alt="" />
+            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
+            <img src="<?php echo base_url()?>images/placeholder.png" alt="" />
+            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
+            <img src="<?php echo base_url()?>images/placeholder.png" alt="" />
+            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
+            <img src="<?php echo base_url()?>images/placeholder.png" alt="" />
+            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
+            <img src="<?php echo base_url()?>images/placeholder.png" alt="" />
+            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
+
+        </div>
+    </div>
+
+
+
+<style>
+
+    #container-me {
+        width: 1000px;
+        overflow: hidden;
+        margin: 10px auto 0px auto;
+        background: white;
+    }
+
+    .photobanner {
+        height: 233px;
+        width: 3550px;
+        margin-top: 10px;
+    }
+
+    .first {
+        -webkit-animation: bannermove 30s linear infinite;
+        -moz-animation: bannermove 30s linear infinite;
+        -ms-animation: bannermove 30s linear infinite;
+        -o-animation: bannermove 30s linear infinite;
+        animation: bannermove 30s linear infinite;
+    }
+
+    @keyframes "bannermove" {
+        0% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: -2125px;
+        }
+
+    }
+
+    @-moz-keyframes bannermove {
+        0% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: -2125px;
+        }
+
+    }
+
+    @-webkit-keyframes "bannermove" {
+        0% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: -2125px;
+        }
+
+    }
+
+    @-ms-keyframes "bannermove" {
+        0% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: -2125px;
+        }
+
+    }
+
+    @-o-keyframes "bannermove" {
+        0% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: -2125px;
+        }
+
+    .photobanner img {
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .photobanner img:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        cursor: pointer;
+
+        -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+        box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    }
+
+</style>
+
 </body>
 
     <?php
