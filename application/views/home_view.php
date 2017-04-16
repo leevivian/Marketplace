@@ -11,9 +11,6 @@
 
 <body>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <style>
         .carousel-inner > .item > img,
         .carousel-inner > .item > a > img {
@@ -23,7 +20,6 @@
     </style>
 
 <div class="container">
-    <br>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
