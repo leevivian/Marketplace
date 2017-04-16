@@ -36,14 +36,26 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <img src="<?php echo base_url()?>images/car2.jpg" alt="Chania" width="460" height="345">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>People will think you're</h3>
+                    <p>...<i>up to something</i></p>
+                </div>
             </div>
 
             <div class="item">
                 <img src="<?php echo base_url()?>images/car1.jpg" alt="Chania" width="460" height="345">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Oi Hermione</h3>
+                    <p>Yur a gurl, right?</p>
+                </div>
             </div>
 
             <div class="item">
                 <img src="<?php echo base_url()?>images/car3.jpg" alt="Flower" width="460" height="345">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Insert cool quote</h3>
+                    <p>about dis website here</p>
+                </div>
             </div>
 
         </div>
