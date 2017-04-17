@@ -18,9 +18,9 @@
                 ?> Items</h1>
             <!--SideNavBar-->
             <div class="col-sm-2 sidenav">
-                <p><a href="#">Books</a></p>
-                <p><a href="#">Clothes</a></p>
-                <p><a href="#">Stuffs</a></p>
+                <p><a href="#"></a></p>
+                <p><a href="#"></a></p>
+                <p><a href="#"></a></p>
             </div>
 
             <!-- Listing Content -->
@@ -55,9 +55,10 @@
                             <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
                                  class="img-thumbnail" width="100px" height="100px" alt="Image not found">
                             <?php
+                            echo "Price: " . "?";
                             echo $row['name'] . "<br>";
                             echo $row['description'] . "<br>";
-                            echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div>";
+                            echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div>" . "<div class='caption'><a href='#' class='btn btn-primary'>More Info</a></div>";
                             echo "\n\n\n";
                             echo "<br>";
                         }
