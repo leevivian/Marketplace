@@ -7,11 +7,11 @@
 
 </style>
 <body>
-<div class="container-fluid text-center">
+<div class="container">
     <div class="row">
 
         <!-- Main Page -->
-        <div class="row content">
+        <div class="col-md-9">
             <!-- Header -->
             <h1>Search Results Found <?php
                 echo count($results);
@@ -39,55 +39,46 @@
 
             </div>
 
-            <div class="thumbnail">
+            <div class="row">
                 <div class="col-sm-4 col-lg-4 col-md-4">
                     <?php
                     if (isset($results)) {
-                        echo "<br>";
-                        foreach ($results as $row) {
-                            ?>
-                            <div class="thumbnail">
-                                <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
-                                <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
-                                     class="img-thumbnail" width="100px" height="100px" alt="Image not found">
-                            </div>
-                            <div class="caption">
-                            <?php
-                            echo $row['name'] . "<br>";
-                            echo $row['description'] . "<br>";
-                            echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
-                            echo "\n\n\n";
-                            echo "<br>";
-                        }
-                    }
+                    echo "<br>";
+                    foreach ($results as $row) {
                     ?>
-                            </div>
+                    <div class="thumbnail">
+                        <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
+                        <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
+                             class="img-thumbnail" width="100px" height="100px" alt="Image not found">
+                    </div>
+                    <div class="caption">
+                        <?php
+                        echo $row['name'] . "<br>";
+                        echo $row['description'] . "<br>";
+                        echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
+                        echo "\n\n\n";
+                        echo "<br>";
+                        }
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!--Pagination-->
-        <div class="pagination-bar text-center">
-            <ul class="pagination">
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#"> ...</a></li>
-                <li><a class="pagination-btn" href="#">Next »</a></li>
-            </ul>
-        </div>
+            <!--Pagination-->
+            <div class="pagination-bar text-center">
+                <ul class="pagination">
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"> ...</a></li>
+                    <li><a class="pagination-btn" href="#">Next »</a></li>
+                </ul>
+            </div>
 
-        <!--Promo Ad-->
-        <div class="post-promo text-center">
-            <h2> Do you have anything to sell ? </h2>
-            <h5>Sell your products online for free! Just register, post, meetup, and earn cash!</h5>
-            <a href="<?php echo base_url() ?>index.php/upload_item"
-               class="btn btn-lg btn-border btn-post btn-danger">Post a Free Ad </a>
         </div>
-
+        <!--/MainPage-->
     </div>
-    <!--/MainPage-->
-</div>
 </div>
 </body>
 </html>
