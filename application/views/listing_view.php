@@ -111,15 +111,6 @@
                     <a href="<?php echo base_url()?>index.php/upload_item" class="btn btn-lg btn-border btn-post btn-danger">Post a Free Ad </a>
                 </div>
 
-            <div class="col-sm-2 sidenav">
-                <div class="well">
-                    <p>AD Spce</p>
-                </div>
-                <div class="well">
-                    <p>AD Space</p>
-                </div>
-            </div>
-
             </div>
         </div>
     </div>
