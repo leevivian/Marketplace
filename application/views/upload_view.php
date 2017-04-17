@@ -52,13 +52,13 @@
         }
     </style>
 
-
     <head>
         <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
         <script type="text/javascript">bkLib.onDomLoaded(function() {
                 new nicEditor({buttonList: ['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript']}).panelInstance('description');
             });</script>
     </head>
+
      <body>
         <div id="title">
             <h3>Create A Listing</h3>
