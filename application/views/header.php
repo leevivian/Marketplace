@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand2"><img src="<?php echo base_url()?>images/logo.png" style="height: 45px;"></a>
+            <a class="navbar-brand2" href="<?php echo base_url()?>index.php/home"><img src="<?php echo base_url()?>images/logo.png" style="height: 45px;"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
