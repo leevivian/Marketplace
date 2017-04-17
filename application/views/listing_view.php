@@ -15,7 +15,7 @@
             <p><a href="#">Stuffs</a></p>
         </div>
         <div class="col-sm-8 text-left">
-            <h1>Welcome</h1>
+            <h1>Search Results Found</h1>
 
             <div class="col-sm-9 page-content col-thin-left">
                 <div class="category-list">
@@ -24,7 +24,7 @@
                         <ul class="nav nav-tabs add-tabs" id="ajaxTabs" role="tablist">
                             <li class="active"><a href="ajax/1.html" data-url="ajax/1.html" role="tab" data-toggle="tab">All Ads <span class="badge">...</span></a>
                             </li>
-                            <li><a href="ajax/2.html" data-url="ajax/2.html" role="tab" data-toggle="tab">Business
+                            <li><a href="ajax/2.html" data-url="ajax/2.html" role="tab" data-toggle="tab">School
                                     <span class="badge">...</span></a></li>
                             <li><a href="ajax/3.html" data-url="ajax/3.html" role="tab" data-toggle="tab">Personal
                                     <span class="badge">...</span></a></li>
@@ -110,6 +110,15 @@
                     <h5>Sell your products online for free! Just register, post, meetup, and earn cash!</h5>
                     <a href="<?php echo base_url()?>index.php/upload_item" class="btn btn-lg btn-border btn-post btn-danger">Post a Free Ad </a>
                 </div>
+
+            <div class="col-sm-2 sidenav">
+                <div class="well">
+                    <p>AD Spce</p>
+                </div>
+                <div class="well">
+                    <p>AD Space</p>
+                </div>
+            </div>
 
             </div>
         </div>
