@@ -3,7 +3,7 @@
 <title>SFSUMarketplace</title>
 
 <head>
-    <h1 style="text-align: center;">
+    <h1 style="text-align: center; margin-top: 0px;">
         <p style="color: black">Welcome to SFSUMarketplace!</p>
         <p style="color: black">A place to buy and sell goods with other SFSU connected people!</p>
     </h1>
@@ -82,10 +82,10 @@
         <div class="row text-center">
 
             <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
                     <img src="<?php echo base_url()?>images/b1.jpg" alt="" style="height: 200px">
                     <div class="caption" style="176px;">
-                        <h3>CSC675 Introduction to Database Systems</h3>
+                        <h4>CSC675 Intro to Database Systems</h4>
                         <p>By John Doe</p>
                         <p>
                             <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
@@ -95,10 +95,10 @@
             </div>
 
             <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
                     <img src="<?php echo base_url()?>images/b2.jpg" alt="" style="height: 200px">
-                    <div class="caption" style="176px;">
-                        <h3>CSC415 Operating Systems</h3>
+                    <div class="caption">
+                        <h4>CSC415 Operating Systems</h4>
                         <p>By Silberschatz</p>
                         <p>
                             <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
@@ -108,10 +108,10 @@
             </div>
 
             <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
                     <img src="<?php echo base_url()?>images/b3.jpg" alt="" style="height: 200px">
-                    <div class="caption" style="176px;">
-                        <h3>Harry Potter and the Half Blood Prince</h3>
+                    <div class="caption">
+                        <h4>Harry Potter and the Half Blood Prince</h4>
                         <p>By J.K. Rowling</p>
                         <p>
                             <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
@@ -121,10 +121,10 @@
             </div>
 
             <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
                     <img src="<?php echo base_url()?>images/b4.jpg" alt="" style="height: 200px">
                     <div class="caption" style="176px;">
-                        <h3>French for Dummies Audio Set</h3>
+                        <h4>French for Dummies Audio Set</h4>
                         <p>By Zoe Erotopoulos</p>
                         <p>
                             <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>

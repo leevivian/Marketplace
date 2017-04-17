@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Search Bar and Menu Buttons-->
     <div class="row">
-        <div class="col-sm-8" style="position:relative; width:100%; color: black; text-align: center;">
+        <div class="col-sm-8" style="position:relative; width:100%; color: black; text-align: center; padding-top: 10px; padding-bottom: 10px;">
             <div class="dropdown" name="category">
 
             </div>
@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->helper('form');
             echo form_open('search/execute_search'); ?>
             <form>
-                <select name="Category" size="1">
+                <select name="Category" size="1" style="height: 40px;">
                     <option selected value="<?php if (isset($category)) {
                         echo $category;
                     } else {
@@ -85,8 +85,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <option value="Books">Books</option>
                     <option value="Other">Other</option>
                 </select>
-                <input type="text" style="width:400px;" name="searchquery"/>
-                <input type="submit" name="submit" value="Search for Items"/>
+                <input type="text" style="width: 50%;" name="searchquery"/>
+                <input type="submit" name="submit" value="Search"/>
             </form>
         </div>
     </div>
