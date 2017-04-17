@@ -10,19 +10,18 @@
 <div class="container-fluid text-center">
     <div class="row content">
 
-        <!--SideNavBar-->
-        <div class="col-sm-2 sidenav">
-            <p><a href="#">Books</a></p>
-            <p><a href="#">Clothes</a></p>
-            <p><a href="#">Stuffs</a></p>
-        </div>
-
         <!-- Main Page -->
         <div class="col-sm-12 text-center">
             <!-- Header -->
             <h1>Search Results Found <?php
                     echo count($results);
                 ?> Items</h1>
+            <!--SideNavBar-->
+            <div class="col-sm-2 sidenav">
+                <p><a href="#">Books</a></p>
+                <p><a href="#">Clothes</a></p>
+                <p><a href="#">Stuffs</a></p>
+            </div>
 
             <!-- Listing Content -->
             <div class="col-sm-12 page-content col-thin-left">
