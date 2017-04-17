@@ -21,17 +21,14 @@
         <div class="col-sm-8 text-left">
             <!-- Header -->
             <h1>Search Results Found <?php
-                    if($results != nil){
-                        echo count($results);
-                    }else{
-                        echo "0";
-                    }
+                    echo count($results);
                 ?> Items</h1>
 
             <!-- Listing Content -->
             <div class="col-sm-9 page-content col-thin-left">
                 <div class="category-list">
                     <div class="tab-box ">
+
                         <!-- Filter Dropdown -->
 <!--                        <div class="tab-filter">-->
 <!--                            <div class="selecter select-short-by closed" tabindex="0"><select-->
@@ -44,19 +41,19 @@
 <!--                            </div>-->
 <!--                        </div>-->
 <!---->
-                        <div class="listing-filter">
-                            <div class="pull-left col-xs-6">
-                                <div class="breadcrumb-list"><a href="#" class="current"><span></span>
-                                    <span class="cityName"> All ads in San Francisco State University </span> <a
-                                            href="#" id="dropdownMenu1" data-toggle="modal"> <span
-                                                class="caret"></span> </a></div>
-                            </div>
-                            <div class="pull-right col-xs-6 text-right listing-view-action"><span
-                                        class="list-view active"><i class="  icon-th"></i></span> <span
-                                        class="compact-view"><i class=" icon-th-list  "></i></span> <span
-                                        class="grid-view"><i class=" icon-th-large "></i></span></div>
-                            <div style="clear:both"></div>
-                        </div>
+<!--                        <div class="listing-filter">-->
+<!--                            <div class="pull-left col-xs-6">-->
+<!--                                <div class="breadcrumb-list"><a href="#" class="current"><span></span>-->
+<!--                                    <span class="cityName"> All ads in San Francisco State University </span> <a-->
+<!--                                            href="#" id="dropdownMenu1" data-toggle="modal"> <span-->
+<!--                                                class="caret"></span> </a></div>-->
+<!--                            </div>-->
+<!--                            <div class="pull-right col-xs-6 text-right listing-view-action"><span-->
+<!--                                        class="list-view active"><i class="  icon-th"></i></span> <span-->
+<!--                                        class="compact-view"><i class=" icon-th-list  "></i></span> <span-->
+<!--                                        class="grid-view"><i class=" icon-th-large "></i></span></div>-->
+<!--                            <div style="clear:both"></div>-->
+<!--                        </div>-->
 
                         <div class="menu-overly-mask"></div>
                     </div>
