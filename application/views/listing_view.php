@@ -45,7 +45,7 @@
             </div>
 
 
-            <div class="col-thin-left">
+            <div class="container-fluid">
                 <?php
                 if (isset($results)) {
                     echo "<br>";
