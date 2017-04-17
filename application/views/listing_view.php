@@ -50,15 +50,15 @@
                     if (isset($results)) {
                         echo "<br>";
                         foreach ($results as $row) {
+                            echo "<div class='caption'><h2 href='#' class='text-right'>$1000</h2></div>";
                             ?>
                             <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
                             <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
                                  class="img-thumbnail" width="100px" height="100px" alt="Image not found">
                             <?php
-                            echo "Price: " . "?";
                             echo $row['name'] . "<br>";
                             echo $row['description'] . "<br>";
-                            echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div>" . "<div class='caption'><a href='#' class='btn btn-primary'>More Info</a></div>";
+                            echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
                             echo "\n\n\n";
                             echo "<br>";
                         }
