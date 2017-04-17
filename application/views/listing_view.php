@@ -16,11 +16,12 @@
             <h1>Search Results Found <?php
                     echo count($results);
                 ?> Items</h1>
+
             <!--SideNavBar-->
             <div class="col-sm-2 sidenav">
-                <p><a href="#"></a></p>
-                <p><a href="#"></a></p>
-                <p><a href="#"></a></p>
+                <p><a href="#">Favorites</a></p>
+                <p><a href="#">Extra</a></p>
+                <p><a href="#">Extra</a></p>
             </div>
 
             <!-- Listing Content -->
