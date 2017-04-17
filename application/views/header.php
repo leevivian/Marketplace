@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class="navbar-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -42,7 +42,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </ul>
         </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+    </div>
+
+
+    <style>
+        .navbar-fluid {
+            margin-right: auto;
+            margin-left: auto;
+            width: 90%;
+        }
+    </style>
+
 </nav>
 
 
@@ -79,7 +89,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="submit" name="submit" value="Search for Items"/>
             </form>
         </div>
-
     </div>
 </div>
 
