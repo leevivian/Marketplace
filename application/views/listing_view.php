@@ -18,7 +18,7 @@
 <!--        </div>-->
 
         <!-- Main Page -->
-        <div class="col-sm-8 text-left">
+        <div class="col-sm-12 text-center">
             <!-- Header -->
             <h1>Search Results Found <?php
                     echo count($results);
@@ -29,39 +29,14 @@
                 <div class="category-list">
                     <div class="tab-box ">
 
+                        <!--Sorting Function -->
                         <div class="tab-filter">
                             <div class="selecter select-short-by closed" tabindex="0"><select class="selectpicker selecter-element" data-style="btn-select" data-width="auto" tabindex="-1">
-                                    <option value="Short by">Short by</option>
+                                    <option value="Sort by">Sort by</option>
                                     <option value="Price: Low to High">Price: Low to High</option>
                                     <option value="Price: High to Low">Price: High to Low</option>
-                                </select><span class="selecter-selected">Short by</span><div class="selecter-options scroller"><div class="scroller-bar" style="height: 100px;"><div class="scroller-track" style="height: 100px; margin-bottom: 0px; margin-top: 0px;"><div class="scroller-handle"></div></div></div><div class="scroller-content"><span class="selecter-item selected" data-value="Short by">Short by</span><span class="selecter-item" data-value="Price: Low to High">Price: Low to High</span><span class="selecter-item" data-value="Price: High to Low">Price: High to Low</span></div></div></div>
+                                </select><span class="selecter-selected">Sort by</span><div class="selecter-options scroller"><div class="scroller-bar" style="height: 100px;"><div class="scroller-track" style="height: 100px; margin-bottom: 0px; margin-top: 0px;"><div class="scroller-handle"></div></div></div><div class="scroller-content"><span class="selecter-item selected" data-value="Short by">Short by</span><span class="selecter-item" data-value="Price: Low to High">Price: Low to High</span><span class="selecter-item" data-value="Price: High to Low">Price: High to Low</span></div></div></div>
                         </div>
-
-                        <!-- Filter Dropdown -->
-<!--                        <div class="tab-filter">-->
-<!--                            <div class="selecter select-short-by closed" tabindex="0"><select-->
-<!--                                        class="selectpicker selecter-element" data-style="btn-select" data-width="auto"-->
-<!--                                        tabindex="-1">-->
-<!--                                    <option value="Short by">Sort by</option>-->
-<!--                                    <option value="Price: Low to High">Price: Low to High</option>-->
-<!--                                    <option value="Price: High to Low">Price: High to Low</option>-->
-<!--                                    <option value="#">Relevance</option>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!---->
-<!--                        <div class="listing-filter">-->
-<!--                            <div class="pull-left col-xs-6">-->
-<!--                                <div class="breadcrumb-list"><a href="#" class="current"><span></span>-->
-<!--                                    <span class="cityName"> All ads in San Francisco State University </span> <a-->
-<!--                                            href="#" id="dropdownMenu1" data-toggle="modal"> <span-->
-<!--                                                class="caret"></span> </a></div>-->
-<!--                            </div>-->
-<!--                            <div class="pull-right col-xs-6 text-right listing-view-action"><span-->
-<!--                                        class="list-view active"><i class="  icon-th"></i></span> <span-->
-<!--                                        class="compact-view"><i class=" icon-th-list  "></i></span> <span-->
-<!--                                        class="grid-view"><i class=" icon-th-large "></i></span></div>-->
-<!--                            <div style="clear:both"></div>-->
-<!--                        </div>-->
 
                         <div class="menu-overly-mask"></div>
                     </div>
@@ -69,7 +44,7 @@
 
             </div>
 
-            <p>
+            <div>
                 <?php
                 if (isset($results)) {
                     echo "<br>";
@@ -85,7 +60,7 @@
                     }
                 }
                 ?>
-            </p>
+            </div>
 
             <!--Pagination-->
             <div class="pagination-bar text-center">
