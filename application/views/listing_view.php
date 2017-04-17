@@ -11,11 +11,11 @@
     <div class="row content">
 
         <!--SideNavBar-->
-<!--        <div class="col-sm-2 sidenav">-->
-<!--            <p><a href="#">Books</a></p>-->
-<!--            <p><a href="#">Clothes</a></p>-->
-<!--            <p><a href="#">Stuffs</a></p>-->
-<!--        </div>-->
+        <div class="col-sm-2 sidenav">
+            <p><a href="#">Books</a></p>
+            <p><a href="#">Clothes</a></p>
+            <p><a href="#">Stuffs</a></p>
+        </div>
 
         <!-- Main Page -->
         <div class="col-sm-12 text-center">
