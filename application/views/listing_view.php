@@ -25,7 +25,7 @@
                 ?> Items</h1>
 
             <!-- Listing Content -->
-            <div class="col-sm-9 page-content col-thin-left">
+            <div class="col-sm-12 page-content col-thin-left">
                 <div class="category-list">
                     <div class="tab-box ">
 
@@ -35,7 +35,7 @@
                                     <option value="Sort by">Sort by</option>
                                     <option value="Price: Low to High">Price: Low to High</option>
                                     <option value="Price: High to Low">Price: High to Low</option>
-                                </select><span class="selecter-selected">Sort by</span><div class="selecter-options scroller"><div class="scroller-bar" style="height: 100px;"><div class="scroller-track" style="height: 100px; margin-bottom: 0px; margin-top: 0px;"><div class="scroller-handle"></div></div></div><div class="scroller-content"><span class="selecter-item selected" data-value="Short by">Short by</span><span class="selecter-item" data-value="Price: Low to High">Price: Low to High</span><span class="selecter-item" data-value="Price: High to Low">Price: High to Low</span></div></div></div>
+                                </select></div>
                         </div>
 
                         <div class="menu-overly-mask"></div>
@@ -44,7 +44,6 @@
 
             </div>
 
-            <p></p>
 
             <div>
                 <?php
