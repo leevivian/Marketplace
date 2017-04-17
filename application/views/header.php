@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <title>SFSUMarketplace</title>
 
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" role="navigation">
     <div class="navbar-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">

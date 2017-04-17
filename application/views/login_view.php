@@ -8,7 +8,6 @@
         text-align: right;
     }
 
-
     #formrow{
         margin-left: 33%;
     }
@@ -22,14 +21,18 @@
     }
 
     #loginform{
-        padding: 50px;
+        padding: 30px;
     }
 
-
-
 </style>
-<body>
 
+<head>
+    <h3 style="text-align: center; margin-top: 0px; color:black;">
+        Login
+    </h3>
+</head>
+
+<body>
 
 <div id="loginform" class="container">
 
@@ -42,6 +45,11 @@
                 <div class="col-md-10">
                     <input type="text" class="form-control" id="username" placeholder="Username">
                 </div>
+                <div id="forgotinfo">
+                    <div class="col-md-offset-2 col-md-10">
+                        <a href="#">Forgot your username?</a>
+                    </div>
+                </div>
             </div>
 
             <div class="form-group row">
@@ -49,31 +57,29 @@
                 <div class="col-md-10">
                     <input type="text" class="form-control" id="password" placeholder="Enter Password">
                 </div>
+
+                <div id="forgotinfo">
+                    <div class="col-md-offset-2 col-md-10">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </div>
+
             </div>
 
             <div class="form-group row">
-                <div class="col-md-offset-2 col-md-10">
-                    <button type ="submit" class="btn btn-default">Log In</button>
+                <div style="width: 47%; padding-left:12px;">
+                    <a href="<?php echo base_url()?>index.php/home" class="btn btn-default" type="button" id="Cancel" >Cancel</a></button>
+                    <button type ="button" id= "submit" class="btn btn-default" style="float: right;">Login</button>
                 </div>
             </div>
-
-            <div class ="form-group row" id="forgotinfo">
-                <div class="col-md-offset-2 col-md-10">
-                    <a href="#">Forgot your password?</a></br>
-                    <a href="#">Forgot your username?</a>
-                </div>
-            </div>
-
-
         </form>
+    </div>
+    <div style="text-align: center">
+            <a href="#" style="font-size: 15px;">New user? Register here</a>
+
     </div>
 
 </div>
-
-</div>
-
-
-
 
 </body>
 </html>

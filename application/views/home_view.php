@@ -86,9 +86,9 @@
                     <img src="<?php echo base_url()?>images/b1.jpg" alt="" style="height: 200px">
                     <div class="caption" style="176px;">
                         <h4>CSC675 Intro to Database Systems</h4>
-                        <p>By John Doe</p>
+                        <p>$20.00</p>
                         <p>
-                            <a href="<?php echo base_url()?>index.php/search/load_description" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
+                            <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -99,9 +99,9 @@
                     <img src="<?php echo base_url()?>images/b2.jpg" alt="" style="height: 200px">
                     <div class="caption">
                         <h4>CSC415 Operating Systems</h4>
-                        <p>By Silberschatz</p>
+                        <p>$35.00</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
+                            <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -112,9 +112,9 @@
                     <img src="<?php echo base_url()?>images/b3.jpg" alt="" style="height: 200px">
                     <div class="caption">
                         <h4>Harry Potter and the Half-Blood Prince</h4>
-                        <p>By J.K. Rowling</p>
+                        <p>$15.00</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
+                            <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -125,9 +125,9 @@
                     <img src="<?php echo base_url()?>images/b4.jpg" alt="" style="height: 200px">
                     <div class="caption" style="176px;">
                         <h4>French for Dummies Audio Set</h4>
-                        <p>By Zoe Erotopoulos</p>
+                        <p>$20.00</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
+                            <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
