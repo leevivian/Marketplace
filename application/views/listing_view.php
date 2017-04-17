@@ -26,16 +26,7 @@
             <div class="col-sm-9 page-content col-thin-left">
                 <div class="category-list">
                     <div class="tab-box ">
-
-                        <ul class="nav nav-tabs add-tabs" id="ajaxTabs" role="tablist">
-                            <li class="active"><a href="ajax/1.html" data-url="ajax/1.html" role="tab"
-                                                  data-toggle="tab">All Ads <span class="badge">...</span></a>
-                            </li>
-                            <li><a href="ajax/2.html" data-url="ajax/2.html" role="tab" data-toggle="tab">School
-                                    <span class="badge">...</span></a></li>
-                            <li><a href="ajax/3.html" data-url="ajax/3.html" role="tab" data-toggle="tab">Personal
-                                    <span class="badge">...</span></a></li>
-                        </ul>
+                        <!-- Filter Dropdown -->
                         <div class="tab-filter">
                             <div class="selecter select-short-by closed" tabindex="0"><select
                                         class="selectpicker selecter-element" data-style="btn-select" data-width="auto"
@@ -64,28 +55,31 @@
                         </div>
 
 
-                        <div class="mobile-filter-bar col-lg-12  ">
-                            <ul class="list-unstyled list-inline no-margin no-padding">
-                                <li class="filter-toggle">
-                                    <a class="">
-                                        <i class="  icon-th-list"></i>
-                                        Filters
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a data-toggle="dropdown" class="dropdown-toggle"><i class="caret "></i> Sort
-                                            by </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+<!--                        <div class="mobile-filter-bar col-lg-12  ">-->
+<!--                            <ul class="list-unstyled list-inline no-margin no-padding">-->
+<!--                                <li class="filter-toggle">-->
+<!--                                    <a class="">-->
+<!--                                        <i class="  icon-th-list"></i>-->
+<!--                                        Filters-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <div class="dropdown">-->
+<!--                                        <a data-toggle="dropdown" class="dropdown-toggle"><i class="caret "></i> Sort-->
+<!--                                            by </a>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+
                         <div class="menu-overly-mask"></div>
                     </div>
                 </div>
 
+                <!-- Save Search -->
                 <div class="tab-box  save-search-bar text-center"><a href=""> <i class=" icon-star-empty"></i>
                         Save Search </a></div>
+
             </div>
 
             <p>
