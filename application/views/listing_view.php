@@ -46,7 +46,7 @@
 
 
             <div class="container-fluid">
-                <div class="col-sm-12 col-thin-left">
+                <div class="col-sm-8 text-left">
                     <?php
                     if (isset($results)) {
                         echo "<br>";
@@ -58,7 +58,7 @@
                             <?php
                             echo $row['name'] . "<br>";
                             echo $row['description'] . "<br>";
-                            echo "<div class='col-sm-12 col-thin-right'><a href='#'>Message</a></div>";
+                            echo "<div class='container-fluid'><a href='#' class='btn btn-primary'>Message</a></div>";
                             echo "\n\n\n";
                             echo "<br>";
                         }
