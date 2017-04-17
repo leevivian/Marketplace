@@ -27,16 +27,16 @@
                 <div class="category-list">
                     <div class="tab-box ">
                         <!-- Filter Dropdown -->
-                        <div class="tab-filter">
-                            <div class="selecter select-short-by closed" tabindex="0"><select
-                                        class="selectpicker selecter-element" data-style="btn-select" data-width="auto"
-                                        tabindex="-1">
-                                    <option value="Sort by">Sort by</option>
-                                    <option value="Price: Low to High">Price: Low to High</option>
-                                    <option value="Price: High to Low">Price: High to Low</option>
-                                    <option value="#">Relevance</option>
-                            </div>
-                        </div>
+<!--                        <div class="tab-filter">-->
+<!--                            <div class="selecter select-short-by closed" tabindex="0"><select-->
+<!--                                        class="selectpicker selecter-element" data-style="btn-select" data-width="auto"-->
+<!--                                        tabindex="-1">-->
+<!--                                    <option value="Sort by">Sort by</option>-->
+<!--                                    <option value="Price: Low to High">Price: Low to High</option>-->
+<!--                                    <option value="Price: High to Low">Price: High to Low</option>-->
+<!--                                    <option value="#">Relevance</option>-->
+<!--                            </div>-->
+<!--                        </div>-->
 <!---->
 <!--                        <div class="listing-filter">-->
 <!--                            <div class="pull-left col-xs-6">-->
