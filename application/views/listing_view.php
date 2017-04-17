@@ -11,11 +11,11 @@
     <div class="row content">
 
         <!--SideNavBar-->
-        <div class="col-sm-2 sidenav">
-            <p><a href="#">Books</a></p>
-            <p><a href="#">Clothes</a></p>
-            <p><a href="#">Stuffs</a></p>
-        </div>
+<!--        <div class="col-sm-2 sidenav">-->
+<!--            <p><a href="#">Books</a></p>-->
+<!--            <p><a href="#">Clothes</a></p>-->
+<!--            <p><a href="#">Stuffs</a></p>-->
+<!--        </div>-->
 
         <!-- Main Page -->
         <div class="col-sm-8 text-left">
@@ -29,12 +29,20 @@
                 <div class="category-list">
                     <div class="tab-box ">
 
+                        <div class="tab-filter">
+                            <div class="selecter select-short-by closed" tabindex="0"><select class="selectpicker selecter-element" data-style="btn-select" data-width="auto" tabindex="-1">
+                                    <option value="Short by">Short by</option>
+                                    <option value="Price: Low to High">Price: Low to High</option>
+                                    <option value="Price: High to Low">Price: High to Low</option>
+                                </select><span class="selecter-selected">Short by</span><div class="selecter-options scroller"><div class="scroller-bar" style="height: 100px;"><div class="scroller-track" style="height: 100px; margin-bottom: 0px; margin-top: 0px;"><div class="scroller-handle"></div></div></div><div class="scroller-content"><span class="selecter-item selected" data-value="Short by">Short by</span><span class="selecter-item" data-value="Price: Low to High">Price: Low to High</span><span class="selecter-item" data-value="Price: High to Low">Price: High to Low</span></div></div></div>
+                        </div>
+
                         <!-- Filter Dropdown -->
 <!--                        <div class="tab-filter">-->
 <!--                            <div class="selecter select-short-by closed" tabindex="0"><select-->
 <!--                                        class="selectpicker selecter-element" data-style="btn-select" data-width="auto"-->
 <!--                                        tabindex="-1">-->
-<!--                                    <option value="Sort by">Sort by</option>-->
+<!--                                    <option value="Short by">Sort by</option>-->
 <!--                                    <option value="Price: Low to High">Price: Low to High</option>-->
 <!--                                    <option value="Price: High to Low">Price: High to Low</option>-->
 <!--                                    <option value="#">Relevance</option>-->
