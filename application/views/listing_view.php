@@ -58,7 +58,7 @@
                             <?php
                             echo $row['name'] . "<br>";
                             echo $row['description'] . "<br>";
-                            echo "<div class='container-fluid'><a href='#' class='btn btn-primary'>Message</a></div>";
+                            echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div>";
                             echo "\n\n\n";
                             echo "<br>";
                         }
