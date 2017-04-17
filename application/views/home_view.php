@@ -31,7 +31,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="<?php echo base_url()?>images/car2.jpg" alt="Chania" width="460" height="345">
+                <img src="<?php echo base_url()?>images/car2.jpg" alt="car2" width="460" height="345">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>People will think you're</h3>
                     <p>...<i>up to something</i></p>
@@ -39,7 +39,7 @@
             </div>
 
             <div class="item">
-                <img src="<?php echo base_url()?>images/car1.jpg" alt="Chania" width="460" height="345">
+                <img src="<?php echo base_url()?>images/car1.jpg" alt="car1" width="460" height="345">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Oi Hermione</h3>
                     <p>Yur a gurl, right?</p>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="item">
-                <img src="<?php echo base_url()?>images/car3.jpg" alt="Flower" width="460" height="345">
+                <img src="<?php echo base_url()?>images/car3.jpg" alt="car3" width="460" height="345">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Insert cool quote</h3>
                     <p>about dis website here</p>
@@ -111,7 +111,7 @@
                 <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
                     <img src="<?php echo base_url()?>images/b3.jpg" alt="" style="height: 200px">
                     <div class="caption">
-                        <h4>Harry Potter and the Half Blood Prince</h4>
+                        <h4>Harry Potter and the Half-Blood Prince</h4>
                         <p>By J.K. Rowling</p>
                         <p>
                             <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
