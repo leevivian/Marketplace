@@ -42,10 +42,8 @@
 <!---->
                         <div class="listing-filter">
                             <div class="pull-left col-xs-6">
-                                <div class="breadcrumb-list"><a href="#" class="current"> <span>All ads</span></a>
-                                    in
-
-                                    <span class="cityName"> San Francisco State University </span> <a
+                                <div class="breadcrumb-list"><a href="#" class="current">
+                                    <span class="cityName"> All ads in San Francisco State University </span> <a
                                             href="#" id="dropdownMenu1" data-toggle="modal"> <span
                                                 class="caret"></span> </a></div>
                             </div>
