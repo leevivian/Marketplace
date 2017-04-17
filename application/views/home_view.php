@@ -19,7 +19,7 @@
         }
     </style>
 
-<div class="container">
+<div class="container-carousel">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -68,120 +68,82 @@
     </div>
 </div>
 
-    <div id="container-me">
-        <header>
-            <p style="color: black">Recent Listings</p>
-        </header>
-        
-        <!-- Each image is 350px by 233px -->
-        <div class="photobanner">
-            <img class="first" src="<?php echo base_url()?>images/placeholder.png" alt="" />
-            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
-            <img src="<?php echo base_url()?>images/placeholder.png" alt="" />
-            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
-            <img src="<?php echo base_url()?>images/placeholder.png" alt="" />
-            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
-            <img src="<?php echo base_url()?>images/placeholder.png" alt="" />
-            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
-            <img src="<?php echo base_url()?>images/placeholder.png" alt="" />
-            <img src="<?php echo base_url()?>images/placeholder2.png" alt="" />
+    <div class="container-carousel">
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 style="color:black">Recent Listings</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="<?php echo base_url()?>images/b1.jpg" alt="" style="height: 200px">
+                    <div class="caption" style="176px;">
+                        <h3>CSC675 Introduction to Database Systems</h3>
+                        <p>By John Doe</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="<?php echo base_url()?>images/b2.jpg" alt="" style="height: 200px">
+                    <div class="caption" style="176px;">
+                        <h3>CSC415 Operating Systems</h3>
+                        <p>By Silberschatz</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="<?php echo base_url()?>images/b3.jpg" alt="" style="height: 200px">
+                    <div class="caption" style="176px;">
+                        <h3>Harry Potter and the Half Blood Prince</h3>
+                        <p>By J.K. Rowling</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="<?php echo base_url()?>images/b4.jpg" alt="" style="height: 200px">
+                    <div class="caption" style="176px;">
+                        <h3>French for Dummies Audio Set</h3>
+                        <p>By Zoe Erotopoulos</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
         </div>
-    </div>
-
 
 
 <style>
 
-    #container-me {
-        width: 1000px;
-        overflow: hidden;
-        margin: 10px auto 0px auto;
-        background: white;
+    .container-carousel {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .photobanner {
-        height: 233px;
-        width: 3550px;
-        margin-top: 10px;
-    }
-
-    .first {
-        -webkit-animation: bannermove 30s linear infinite;
-        -moz-animation: bannermove 30s linear infinite;
-        -ms-animation: bannermove 30s linear infinite;
-        -o-animation: bannermove 30s linear infinite;
-        animation: bannermove 30s linear infinite;
-    }
-
-    @keyframes "bannermove" {
-        0% {
-            margin-left: 0px;
-        }
-        100% {
-            margin-left: -2125px;
-        }
-
-    }
-
-    @-moz-keyframes bannermove {
-        0% {
-            margin-left: 0px;
-        }
-        100% {
-            margin-left: -2125px;
-        }
-
-    }
-
-    @-webkit-keyframes "bannermove" {
-        0% {
-            margin-left: 0px;
-        }
-        100% {
-            margin-left: -2125px;
-        }
-
-    }
-
-    @-ms-keyframes "bannermove" {
-        0% {
-            margin-left: 0px;
-        }
-        100% {
-            margin-left: -2125px;
-        }
-
-    }
-
-    @-o-keyframes "bannermove" {
-        0% {
-            margin-left: 0px;
-        }
-        100% {
-            margin-left: -2125px;
-        }
-
-    .photobanner img {
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        -ms-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-    }
-
-    .photobanner img:hover {
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -o-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        cursor: pointer;
-
-        -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-        -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-        box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-    }
 
 </style>
 
