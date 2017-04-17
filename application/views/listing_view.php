@@ -52,15 +52,17 @@
                              class="img-thumbnail" width="100px" height="100px" alt="Image not found">
 
                         <div class="caption">
-                            <?php
-                            echo $row['name'] . "<br>";
-                            echo $row['description'] . "<br>";
-                            echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
-                            echo "\n\n\n";
-                            echo "<br>";
-                            }
-                            }
-                            ?>
+                            <p>
+                                <?php
+                                echo $row['name'] . "<br>";
+                                echo $row['description'] . "<br>";
+                                echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
+                                echo "\n\n\n";
+                                echo "<br>";
+                                }
+                                }
+                                ?>
+                            </p>
                         </div>
                     </div>
                 </div>
