@@ -46,21 +46,23 @@
 
 
             <div class="container-fluid">
-                <?php
-                if (isset($results)) {
-                    echo "<br>";
-                    foreach ($results as $row) {
-                        ?>
-                        <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
-                        <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
-                             class="img-thumbnail" width="100px" height="100px" alt="Image not found">
-                        <?php
-                        echo $row['name'] . "<br>";
-                        echo $row['description'] . "<br>";
+                <div class="col-sm-12 col-thin-left">
+                    <?php
+                    if (isset($results)) {
                         echo "<br>";
+                        foreach ($results as $row) {
+                            ?>
+                            <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
+                            <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
+                                 class="img-thumbnail" width="100px" height="100px" alt="Image not found">
+                            <?php
+                            echo $row['name'] . "<br>";
+                            echo $row['description'] . "<br>";
+                            echo "<br>";
+                        }
                     }
-                }
-                ?>
+                    ?>
+                </div>
             </div>
 
             <!--Pagination-->
