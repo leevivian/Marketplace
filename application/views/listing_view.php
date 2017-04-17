@@ -44,6 +44,8 @@
 
             </div>
 
+            <p></p>
+
             <div>
                 <?php
                 if (isset($results)) {
