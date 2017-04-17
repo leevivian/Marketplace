@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="btn btn-default" href="<?php echo base_url()?>index.php/home"><img src="<?php echo base_url()?>images/logo.png" style="height: 45px;"></a>
+            <a class="navbar-brand2" href="<?php echo base_url()?>index.php/home"><img src="<?php echo base_url()?>images/logo.png" style="height: 45px;"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <ul class="nav navbar-nav navbar-right">
                 <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default"><a style="height: 10px;" href="<?php echo base_url()?>index.php/upload_item">Sell</a></button>
+                    <a class="btn btn-default" href="<?php echo base_url()?>index.php/upload_item">Sell</a></button>
                     <button type="button" class="btn btn-default">
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </button>
@@ -51,6 +51,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             margin-left: auto;
             width: 90%;
         }
+
+        .navbar-brand2 {
+            float: left;
+            height: 50px;
+            /* padding: 15px 15px; */
+            font-size: 18px;
+            line-height: 20px;
+        }
+
     </style>
 
 </nav>

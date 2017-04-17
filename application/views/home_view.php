@@ -88,7 +88,7 @@
                         <h4>CSC675 Intro to Database Systems</h4>
                         <p>By John Doe</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
+                            <a href="<?php echo base_url()?>index.php/search/load_description" class="btn btn-primary">Buy Now</a> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
