@@ -58,6 +58,7 @@
                             <?php
                             echo $row['name'] . "<br>";
                             echo $row['description'] . "<br>";
+                            "<div class='col-sm-12 col-right'><a href='<?php echo base_url() ?>index.php/messaging'>Message</a></div>";
                             echo "<br>";
                         }
                     }
