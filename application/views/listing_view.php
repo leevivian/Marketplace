@@ -31,7 +31,7 @@
                             <div class="selecter select-short-by closed" tabindex="0"><select
                                         class="selectpicker selecter-element" data-style="btn-select" data-width="auto"
                                         tabindex="-1">
-                                    <option value="Short by">Sort by</option>
+                                    <option value="Sort by">Sort by</option>
                                     <option value="Price: Low to High">Price: Low to High</option>
                                     <option value="Price: High to Low">Price: High to Low</option>
                                     <option value="#">Relevance</option>
@@ -44,7 +44,7 @@
                                     in
 
                                     <span class="cityName"> San Francisco State University </span> <a
-                                            href="#selectRegion" id="dropdownMenu1" data-toggle="modal"> <span
+                                            href="#" id="dropdownMenu1" data-toggle="modal"> <span
                                                 class="caret"></span> </a></div>
                             </div>
                             <div class="pull-right col-xs-6 text-right listing-view-action"><span
@@ -53,24 +53,6 @@
                                         class="grid-view"><i class=" icon-th-large "></i></span></div>
                             <div style="clear:both"></div>
                         </div>
-
-
-<!--                        <div class="mobile-filter-bar col-lg-12  ">-->
-<!--                            <ul class="list-unstyled list-inline no-margin no-padding">-->
-<!--                                <li class="filter-toggle">-->
-<!--                                    <a class="">-->
-<!--                                        <i class="  icon-th-list"></i>-->
-<!--                                        Filters-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <div class="dropdown">-->
-<!--                                        <a data-toggle="dropdown" class="dropdown-toggle"><i class="caret "></i> Sort-->
-<!--                                            by </a>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
 
                         <div class="menu-overly-mask"></div>
                     </div>
