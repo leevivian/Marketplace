@@ -21,7 +21,11 @@
         <div class="col-sm-8 text-left">
             <!-- Header -->
             <h1>Search Results Found <?php
-                    echo count($results);
+                    if($results != nil){
+                        echo count($results);
+                    }else{
+                        echo "0";
+                    }
                 ?> Items</h1>
 
             <!-- Listing Content -->
@@ -42,7 +46,7 @@
 <!---->
                         <div class="listing-filter">
                             <div class="pull-left col-xs-6">
-                                <div class="breadcrumb-list"><a href="#" class="current">
+                                <div class="breadcrumb-list"><a href="#" class="current"><span></span>
                                     <span class="cityName"> All ads in San Francisco State University </span> <a
                                             href="#" id="dropdownMenu1" data-toggle="modal"> <span
                                                 class="caret"></span> </a></div>
