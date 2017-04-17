@@ -8,7 +8,7 @@
 </style>
 <body>
 <div class="container-fluid text-center">
-    <div class="row content">
+    <div class="row">
 
         <!-- Main Page -->
         <div class="row content">
@@ -39,27 +39,7 @@
 
             </div>
 
-            <!-- Containers -->
-            <div class="row">
-                <div class="col-sm-4 col-lg-4 col-md-4">
-                    <div class="thumbnail">
-                        <img src="http://placehold.it/320x150" alt="">
-                        <div class="caption">
-                            <h4 class="pull-right">$24.99</h4>
-                            <h4><a href="#">First Product</a>
-                            </h4>
-                            <p>See more snippets like this online store item at <a target="_blank"
-                                                                                   href="http://www.bootsnipp.com">Bootsnipp
-                                    - http://bootsnipp.com</a>.</p>
-                        </div>
-                        <div class="btn btn-primary">Contact</div>
-                        <div class="btn btn-default">More Info</div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Containers -->
-
-            <div class="row">
+            <div class="thumbnail">
                 <div class="col-sm-4 col-lg-4 col-md-4">
                     <?php
                     if (isset($results)) {
@@ -71,6 +51,7 @@
                                 <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
                                      class="img-thumbnail" width="100px" height="100px" alt="Image not found">
                             </div>
+                            <div class="caption">
                             <?php
                             echo $row['name'] . "<br>";
                             echo $row['description'] . "<br>";
@@ -80,6 +61,7 @@
                         }
                     }
                     ?>
+                            </div>
                 </div>
             </div>
         </div>
