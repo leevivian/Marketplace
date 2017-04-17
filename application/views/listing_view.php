@@ -45,7 +45,7 @@
             </div>
 
 
-            <div>
+            <div class="col-thin-left">
                 <?php
                 if (isset($results)) {
                     echo "<br>";
@@ -69,8 +69,6 @@
                     <li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
                     <li><a href="#"> ...</a></li>
                     <li><a class="pagination-btn" href="#">Next »</a></li>
                 </ul>
