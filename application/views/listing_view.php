@@ -38,29 +38,25 @@
 <!--                            </div>-->
 <!--                        </div>-->
 <!---->
-<!--                        <div class="listing-filter">-->
-<!--                            <div class="pull-left col-xs-6">-->
-<!--                                <div class="breadcrumb-list"><a href="#" class="current"> <span>All ads</span></a>-->
-<!--                                    in-->
-<!---->
-<!--                                    <span class="cityName"> San Francisco State University </span> <a-->
-<!--                                            href="#" id="dropdownMenu1" data-toggle="modal"> <span-->
-<!--                                                class="caret"></span> </a></div>-->
-<!--                            </div>-->
-<!--                            <div class="pull-right col-xs-6 text-right listing-view-action"><span-->
-<!--                                        class="list-view active"><i class="  icon-th"></i></span> <span-->
-<!--                                        class="compact-view"><i class=" icon-th-list  "></i></span> <span-->
-<!--                                        class="grid-view"><i class=" icon-th-large "></i></span></div>-->
-<!--                            <div style="clear:both"></div>-->
-<!--                        </div>-->
+                        <div class="listing-filter">
+                            <div class="pull-left col-xs-6">
+                                <div class="breadcrumb-list"><a href="#" class="current"> <span>All ads</span></a>
+                                    in
+
+                                    <span class="cityName"> San Francisco State University </span> <a
+                                            href="#" id="dropdownMenu1" data-toggle="modal"> <span
+                                                class="caret"></span> </a></div>
+                            </div>
+                            <div class="pull-right col-xs-6 text-right listing-view-action"><span
+                                        class="list-view active"><i class="  icon-th"></i></span> <span
+                                        class="compact-view"><i class=" icon-th-list  "></i></span> <span
+                                        class="grid-view"><i class=" icon-th-large "></i></span></div>
+                            <div style="clear:both"></div>
+                        </div>
 
                         <div class="menu-overly-mask"></div>
                     </div>
                 </div>
-
-                <!-- Save Search -->
-                <div class="tab-box  save-search-bar text-center"><a href=""> <i class=" icon-star-empty"></i>
-                        Save Search </a></div>
 
             </div>
 
