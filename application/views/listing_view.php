@@ -11,7 +11,7 @@
     <div class="row content">
 
         <!-- Main Page -->
-        <div class="col-sm-12 text-center">
+        <div class="row content">
             <!-- Header -->
             <h1>Search Results Found <?php
                     echo count($results);
@@ -24,7 +24,7 @@
             </div>
 
             <!-- Listing Content -->
-            <div class="col-sm-12 page-content col-thin-left">
+            <div class="col-sm-8 page-content col-thin-left">
                 <div class="category-list">
                     <div class="tab-box ">
 
@@ -86,6 +86,7 @@
             </div>
 
         </div>
+        <!--/MainPage-->
     </div>
 </div>
 </body>
