@@ -20,7 +20,9 @@
         <!-- Main Page -->
         <div class="col-sm-8 text-left">
             <!-- Header -->
-            <h1>Search Results Found</h1>
+            <h1>Search Results Found <?php
+                    echo count($results);
+                ?> Items</h1>
 
             <!-- Listing Content -->
             <div class="col-sm-9 page-content col-thin-left">
