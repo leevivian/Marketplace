@@ -132,10 +132,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
-
+    </div>
+</body>
 <style>
 
     .container-carousel {
@@ -146,8 +145,6 @@
 
 
 </style>
-
-</body>
 
     <?php
     /**

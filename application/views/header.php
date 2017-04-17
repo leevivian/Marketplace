@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Search Bar and Menu Buttons-->
     <div class="row">
-        <div class="col-sm-8" style="position:relative; width:100%; color: black; text-align: center; padding-top: 10px; padding-bottom: 10px;">
+        <div class="col-sm-8" style="background-color: #757575 ; bottom: 10px; position:relative; width:100%; color: black; text-align: center; padding-top: 10px; padding-bottom: 10px;">
             <div class="dropdown" name="category">
 
             </div>
@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </form>
         </div>
     </div>
-</div>
+
 
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
      and jquery are loaded. It also has the different backgrounds we are using for the site. This will be loaded by

@@ -17,8 +17,6 @@
     .container-footer {
         padding-right: 15px;
         padding-left: 15px;
-        margin-right: 10px;
-        margin-left: 10px;
     }
 
 </style>
