@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand2" href="<?php echo base_url()?>index.php/home"><img src="<?php echo base_url()?>images/logo.png" style="height: 45px;"></a>
+            <a class="btn btn-default" href="<?php echo base_url()?>index.php/home"><img src="<?php echo base_url()?>images/logo.png" style="height: 45px;"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="<?php echo base_url()?>index.php/dashboard">Dashboard</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="<?php echo base_url()?>index.php/login">Login</a></li>
                         </ul>
@@ -51,15 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             margin-left: auto;
             width: 90%;
         }
-
-        .navbar-brand2 {
-            float: left;
-            height: 50px;
-            /* padding: 15px 15px; */
-            font-size: 18px;
-            line-height: 20px;
-        }
-
     </style>
 
 </nav>

@@ -2,7 +2,7 @@
     <style>
         body{
             color: black;
-            margin: 25px;
+            /*margin: 25px;*/
         }
 
         label{
@@ -155,7 +155,7 @@
         <!-- submit and cancel buttons -->
         <div align="right" class="container submitbuttons">
             <div class="row" id="buttonrow">
-            <button class="btn btn-danger pull-left" type="button" id="Cancel">Cancel</button>
+                <a href="<?php echo base_url()?>index.php/home" button class="btn btn-danger pull-left" type="button" id="Cancel">Cancel</abutton></a>
             <button class="btn btn-primary" type="button" id="submit">Submit</button>
             </div>
         </div>
