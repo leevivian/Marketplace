@@ -5,7 +5,7 @@
 <head>
     <h1 style="text-align: center; margin-top: 0px;">
         <p style="color: black">Welcome to SFSUMarketplace!</p>
-        <p style="color: black">A place to buy and sell goods with other SFSU connected people!</p>
+        <p style="color: black">The online market to buy and sell goods with other SFSU connected people!</p>
     </h1>
 </head>
 
@@ -16,6 +16,7 @@
         .carousel-inner > .item > a > img {
             width: 100%;
             margin: auto;
+            height: 300px;
         }
     </style>
 
@@ -29,8 +30,8 @@
         </ol>
 
         <!-- Wrapper for slides -->
-        <div class="carousel-inner" style="height: 300px;" role="listbox">
-            <div class="item active" style="height: 300px;">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
                 <a href="<?php echo base_url()?>index.php/search/category_books">
                     <img src="<?php echo base_url()?>images/banner4.jpg" alt="banner1" width="460" height="345">
                 </a>
@@ -40,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="item" style="height: 300px;">
+            <div class="item">
                 <a href="<?php echo base_url()?>index.php/search/category_furniture">
                     <img src="<?php echo base_url()?>images/banner2.jpg" alt="banner2" width="460" height="345">
                 </a>
@@ -87,7 +88,7 @@
         <!-- Page Features -->
         <div class="row text-center">
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-2 col-sm-6 hero-feature">
                 <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
                     <img src="<?php echo base_url()?>images/b1.jpg" alt="" style="height: 200px">
                     <div class="caption" style="176px;">
@@ -100,7 +101,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-2 col-sm-6 hero-feature">
                 <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
                     <img src="<?php echo base_url()?>images/b2.jpg" alt="" style="height: 200px">
                     <div class="caption">
@@ -113,7 +114,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-2 col-sm-6 hero-feature">
                 <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
                     <img src="<?php echo base_url()?>images/b3.jpg" alt="" style="height: 200px">
                     <div class="caption">
@@ -126,7 +127,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-2 col-sm-6 hero-feature">
                 <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
                     <img src="<?php echo base_url()?>images/b4.jpg" alt="" style="height: 200px">
                     <div class="caption" style="176px;">
@@ -138,6 +139,33 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-2 col-sm-6 hero-feature">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
+                    <img src="<?php echo base_url()?>images/b1.jpg" alt="" style="height: 200px">
+                    <div class="caption" style="176px;">
+                        <h4>CSC675 Intro to Database Systems</h4>
+                        <p>$20.00</p>
+                        <p>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6 hero-feature">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
+                    <img src="<?php echo base_url()?>images/b1.jpg" alt="" style="height: 200px">
+                    <div class="caption" style="176px;">
+                        <h4>CSC675 Intro to Database Systems</h4>
+                        <p>$20.00</p>
+                        <p>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
