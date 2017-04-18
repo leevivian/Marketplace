@@ -52,7 +52,7 @@
                                 <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
                                      class="img-thumbnail" width="100px" height="100px" alt="Image not found">
                             </div>
-                            <div class="container">
+                            <div>
                                 <?php
                                 ?>
                                 <h4>
