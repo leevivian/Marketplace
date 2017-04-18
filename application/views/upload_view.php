@@ -155,8 +155,8 @@
         <!-- submit and cancel buttons -->
         <div align="right" class="container submitbuttons">
             <div class="row" id="buttonrow">
-                <a href="<?php echo base_url()?>index.php/home" button class="btn btn-danger pull-left" type="button" id="Cancel">Cancel</abutton></a>
-            <button class="btn btn-primary" type="button" id="submit">Submit</button>
+                <a href="<?php echo base_url()?>index.php/home" button class="btn btn-danger pull-left" type="button" id="Cancel">Cancel</button></a>
+                <a href="<?php echo base_url()?>index.php/individual_listing" button class="btn btn-primary" type="button" id="submit">Submit</button></a>
             </div>
         </div>
         <!-- end button row -->
