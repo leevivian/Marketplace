@@ -11,7 +11,7 @@
     <div class="row">
 
         <!-- Main Page -->
-        <div class="col-md-9">
+        <div class="col-md-12">
             <!-- Header -->
             <h1>Search Results Found <?php
                 echo count($results);
