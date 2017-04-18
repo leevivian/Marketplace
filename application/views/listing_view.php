@@ -52,16 +52,16 @@
                                 <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
                                      class="img-thumbnail" width="100px" height="100px" alt="Image not found">
                             </div>
+                            <div class="container">
+                                <?php
+                                echo $row['name'] . "<br>";
+                                echo $row['description'] . "<br>";
+                                echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
+                                echo "<br>";
+                                ?>
+                            </div>
                         </div>
-                        <div class="container">
                         <?php
-                        echo $row['name'] . "<br>";
-                        echo $row['description'] . "<br>";
-                        echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
-                        echo "<br>";
-                        ?>
-                        </div>
-                    <?php
                     }
                 }
                 ?>
