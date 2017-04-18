@@ -1,4 +1,4 @@
-<div class="container-fluid bg-3 text-left">
+<div class="container-fluid bg-2 text-left">
     <h2 style="text-decoration: underline">Inbox</h2>
     <?php
     if(isset($message)) {
