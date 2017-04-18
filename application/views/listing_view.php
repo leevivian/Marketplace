@@ -4,7 +4,6 @@
     body {
         color: black;
     }
-
 </style>
 <body>
 <div class="container">
@@ -66,8 +65,8 @@
                                     <?php
                                     echo "<br>";
                                     ?>
-                                <div class='btn btn-primary'><a href='#'>Contact</a></div>
-                                <div class='btn btn-default'><a href='#'>More Info</a></div>
+                                <a class="btn btn-primary" target="_blank" href="#">Contact</a>
+                                <a class="btn btn-default" target="_blank" href="#">More Info</a>
                             </div>
                         </div>
                         <?php
