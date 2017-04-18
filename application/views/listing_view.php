@@ -50,7 +50,7 @@
                             <div class="thumbnail">
                                 <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
                                 <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
-                                     class="img-thumbnail" width="100px" height="100px" alt="Image not found">
+                                     width="100px" height="100px" alt="Image not found">
                                     <?php
                                     ?>
                                     <h4>
