@@ -64,10 +64,10 @@
                                         ?>
                                     </p>
                                     <?php
-                                    echo "<div class='btn btn-primary'><a href='#'>Contact</a></div>
-                                          <div class='btn btn-default'><a href='#'>More Info</a></div>";
                                     echo "<br>";
                                     ?>
+                                <div class='btn btn-primary'><a href='#'>Contact</a></div>
+                                <div class='btn btn-default'><a href='#'>More Info</a></div>
                             </div>
                         </div>
                         <?php
