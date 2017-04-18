@@ -35,12 +35,10 @@ class Search extends CI_Controller{
         $keyword = $this->input->post('searchquery');
         $category = $this->input->post('Category');
 
-
         /* passes the search keyword to get_items()
         and stores the data in an array named 'results' */
         $data['category'] = $category;
         $data['results'] = $this->search_model->get_items($keyword, $category);
-
 
         // loads the search_view page, passing it data from get_items()
         $title = array(
@@ -48,6 +46,42 @@ class Search extends CI_Controller{
         $this->load->view('header', $title);
         $this->load->view('listing_view', $data);
         $this->load->view('footer');
-
     }
+    
+    public function load_description(){
+        //loads the view for the item description
+        $title = array(
+            'title' => 'Description');
+        $this->load->view('header', $title);
+        $this->load->view('listingPage_view');
+        $this->load->view('footer');
+    }
+
+    public function category_books() {
+
+        $data['results'] = $this->search_model->get_items('', 'books');
+
+        $this->load->view('header');
+        $this->load->view('listing_view', $data);
+        $this->load->view('footer');
+    }
+
+    public function category_furniture() {
+
+        $data['results'] = $this->search_model->get_items('', 'furniture');
+
+        $this->load->view('header');
+        $this->load->view('listing_view', $data);
+        $this->load->view('footer');
+    }
+
+    public function category_electronics() {
+
+        $data['results'] = $this->search_model->get_items('', 'electronics');
+
+        $this->load->view('header');
+        $this->load->view('listing_view', $data);
+        $this->load->view('footer');
+    }
+
 }
