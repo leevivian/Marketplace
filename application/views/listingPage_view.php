@@ -1,8 +1,10 @@
 <html>
+
+
 <body>
 <div class="container">
 
-    <!-- Portfolio Item Heading -->
+    <!-- Item Heading -->
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Antique Wizard's Hat
@@ -12,7 +14,7 @@
     </div>
     <!-- /.row -->
 
-    <!-- Portfolio Item Row -->
+    <!-- Item Row -->
     <div class="row">
 
         <div class="col-md-6">
@@ -28,7 +30,7 @@
                 <li>Judgmental</li>
             </ul>
 
-            <button class="btn btn-default" style="width:80%; font-size: 20px; background-color: #4089d4; color: white;">Contact Seller</button>
+            <a href="<?php echo base_url()?>index.php/messaging" class="btn btn-default" style="width:80%; font-size: 20px; background-color: #4089d4; color: white;">Contact Seller</a>
 
         </div>
 
@@ -61,12 +63,6 @@
 </body>
 
 <style>
-
-    body {
-        font: 14px Montserrat, sans-serif;
-        line-height: 1.8;
-        color: #3e3f40;
-    }
 
 </style>
 
