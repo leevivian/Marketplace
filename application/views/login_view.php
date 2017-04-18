@@ -69,13 +69,13 @@
             <div class="form-group row">
                 <div style="width: 47%; padding-left:12px;">
                     <a href="<?php echo base_url()?>index.php/home" class="btn btn-default" type="button" id="Cancel" >Cancel</a></button>
-                    <button type ="button" id= "submit" class="btn btn-default" style="float: right;">Login</button>
+                    <a href="<?php echo base_url()?>index.php/home" type ="button" id= "submit" class="btn btn-default" style="float: right;">Login</a>
                 </div>
             </div>
         </form>
     </div>
     <div style="text-align: center">
-            <a href="#" style="font-size: 15px;">New user? Register here</a>
+            <a href="<?php echo base_url()?>index.php/registration" style="font-size: 15px;">New user? Register here</a>
 
     </div>
 

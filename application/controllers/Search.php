@@ -58,4 +58,17 @@ class Search extends CI_Controller{
         $this->load->view('listingPage_view');
         $this->load->view('footer');
     }
+
+    public function search_books() {
+        $keyword = $this->input->post('searchquery');
+        $category = $this->input->post('Category');
+
+        $data['category'] = $category;
+        $data['results'] = $this->search_model->get_items($keyword, 'books');
+
+        $this->load->view('header');
+        $this->load->view('listing_view', $data);
+        $this->load->view('footer');
+    }
+
 }

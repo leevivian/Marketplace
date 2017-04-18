@@ -31,26 +31,28 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="<?php echo base_url()?>images/car2.jpg" alt="car2" width="460" height="345">
+                <a href="<?php echo base_url()?>index.php/search/search_books">
+                    <img src="<?php echo base_url()?>images/banner1.jpg" alt="car2" width="460" height="345">
+                </a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>People will think you're</h3>
-                    <p>...<i>up to something</i></p>
+                    <h3>Books</h3>
+                    <p>...Browse textbooks and other books other students are selling!</p>
                 </div>
             </div>
 
             <div class="item">
-                <img src="<?php echo base_url()?>images/car1.jpg" alt="car1" width="460" height="345">
+                <img src="<?php echo base_url()?>images/banner2.jpg" alt="car1" width="460" height="345">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Oi Hermione</h3>
-                    <p>Yur a gurl, right?</p>
+                    <h3>Furniture</h3>
+                    <p>Get your bands on some rad furniture at low prices!</p>
                 </div>
             </div>
 
             <div class="item">
-                <img src="<?php echo base_url()?>images/car3.jpg" alt="car3" width="460" height="345">
+                <img src="<?php echo base_url()?>images/banner3.jpg" alt="car3" width="460" height="345">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Insert cool quote</h3>
-                    <p>about dis website here</p>
+                    <h3>Electronics</h3>
+                    <p>Get the latest technology in the city!</p>
                 </div>
             </div>
 
@@ -88,7 +90,7 @@
                         <h4>CSC675 Intro to Database Systems</h4>
                         <p>$20.00</p>
                         <p>
-                            <a href="#" class="btn btn-default">More Info</a>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
