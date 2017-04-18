@@ -1,5 +1,3 @@
-
-
 <html>
     <body>
         <div class="container-fluid bg-3 text-left">
@@ -8,7 +6,8 @@
             </div>
 	   <?php echo form_open('search/execute_search'); ?>
             <form>
-                <select name="Category" size="1" >
+                <!-- If category is not set, set it to All. Otherwise, set it to the previously selected one -->
+                <select name="Category" size="1" > 
                     <option selected value="<?php if (isset($category)){echo $category;} 
                     else {echo "All";}?>" >
                         <?php
@@ -33,8 +32,10 @@
         foreach ($results as $row)
         {
             ?>
-            <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
-            <img src="<?php echo base_url('images/item_images/' . $row['image_link']); ?>" class="img-thumbnail" width="100px" height="100px" alt="Image not found">
+            <!-- Click any search result image to go to href link-->
+            <a href="<?php echo base_url('/index.php/search/load_description'); ?>">
+                <img src="<?php echo base_url('images/item_images/' . $row['image_link']); ?>" class="img-thumbnail" width="100px" height="100px" alt="Image not found">
+            </a>
             <?php
             echo $row['name'] . "<br>";
             echo $row['description'] . "<br>";

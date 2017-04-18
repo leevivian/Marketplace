@@ -1,2 +1,4 @@
 .idea/
 .dbconfig.php
+/nbproject/private/
+/config/config.php

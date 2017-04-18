@@ -8,5 +8,13 @@
     <div class="btn-group-vertical">
         <a href="index.php/about" class="btn btn-primary">About Page</a>
         <a href="index.php/search" class="btn btn-primary">Vertical Prototype</a>
+        <a href="index.php/home" class="btn btn-primary">Home Page</a>
+        <a href="index.php/listing" class="btn btn-primary">Search Listing</a>
+        <a href="index.php/login" class="btn btn-primary">Login</a>
+        <a href="index.php/upload_item" class="btn btn-primary">Upload Item/Sell</a>
+        <a href="index.php/sell_controller" class="btn btn-primary">Sell Controller/Sell</a>
+        <a href="index.php/messaging" class="btn btn-primary">Messages</a>
+        <a href="index.php/registration" class="btn btn-primary">Registration</a>
+
     </div>
 </div>
