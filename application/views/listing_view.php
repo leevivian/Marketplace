@@ -51,24 +51,24 @@
                                 <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
                                 <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
                                      class="img-thumbnail" width="100px" height="100px" alt="Image not found">
-                            </div>
-                            <div>
-                                <?php
-                                ?>
-                                <h4>
+                                <div>
                                     <?php
-                                    echo $row['name'] . "<br>";
                                     ?>
-                                </h4>
-                                <p>
+                                    <h4>
+                                        <?php
+                                        echo $row['name'] . "<br>";
+                                        ?>
+                                    </h4>
+                                    <p>
+                                        <?php
+                                        echo $row['description'] . "<br>";
+                                        ?>
+                                    </p>
                                     <?php
-                                    echo $row['description'] . "<br>";
+                                    echo "<div class='btn btn-primary'><a href='#'>Contact</a></div><div class='btn btn-default'><a href='#'>More Info</a></div>";
+                                    echo "<br>";
                                     ?>
-                                </p>
-                                <?php
-                                echo "<div class='btn btn-primary'><a href='#'>Contact</a></div><div class='btn btn-default'><a href='#'>More Info</a></div>";
-                                echo "<br>";
-                                ?>
+                                </div>
                             </div>
                         </div>
                         <?php
