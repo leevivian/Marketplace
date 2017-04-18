@@ -43,31 +43,28 @@
 
                 <?php
                 if (isset($results)) {
-                echo "<br>";
-                foreach ($results as $row) {
-                ?>
-                <div class="col-sm-4 col-lg-4 col-md-4">
-                    <div class="thumbnail">
+                    echo "<br>";
+                    foreach ($results as $row) {
+                        ?>
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
                                 <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
                                 <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
                                      class="img-thumbnail" width="100px" height="100px" alt="Image not found">
-                                <p>
-                                </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                                    <?php
-                                    echo $row['name'] . "<br>";
-                                    echo $row['description'] . "<br>";
-                                    echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
-                                    echo "\n\n\n";
-                                    echo "<br>";
+                        <div class="container">
+                        <?php
+                        echo $row['name'] . "<br>";
+                        echo $row['description'] . "<br>";
+                        echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
+                        echo "<br>";
+                        ?>
+                        </div>
+                    <?php
+                    }
                 }
-                }
-            ?>
+                ?>
             </div>
 
 
