@@ -29,10 +29,10 @@
         </ol>
 
         <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
+        <div class="carousel-inner" style="height: 300px;" role="listbox">
+            <div class="item active" style="height: 300px;">
                 <a href="<?php echo base_url()?>index.php/search/category_books">
-                    <img src="<?php echo base_url()?>images/banner1.jpg" alt="banner1" width="460" height="345">
+                    <img src="<?php echo base_url()?>images/banner4.jpg" alt="banner1" width="460" height="345">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Books</h3>
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" style="height: 300px;">
                 <a href="<?php echo base_url()?>index.php/search/category_furniture">
                     <img src="<?php echo base_url()?>images/banner2.jpg" alt="banner2" width="460" height="345">
                 </a>
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" style="height: 300px;">
                 <a href="<?php echo base_url()?>index.php/search/category_electronics">
                     <img src="<?php echo base_url()?>images/banner3.jpg" alt="banner3" width="460" height="345">
                 </a>
