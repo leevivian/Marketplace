@@ -13,7 +13,7 @@ class Welcome extends CI_Controller {
         $title = array(
             'title' => 'SFSU Buy/Sell');
         $this->load->view('header', $title);
-        $this->load->view('welcome_message');
+        $this->load->view('home_view');
         $this->load->view('footer');
     }
 }

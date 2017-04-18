@@ -1,196 +1,156 @@
 <html>
 
+<title>SFSUMarketplace</title>
+
+<head>
+    <h1 style="text-align: center; margin-top: 0px;">
+        <p style="color: black">Welcome to SFSUMarketplace!</p>
+        <p style="color: black">A place to buy and sell goods with other SFSU connected people!</p>
+    </h1>
+</head>
+
+<body>
+
     <style>
-        /* Photo Banner */
-        .container {
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
             width: 100%;
-            overflow: hidden;
-            margin: 10px auto;
-            background: white;
-        }
-
-        .photobanner, .photobanner2 {
-            height: 233px;
-            width: 3550px;
-            margin-bottom: 5px;
-            font-size: 0;
-        }
-
-        .photobanner img, .photobanner2 img {
-            margin-bottom: 10px;
-            margin-right: 5px;
-            height: 180px;
-            width: 180px;
-        }
-
-        .photobanner img  {
-            -webkit-transition: all 0.5s ease;
-            -moz-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            -ms-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-        }
-
-        .photobanner img:hover {
-            -webkit-transform: scale(1.2);
-            -moz-transform: scale(1.2);
-            -o-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            transform: scale(1.2);
-            cursor: pointer;
-
-            -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-            -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-            box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
-        }
-
-
-        /*keyframe animations*/
-        .first {
-            -webkit-animation: bannermove 30s linear infinite;
-            -moz-animation: bannermove 30s linear infinite;
-            -ms-animation: bannermove 30s linear infinite;
-            -o-animation: bannermove 30s linear infinite;
-            animation: bannermove 30s linear infinite;
-        }
-
-        @keyframes "bannermove" {
-            0% {margin-left: 0px;}
-            100% {margin-left: -2130px;}
-        }
-
-        @-moz-keyframes bannermove {
-            0% {margin-left: 0px;}
-            100% {margin-left: -2130px;}
-        }
-
-        @-webkit-keyframes "bannermove" {
-            0% {margin-left: 0px;}
-            100% {margin-left: -2130px;}
-        }
-
-        @-ms-keyframes "bannermove" {
-            0% {margin-left: 0px;}
-            100% {margin-left: -2130px;}
-        }
-
-        @-o-keyframes "bannermove" {
-            0% {margin-left: 0px;}
-            100% {margin-left: -2130px;}
-        }
-
-        .second {
-            -webkit-animation: bannermoves 30s linear infinite;
-            -moz-animation: bannermoves 30s linear infinite;
-            -ms-animation: bannermoves 30s linear infinite;
-            -o-animation: bannermoves 30s linear infinite;
-            animation: bannermoves 30s linear infinite;
-        }
-
-        @keyframes "bannermoves" {
-            0% {margin-left: -2130px;}
-            100% {margin-left: 0px;}
-        }
-
-        @-moz-keyframes bannermoves {
-            0% {margin-left: -2130px;}
-            100% {margin-left: 0px;}
-        }
-
-        @-webkit-keyframes "bannermoves" {
-            0% {margin-left: -2130px;}
-            100% {margin-left: 0px;}
-        }
-
-        @-ms-keyframes "bannermoves" {
-            0% {margin-left: -2130px;}
-            100% {margin-left: 0px;}
-        }
-
-        @-o-keyframes "bannermoves" {
-            0% {margin-left: -2130px;}
-            100% {margin-left: 0px;}
+            margin: auto;
         }
     </style>
-<title>SFSUMarketplace</title>
-    <head>
-        <h1 style="text-align: center;">
-            <p>Welcome to SFSUMarketplace!</p>
-            <p>A place to buy and sell goods with other SFSU connected people!</p>
-        </h1>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <style>
-            .carousel-inner > .item > img,
-            .carousel-inner > .item > a > img {
-                width: 750px;
-                height: 380px;
-                margin: auto;
-            }
-        </style>
-    </head>
-    <body>
 
-    <div class="container" style="padding-bottom: 30px;">
-        <br>
-        <div id="myCarousel" class="carousel slide" style="width: 750px; margin:auto;" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
+<div class="container-carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <!-- <img src="http://localhost:8888/images/c1.jpg" alt="Picture" width="350" height="350"> -->
-                    <img src="http://sfsuse.com/~vlee1/images/c1.jpg" alt="Picture" width="460" height="350">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a href="<?php echo base_url()?>index.php/search/category_books">
+                    <img src="<?php echo base_url()?>images/banner1.jpg" alt="banner1" width="460" height="345">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Books</h3>
+                    <p>...Browse textbooks and other books other students are selling!</p>
                 </div>
-
-                <div class="item">
-                    <img src="http://sfsuse.com/~vlee1/images/c2.jpg" alt="Chania" width="460" height="350">
-                </div>
-
-                <div class="item">
-                    <img src="http://sfsuse.com/~vlee1/images/c3.jpg" alt="Flower" width="460" height="350">
-                </div>
-
             </div>
 
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
+            <div class="item">
+                <a href="<?php echo base_url()?>index.php/search/category_furniture">
+                    <img src="<?php echo base_url()?>images/banner2.jpg" alt="banner2" width="460" height="345">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Furniture</h3>
+                    <p>Get your hands on some rad furniture at low prices!</p>
+                </div>
+            </div>
 
-    <div class="container">
-        <div class="photobanner">
-            <img class="first" src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder.png">
-            <img src="http://sfsuse.com/~vlee1/images/placeholder2.png">
+            <div class="item">
+                <a href="<?php echo base_url()?>index.php/search/category_electronics">
+                    <img src="<?php echo base_url()?>images/banner3.jpg" alt="banner3" width="460" height="345">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Electronics</h3>
+                    <p>Get the latest technology in the city!</p>
+                </div>
+            </div>
+
         </div>
 
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+</div>
 
-    </body>
+    <div class="container-carousel">
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 style="color:black">Recent Listings</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
+                    <img src="<?php echo base_url()?>images/b1.jpg" alt="" style="height: 200px">
+                    <div class="caption" style="176px;">
+                        <h4>CSC675 Intro to Database Systems</h4>
+                        <p>$20.00</p>
+                        <p>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
+                    <img src="<?php echo base_url()?>images/b2.jpg" alt="" style="height: 200px">
+                    <div class="caption">
+                        <h4>CSC415 Operating Systems</h4>
+                        <p>$35.00</p>
+                        <p>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
+                    <img src="<?php echo base_url()?>images/b3.jpg" alt="" style="height: 200px">
+                    <div class="caption">
+                        <h4>Harry Potter and the Half-Blood Prince</h4>
+                        <p>$15.00</p>
+                        <p>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail" style="min-height: 386px; max-height: 386px;">
+                    <img src="<?php echo base_url()?>images/b4.jpg" alt="" style="height: 200px">
+                    <div class="caption" style="176px;">
+                        <h4>French for Dummies Audio Set</h4>
+                        <p>$20.00</p>
+                        <p>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+
+    .container-carousel {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+</style>
 
     <?php
     /**
