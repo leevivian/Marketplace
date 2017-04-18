@@ -13,14 +13,17 @@ class Messaging extends CI_Controller{
         $messages = $this->messaging_model->getMessages($username);
         $data['messages'] = $messages;
         
-        $title = array(
-            'title' => 'Messaging');
-        $this->load->view('header', $title);
+        $this->load->view('header');
         $this->load->view('messaging/messaging_view', $data);
         $this->load->view('footer');
     }
     
-    public function open() {
+    public function open($messageid) {
+        $username = "Admin";
+        $data['message'] = $this->messaging_model->openMessage($messageid);
         
+        $this->load->view('header');
+        $this->load->view('messaging/messaging_view', $data);
+        $this->load->view('footer');
     }
 }
