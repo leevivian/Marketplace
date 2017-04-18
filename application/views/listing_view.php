@@ -46,16 +46,26 @@
                     echo "<br>";
                     foreach ($results as $row) {
                         ?>
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
+                        <div class="col-sm-4 col-lg-4 col-md-4" style="color: #2b542c">
+                            <div class="thumbnail" style="color: #00CC00">
                                 <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
                                 <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
                                      class="img-thumbnail" width="100px" height="100px" alt="Image not found">
                             </div>
-                            <div class="container">
+                            <div class="container" style="color: #5a0099">
                                 <?php
-                                echo $row['name'] . "<br>";
-                                echo $row['description'] . "<br>";
+                                ?>
+                                <h4>
+                                    <?php
+                                    echo $row['name'] . "<br>";
+                                    ?>
+                                </h4>
+                                <p>
+                                    <?php
+                                    echo $row['description'] . "<br>";
+                                    ?>
+                                </p>
+                                <?php
                                 echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
                                 echo "<br>";
                                 ?>
