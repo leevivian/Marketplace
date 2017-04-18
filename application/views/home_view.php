@@ -31,8 +31,8 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <a href="<?php echo base_url()?>index.php/search/category" name="post">
-                    <img src="<?php echo base_url()?>images/banner1.jpg" alt="car2" width="460" height="345">
+                <a href="<?php echo base_url()?>index.php/search/category_books">
+                    <img src="<?php echo base_url()?>images/banner1.jpg" alt="banner1" width="460" height="345">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Books</h3>
@@ -41,15 +41,19 @@
             </div>
 
             <div class="item">
-                <img src="<?php echo base_url()?>images/banner2.jpg" alt="car1" width="460" height="345">
+                <a href="<?php echo base_url()?>index.php/search/category_furniture">
+                    <img src="<?php echo base_url()?>images/banner2.jpg" alt="banner2" width="460" height="345">
+                </a>
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Furniture</h3>
-                    <p>Get your bands on some rad furniture at low prices!</p>
+                    <p>Get your hands on some rad furniture at low prices!</p>
                 </div>
             </div>
 
             <div class="item">
-                <img src="<?php echo base_url()?>images/banner3.jpg" alt="car3" width="460" height="345">
+                <a href="<?php echo base_url()?>index.php/search/category_electronics">
+                    <img src="<?php echo base_url()?>images/banner3.jpg" alt="banner3" width="460" height="345">
+                </a>
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Electronics</h3>
                     <p>Get the latest technology in the city!</p>
