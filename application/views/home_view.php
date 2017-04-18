@@ -31,7 +31,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <a href="<?php echo base_url()?>index.php/search/search_books">
+                <a href="<?php echo base_url()?>index.php/search/category" name="post">
                     <img src="<?php echo base_url()?>images/banner1.jpg" alt="car2" width="460" height="345">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
