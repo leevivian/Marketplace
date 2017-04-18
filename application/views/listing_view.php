@@ -65,8 +65,8 @@
                                     <?php
                                     echo "<br>";
                                     ?>
-                                <a class="btn btn-primary" target="_blank" href="#"> Contact </a>
-                                <a class="btn btn-default" target="_blank" href="#"> More Info </a>
+                                <a class="btn btn-primary" target="_blank" href="<?php echo base_url()?>index.php/messaging"> Contact </a>
+                                <a class="btn btn-default" target="_blank" href="<?php echo base_url()?>index.php/individual_listing"> More Info </a>
                             </div>
                         </div>
                         <?php
