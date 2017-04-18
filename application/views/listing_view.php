@@ -43,39 +43,38 @@
 
                 <?php
                 if (isset($results)) {
-                echo "<br>";
-                foreach ($results as $row) {
+                    echo "<br>";
+                    foreach ($results as $row) {
+                        ?>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
+                                <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
+                                     class="img-thumbnail" width="100px" height="100px" alt="Image not found">
+                            </div>
+                            <div class="container">
+                                <?php
+                                ?>
+                                <h4>
+                                    <?php
+                                    echo $row['name'] . "<br>";
+                                    ?>
+                                </h4>
+                                <p>
+                                    <?php
+                                    echo $row['description'] . "<br>";
+                                    ?>
+                                </p>
+                                <?php
+                                echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
+                                echo "<br>";
+                                ?>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                }
                 ?>
-                <div class="col-sm-4 col-lg-4 col-md-4">
-                    <div class="thumbnail">
-                        <!-- I added the link here for the images. It's really a rough draft, but it is working on my machine. -->
-                        <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>"
-                             class="img-thumbnail" width="100px" height="100px" alt="Image not found">
-                    </div>
-                    <div>
-                        <?php
-                        ?>
-                        <h4>
-                            <?php
-                            echo $row['name'] . "<br>";
-                            ?>
-                        </h4>
-                        <p>
-                            <?php
-                            echo $row['description'] . "<br>";
-                            ?>
-                        </p>
-                        <?php
-                        echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
-                        echo "<br>";
-                        ?>
-                    </div>
-                    <?php
-                    }
-                    }
-                    ?>
-                </div>
-
             </div>
 
 
