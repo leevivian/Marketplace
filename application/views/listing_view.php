@@ -66,7 +66,7 @@
                                     ?>
                                 </p>
                                 <?php
-                                echo "<div class='caption'><a href='#' class='btn btn-primary'>Message</a></div><div class='caption'><a href='#' class='btn btn-default'>More Info</a></div>";
+                                echo "<div class='btn btn-primary'><a href='#'>Contact</a></div><div class='btn btn-default'><a href='#'>More Info</a></div>";
                                 echo "<br>";
                                 ?>
                             </div>
