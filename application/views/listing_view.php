@@ -70,9 +70,11 @@
                                 echo "<br>";
                                 ?>
                             </div>
-                        </div>
                         <?php
                     }
+                    ?>
+                    </div>
+                <?php
                 }
                 ?>
             </div>
