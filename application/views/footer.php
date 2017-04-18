@@ -4,7 +4,7 @@
 
             <a style="font-size: 14px;" href="<?php echo base_url() ?>index.php/about">About the Team</a>
             <p>
-                <a style="font-size: 14px;" href="#">Contact</a>
+                <a style="font-size: 14px;" href="<?php echo base_url() ?>index.php/about">Contact</a>
             </p>
 
         <div>

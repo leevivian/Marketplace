@@ -107,7 +107,7 @@
                         <h4>CSC415 Operating Systems</h4>
                         <p>$35.00</p>
                         <p>
-                            <a href="#" class="btn btn-default">More Info</a>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                         <h4>Harry Potter and the Half-Blood Prince</h4>
                         <p>$15.00</p>
                         <p>
-                            <a href="#" class="btn btn-default">More Info</a>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                         <h4>French for Dummies Audio Set</h4>
                         <p>$20.00</p>
                         <p>
-                            <a href="#" class="btn btn-default">More Info</a>
+                            <a href="<?php echo base_url()?>index.php/individual_listing" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
