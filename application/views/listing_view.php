@@ -18,7 +18,7 @@
                 ?> Items</h1>
 
             <!-- Listing Content -->
-            <div class="col-sm-8 page-content col-thin-left">
+            <div class="col-sm-12 page-content">
                 <div class="category-list">
                     <div class="tab-box ">
 
@@ -60,7 +60,7 @@
                                     </h4>
                                     <p>
                                         <?php
-                                        echo $row['description'] . "<br>";
+                                        echo "$" . $row['price'] . "<br>";
                                         ?>
                                     </p>
                                     <?php
