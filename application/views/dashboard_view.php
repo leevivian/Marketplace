@@ -80,7 +80,7 @@
                     <i class="fa fa-comments-o fa-3x" aria-hidden="true"></i>
                 </div>
 
-                <a href="#" class="col-xs-9 icon-description">
+                <a href="<?php echo base_url()?>index.php/messaging" class="col-xs-9 icon-description">
                     <div>
                         <span class="pull-left panel-description">Messages</span>
                         <span class="pull-right panel-description">
