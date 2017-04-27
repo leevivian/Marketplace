@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
           <!-- Search Bar and Menu Buttons-->
-    <div class="row" style="display:inline-block; width: 60%; margin: 0 auto; border: 3px solid blue;">
+    <div class="row" style="display:inline-block; width: 60%; ">
         <div class="col-sm-8" style="bottom: 10px; position:relative;  width:100%; color: black; text-align: center; padding-top: 10px; padding-bottom: 10px;">
             <div class="dropdown" name="category">
 
@@ -27,18 +27,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->helper('form');
             echo form_open('search/execute_search'); ?>
             <form>
-                <select name="Category" size="1" style="height: auto;">
-                    <option selected value="<?php if (isset($category)) {
+                <select name="Condition" size="1" style="width: auto;">
+                    <option selected value="<?php
+                    if (isset($category)) {
                         echo $category;
                     } else {
-                        echo "All";
-                    } ?>">
-                        <?php
-                        if (isset($category)) {
-                            echo $category;
-                        } else {
-                            echo "All";
-                        } ?>
+                        echo "New";
+                    }
+                    ?>">
+                                <?php
+                                if (isset($category)) {
+                                    echo $category;
+                                } else {
+                                    echo "New";
+                                }
+                                ?>
+                    </option>
+                    <option value="New">New</option>
+                    <option value="Old">Old</option>
+                    <option value="Refurbished">Refurbished</option>
+                </select>
+                <select name="Category" size="1" style="height: auto;">
+                    <option selected value="<?php
+                            if (isset($category)) {
+                                echo $category;
+                            } else {
+                                echo "All";
+                            }
+                            ?>">
+                                <?php
+                                if (isset($category)) {
+                                    echo $category;
+                                } else {
+                                    echo "All";
+                                }
+                                ?>
                     </option>
                     <option value="All">All</option>
                     <option value="Furniture">Furniture</option>
@@ -46,25 +69,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <option value="Books">Books</option>
                     <option value="Other">Other</option>
                 </select>
-                <select name="Condition" size="1" style="width: auto;">
-                    <option selected value="<?php if (isset($category)) {
-                        echo $category;
-                    } else {
-                        echo "New";
-                    } ?>">
-                        <?php
-                        if (isset($category)) {
-                            echo $category;
-                        } else {
-                            echo "New";
-                        } ?>
-                    </option>
-                    <option value="New">New</option>
-                    <option value="Old">Old</option>
-                    <option value="Refurbished">Refurbished</option>
-                </select>
-                <input type="text" style="width: 40%;" name="searchquery"/>
-                <input type="submit" name="submit" value="Search"/>
+                <input type="text" style="width: 50%;" name="searchquery"/>
+                <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
             </form>
         </div>
     </div>
