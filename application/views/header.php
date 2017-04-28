@@ -18,8 +18,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
           <!-- Search Bar and Menu Buttons-->
-    <div class="row" style="display:inline-block; width: 60%; ">
-        <div class="col-sm-8" style="bottom: 10px; position:relative;  width:100%; color: black; text-align: center; padding-top: 10px; padding-bottom: 10px;">
+    <div class="row" style="margin: 0px auto; display:inline-block; width: 60%; ">
+        <div class="col-sm-8" style=" bottom: 10px; position:relative;  width:100%; color: black; text-align: center; padding-top: 10px; padding-bottom: 10px;">
             <div class="dropdown" name="category">
 
             </div>
@@ -166,7 +166,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             background-color: #ffffff; /* White */
             color: #555555;
         }
-
+        
         .bg-4 {
             background-color: #2f2f2f; /* Black Gray */
             color: #fff;
