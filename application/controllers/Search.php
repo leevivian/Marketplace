@@ -47,6 +47,15 @@ class Search extends CI_Controller{
         $this->load->view('listing_view', $data);
         $this->load->view('footer');
     }
+
+    public function load_details(){
+        $id = $this->input->post('itemid');
+        $data['results'] = $this->search_model->get_details($id);
+
+        $this->load->view('listingPage_view', $data);
+        $this->load->view('footer');
+
+    }
     
     public function load_description(){
         //loads the view for the item description

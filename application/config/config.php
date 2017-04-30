@@ -24,7 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://sfsuse.com/~sp17g12';
+$config['base_url'] = 'http://sfsuse.com/~aculanay';
+
 
 /*
 |--------------------------------------------------------------------------

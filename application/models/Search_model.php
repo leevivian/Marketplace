@@ -39,4 +39,14 @@ class Search_model extends CI_Model {
 
     }
 
+    public function get_details($id){
+
+        $this->db->from('Items');
+        $this->db->where('itemid', $id);
+
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
+
 }

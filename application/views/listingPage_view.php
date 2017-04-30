@@ -8,6 +8,9 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Antique Wizard's Hat
+                <?php
+                    echo $results['title'];
+                ?>
                 <!-- <small></small> -->
             </h1>
         </div>

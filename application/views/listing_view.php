@@ -44,6 +44,7 @@
                 if (isset($results)) {
                     echo "<br>";
                     foreach ($results as $row) {
+                        $id = $row['itemid'];
                         ?>
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
@@ -66,7 +67,10 @@
                                     echo "<br>";
                                     ?>
                                 <a class="btn btn-primary" target="_blank" href="<?php echo base_url()?>index.php/messaging"> Contact </a>
-                                <a class="btn btn-default" target="_blank" href="<?php echo base_url()?>index.php/individual_listing"> More Info </a>
+                                <?php form_open('search/load_details'); ?>
+                                <form>
+                                    <button class="btn btn-primary" type="submit" name="itemid" value="<?php echo $id ?>">More Info</button>
+                                </form>
                             </div>
                         </div>
                         <?php
