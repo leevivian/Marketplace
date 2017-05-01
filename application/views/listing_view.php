@@ -75,9 +75,9 @@
                                     <input type="hidden" name=itemid value = "<?php echo $id ?>" />
                                     <button class="btn btn-primary" type="submit" >More Info</button>
                                 </form>
-                            </div>
 
-                        </div>
+
+                            </div>
                         </div>
                         <?php
                     }

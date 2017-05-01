@@ -32,12 +32,15 @@
 
         <div class="col-md-4">
             <h3>About the Product</h3>
-            <p>An old, mysterious hat, passed down for centuries.</p>
-            <ul>
-                <li>Very durable</li>
-                <li>Fashionable</li>
-                <li>Judgmental</li>
-            </ul>
+            <p>
+                <?php
+                if(isset($results)){
+                    foreach($results as $item){
+                        echo $item['description'];
+                    }
+                }
+                ?>
+            </p>
 
             <a href="<?php echo base_url()?>index.php/messaging" class="btn btn-default" style="width:80%; font-size: 20px; background-color: #4089d4; color: white;">Contact Seller</a>
 
