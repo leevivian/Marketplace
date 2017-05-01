@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <option value="Books">Books</option>
                     <option value="Other">Other</option>
                 </select>
-                <input type="text" style="width: 50%;" name="searchquery"/>
+                <input type="text" style="width: 45%;" name="searchquery"/>
                 <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
             </form>
         </div>
