@@ -2,14 +2,20 @@
 
 
 <body>
+
+
 <div class="container">
 
     <!-- Item Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Antique Wizard's Hat
+            <h1 class="page-header">
                 <?php
-                    echo $results['title'];
+                if(isset($results)){
+                    foreach($results as $item){
+                        echo $item['name'];
+                    }
+                }
                 ?>
                 <!-- <small></small> -->
             </h1>
@@ -21,7 +27,7 @@
     <div class="row">
 
         <div class="col-md-6">
-            <img class="img-responsive" src="<?php echo base_url()?>images/temp_images/sortinghat.jpg" alt="">
+            <img class="img-responsive" src="<?php echo base_url('images/item_images/' . $item['image']); ?>" alt="">
         </div>
 
         <div class="col-md-4">

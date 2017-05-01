@@ -48,10 +48,14 @@ class Search extends CI_Controller{
         $this->load->view('footer');
     }
 
+    /* Gets itemid from listing_view.php, and calls get_details function
+     * in the Search model. Takes data that returns from get_details
+     * function, and passes it to listingPage_view.php */
     public function load_details(){
-        $id = $this->input->post('itemid');
-        $data['results'] = $this->search_model->get_details($id);
 
+        $id = $this->input->post('itemid');
+        $data['results']= $this->search_model->get_details($id);
+        $this->load->view('header');
         $this->load->view('listingPage_view', $data);
         $this->load->view('footer');
 

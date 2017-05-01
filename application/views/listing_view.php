@@ -67,11 +67,17 @@
                                     echo "<br>";
                                     ?>
                                 <a class="btn btn-primary" target="_blank" href="<?php echo base_url()?>index.php/messaging"> Contact </a>
-                                <?php form_open('search/load_details'); ?>
-                                <form>
-                                    <button class="btn btn-primary" type="submit" name="itemid" value="<?php echo $id ?>">More Info</button>
+
+                                <!-- Creates a form with a hidden field that has the itemid number in it.
+                                     When button is clicked, calls the load_details function in the Search
+                                     controller -->
+                                <form action = "load_details" method ="post">
+                                    <input type="hidden" name=itemid value = "<?php echo $id ?>" />
+                                    <button class="btn btn-primary" type="submit" >More Info</button>
                                 </form>
                             </div>
+
+                        </div>
                         </div>
                         <?php
                     }

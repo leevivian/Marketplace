@@ -39,7 +39,11 @@ class Search_model extends CI_Model {
 
     }
 
+    /* Queries database, looking for the item with the
+     * unique itemid number it is given, returns result
+     * to the search model's load_details function*/
     public function get_details($id){
+        $this->db->select('*');
 
         $this->db->from('Items');
         $this->db->where('itemid', $id);
