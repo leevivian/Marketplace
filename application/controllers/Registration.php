@@ -20,6 +20,7 @@ class Registration extends CI_Controller
         $this->load->view('header', $title);
         $this->load->view('registration_view');
         $this->load->view('footer');
+        $this->register();
     }
 
     public function register()

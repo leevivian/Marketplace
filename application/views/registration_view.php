@@ -52,32 +52,32 @@
         ?>
         <div class="col-md-8 col-md-offset-2" id="formrow" >
 
-            <form class="form-horizontal">
+            <form class="form-horizontal" method="post">
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">Username: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="username" placeholder="Username">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">First Name: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                        <input type="text" class="form-control" id="first-name" name="firstname" placeholder="First Name">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">Last Name: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                        <input type="text" class="form-control" id="last-name" name="lastname" placeholder="Last Name">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="password">Password: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="password" placeholder="Enter Password">
+                        <input type="text" class="form-control" id="password" name="password" placeholder="Enter Password">
                     </div>
                 </div>
 
