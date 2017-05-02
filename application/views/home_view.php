@@ -4,6 +4,7 @@
 
 <head>
     <h1 style="text-align: center; margin-top: 0px;">
+        <br>
         <p style="color: black">Welcome to SFSUMarketplace!</p>
         <p style="color: black">The online market to buy and sell goods with other SFSU connected people!</p>
     </h1>

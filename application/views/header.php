@@ -17,24 +17,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a class="navbar-brand2" href="<?php echo base_url()?>index.php/home"><img src="<?php echo base_url()?>images/logo.png" style="height: 45px;"></a>
         </div>
 
-          <!-- Search Bar and Menu Buttons-->
-    <div class="row" style="margin: 0px auto; display:inline-block; width: 60%; ">
-        <div class="col-sm-8" style=" bottom: 10px; position:relative;  width:100%; color: black; text-align: center; padding-top: 10px; padding-bottom: 10px;">
-            <div class="dropdown" name="category">
+        <!-- Search Bar and Menu Buttons-->
 
-            </div>
-            <?php
-            $this->load->helper('form');
-            echo form_open('search/execute_search'); ?>
-            <form>
-                <select name="Condition" size="1" style="width: auto;">
-                    <option selected value="<?php
-                    if (isset($category)) {
-                        echo $category;
-                    } else {
-                        echo "New";
-                    }
-                    ?>">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+
+            <div style="margin: 0px auto; width: 60%; ">
+                <div class="col-sm-8" style="position:relative;  width:100%; color: black; text-align: center; padding-top: 10px;">
+                    <div class="dropdown" name="category">
+
+                    </div>
+                    <?php
+                    $this->load->helper('form');
+                    echo form_open('search/execute_search'); ?>
+                    <form>
+                        <select name="Condition" size="1" style="width: auto; height: 28px;">
+                            <option selected value="<?php
+                            if (isset($category)) {
+                                echo $category;
+                            } else {
+                                echo "New";
+                            }
+                            ?>">
                                 <?php
                                 if (isset($category)) {
                                     echo $category;
@@ -42,13 +46,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     echo "New";
                                 }
                                 ?>
-                    </option>
-                    <option value="New">New</option>
-                    <option value="Old">Old</option>
-                    <option value="Refurbished">Refurbished</option>
-                </select>
-                <select name="Category" size="1" style="height: auto;">
-                    <option selected value="<?php
+                            </option>
+                            <option value="New">New</option>
+                            <option value="Old">Old</option>
+                            <option value="Refurbished">Refurbished</option>
+                        </select>
+                        <select name="Category" size="1" style="height: 28px;">
+                            <option selected value="<?php
                             if (isset($category)) {
                                 echo $category;
                             } else {
@@ -62,23 +66,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     echo "All";
                                 }
                                 ?>
-                    </option>
-                    <option value="All">All</option>
-                    <option value="Furniture">Furniture</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Books">Books</option>
-                    <option value="Other">Other</option>
-                </select>
-                <input type="text" style="width: 45%;" name="searchquery"/>
-                <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
-            </form>
-        </div>
-    </div>
-        
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="display:inline-block; float: right; width: 18%;" >
-            
-            <ul class="nav navbar-nav navbar-right" >
+                            </option>
+                            <option value="All">All</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Books">Books</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <input type="text" style="width: 45%;" name="searchquery"/>
+                        <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
+                    </form>
+                </div>
+            </div>
+
+
+            <ul class="nav navbar-nav navbar-right" style="padding-top: 9px;">
                 <div class="btn-group" role="group" aria-label="...">
                     <a class="btn btn-sm btn-success" href="<?php echo base_url()?>index.php/upload_item">Sell</a></button>
                     <a href="<?php echo base_url()?>index.php/messaging" type="button" class="btn btn-sm btn-default">
