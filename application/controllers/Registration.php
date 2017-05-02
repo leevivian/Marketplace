@@ -23,7 +23,7 @@ class Registration extends CI_Controller
         // Validate user input field constraints are not violated
         if($this->input->post('register-submit'))
             $this->form_validation->set_rules('username', 'username', 'required');
-            $this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_email_check');
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
             $this->form_validation->set_rules('password', 'password', 'required');
             $this->form_validation->set_rules('password-confirm', 'confirm password', 'required|matches[password]');
 
