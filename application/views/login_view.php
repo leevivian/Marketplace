@@ -34,16 +34,32 @@
 
 <body>
 
+    <!-- This ugly block of code handles when the user logs in or out. Inside of the if/else statements can be changed to make it appear better -->
+    <?php
+    if(isset($login)) {
+        if($login == 1) {
+            // User has been logged in.
+            echo "Logged in successfully.";
+        } else if($login == 2) {
+            // User has been logged out.
+            echo "Logged out successfully.";
+        } else {
+            // User entered wrong username or password.
+            echo "Error logging in.";
+        }
+    } else {
+    ?>
+    
 <div id="loginform" class="container">
 
-    <?php echo form_open('Login');?>
+    <?php echo form_open('Login/submit');?>
     <div class="row" id="formrow">
         <form class="form-horizontal">
 
             <div class="form-group row">
                 <label class="control-label col-md-2" for="username">Username: </label>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" id="username" placeholder="Username">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
                 </div>
                 <div id="forgotinfo">
                     <div class="col-md-offset-2 col-md-10">
@@ -55,7 +71,7 @@
             <div class="form-group row">
                 <label class="control-label col-md-2" for="password">Password: </label>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" id="password" placeholder="Enter Password">
+                    <input type="text" class="form-control" name="password" placeholder="Enter Password">
                 </div>
 
                 <div id="forgotinfo">
@@ -69,7 +85,7 @@
             <div class="form-group row">
                 <div style="width: 47%; padding-left:12px;">
                     <a href="<?php echo base_url()?>index.php/home" class="btn btn-default" type="button" id="Cancel" >Cancel</a></button>
-                    <a href="<?php echo base_url()?>index.php/home" type ="button" id= "submit" class="btn btn-default" style="float: right;">Login</a>
+                    <input type = "submit" name = "submit" value="Login" style="float: right;">
                 </div>
             </div>
         </form>
@@ -82,4 +98,5 @@
 </div>
 
 </body>
+    <?php } ?>
 </html>

@@ -47,7 +47,6 @@ class Messaging extends CI_Controller{
     public function send_message() {
         $username = "Admin";
         
-        
         $recipient = $this->input->post('recipient');
         $subject = $this->input->post('subject');
         $contents = $this->input->post('contents');
