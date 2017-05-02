@@ -14,4 +14,11 @@ class Messaging_model extends CI_Model {
         $query = $this->db->query("SELECT * FROM messages WHERE messageid = '$messageid'");
         return $query->result_array();
     }
+    
+    public function sendMessage($sender, $recipient, $subject, $contents) {
+        $timestamp = time();
+        $query = "INSERT INTO Messages (sender, recipient, subject, contents, timestamp) VALUES (".$this->db->escape($sender).", "
+                .$this->db->escape($recipient).", ".$this->db->escape($subject).", ".$this->db->escape($contents).", ".$this->db->escape($timestamp).")";
+        $this->db->query($query);
+    }
 }

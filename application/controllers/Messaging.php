@@ -26,4 +26,36 @@ class Messaging extends CI_Controller{
         $this->load->view('messaging/messaging_view', $data);
         $this->load->view('footer');
     }
+    
+    public function send($recipient = NULL, $subject = NULL) {
+        $this->load->helper('form');
+        
+        if(isset($recipient)) {
+            $data['recipient'] = $recipient;
+        }
+        if(isset($itemName)) {
+            $data['subject'] = $subject;
+        }
+        
+        $this->load->view('header');
+        $this->load->view('messaging/send_message', $data);
+        $this->load->view('footer');
+    }
+    
+    public function send_message() {
+        $username = "Admin";
+        
+        
+        $recipient = $this->input->post('recipient');
+        $subject = $this->input->post('subject');
+        $contents = $this->input->post('contents');
+
+        
+        $this->messaging_model->sendMessage($username, $recipient, $subject, $contents);
+
+        $data['sent'] = 1;
+        $this->load->view('header', $title);
+        $this->load->view('messaging/send_message', $data);
+        $this->load->view('footer');
+    }
 }
