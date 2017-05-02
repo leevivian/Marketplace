@@ -84,7 +84,7 @@
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="password">Confirm Password: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="password-confirm" placeholder="Confirm Password">
+                        <input type="text" class="form-control" id="password-confirm" name="password-confirm" placeholder="Confirm Password">
                     </div>
                 </div>
 
