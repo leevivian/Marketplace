@@ -1,6 +1,6 @@
 <div class="container-fluid bg-3 text-left">
     <?php
-    if (isset($sent)) {
+    if(isset($sent)):
         switch ($sent) {
             case 1:
                 echo "Message Sent.<br>";
@@ -16,23 +16,22 @@
                 echo "<a href=\"" . base_url() . "index.php/messaging\" class=\"btn btn-primary\">Back to Inbox</a>";
                 break;
         }
-    } else {
+    else:
         if (!isset($recipient)) {
             $recipient = "";
         }
         if (!isset($subject)) {
             $subject = "";
         }
-        echo form_open('messaging/send_message');
-        echo "<form>";
-        echo "TO:";
-        echo "<input type=\"text\" name=\"recipient\" value=$recipient><br>";
-        echo "Subject:";
-        echo "<input type=\"text\" name=\"subject\" value=$subject><br>";
-        echo "Contents:";
-        echo "<input type=\"text\" name=\"contents\"><br>";
-        echo "<input type=\"submit\" name=\"submit\" value=\"submit\"/>";
-        echo "</form>";
-    }
-    ?>
+        echo form_open('messaging/send_message'); ?>
+        <form>
+        TO:
+        <input type="text" name="recipient" value=<?php echo $recipient ?>><br>
+        Subject:
+        <input type="text" name="subject" value=<?php echo $subject ?>><br>
+        Contents:
+        <input type="text" name="contents"><br>
+        <input type="submit" name="submit" value="submit"/>
+        </form>
+    <?php endif; ?>
 </div>

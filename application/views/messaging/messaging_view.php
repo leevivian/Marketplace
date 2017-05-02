@@ -16,7 +16,7 @@
             foreach($messages as $row) {
                 $dt = new DateTime();
                 $dt->setTimestamp($row['timestamp']);
-                $dt->setTimezone(new DateTimeZone('PDT'));
+                $dt->setTimezone(new DateTimeZone('America/Los_Angeles'));
                 $time = $dt->format('h:ia M j');
                 if($row['read'] == false) {
                     echo "<tr><th><a href='messaging/open/{$row['messageid']}'>O</a></th>";

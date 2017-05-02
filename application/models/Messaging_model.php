@@ -8,12 +8,12 @@ class Messaging_model extends CI_Model {
     }
 
     public function getMessages($username) {
-        $query = $this->db->query("SELECT * FROM Messages WHERE sender = '$username' OR recipient = '$username'");
+        $query = $this->db->query("SELECT * FROM Messages WHERE sender = '$username' OR recipient = '$username' ORDER BY timestamp DESC");
         return $query->result_array();
     }
 
-    public function openMessage($messageid) {
-        $query = $this->db->query("SELECT * FROM Messages WHERE messageid = '$messageid'");
+    public function openMessage($messageid, $username) {
+        $query = $this->db->query("SELECT * FROM Messages WHERE messageid = '$messageid' AND (sender = '$username' OR recipient = '$username')");
         return $query->result_array();
     }
 
