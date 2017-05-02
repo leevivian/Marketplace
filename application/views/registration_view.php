@@ -53,17 +53,6 @@
         <div class="col-md-8 col-md-offset-2" id="formrow" >
 
             <form class="form-horizontal">
-                <!--$this->input->$post can only find the name of the text field-->
-                <div class="form-group row">
-                    <label class="control-label col-md-4" for="email">SFSU Email: </label>
-                    <div class="col-md-8">
-                        <input style="text-align: left;" name="email" type="text" class="form-control" id="email" placeholder="Email"
-                               value="<?php echo set_value('email'); ?>">
-                               <?php echo form_error('email', '<div class="error">', '</div>'); ?>     
-
-                    </div>
-                </div>
-
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">Username: </label>
                     <div class="col-md-8">
@@ -99,8 +88,19 @@
                     </div>
                 </div>
 
+                <!--$this->input->$post can only find the name of the text field-->
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="email">SFSU Email: </label>
+                    <div class="col-md-8">
+                        <input style="text-align: left;" name="email" type="text" class="form-control" id="email" placeholder="Email"
+                               value="<?php echo set_value('email'); ?>">
+                                <?php echo form_error('email', '<div class="error">', '</div>'); ?>
+
+                    </div>
+                </div>
+
                 <div class="form-group row checkbox-inline" style="padding-left: 80px;">
-                    <label><input type="checkbox" value="">I have read the terms & agreements.</label>
+                    <label><input type="checkbox" style="height: 30px;" value="">I have read the terms & agreements.</label>
                 </div>
 
                 <div class="form-group row">
