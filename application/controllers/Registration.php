@@ -8,6 +8,7 @@ class Registration extends CI_Controller
         parent::__construct();
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->library(array('session', 'form_validation', 'email'));
         $this->load->database();
         $this->load->model('Registration_model');
     }
