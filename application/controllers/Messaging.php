@@ -30,6 +30,8 @@ class Messaging extends CI_Controller{
     public function send($recipient = NULL, $subject = NULL) {
         $this->load->helper('form');
         
+        $data['sender'] = 'Admin';
+        
         if(isset($recipient)) {
             $data['recipient'] = $recipient;
         }
@@ -51,10 +53,10 @@ class Messaging extends CI_Controller{
         $contents = $this->input->post('contents');
 
         
-        $this->messaging_model->sendMessage($username, $recipient, $subject, $contents);
-
-        $data['sent'] = 1;
-        $this->load->view('header', $title);
+        $result = $this->messaging_model->sendMessage($username, $recipient, $subject, $contents);
+        
+        $data['sent'] = $result;
+        $this->load->view('header');
         $this->load->view('messaging/send_message', $data);
         $this->load->view('footer');
     }

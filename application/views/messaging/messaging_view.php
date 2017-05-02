@@ -1,4 +1,5 @@
 <div class="container-fluid bg-3 text-left">
+    <a href="<?php echo base_url() ?>/index.php/messaging/send" class="btn btn-primary" style="float: right;">Send Message</a>
     <h2 style="text-decoration: underline">Inbox</h2>
     <?php
     if(isset($message)) {
