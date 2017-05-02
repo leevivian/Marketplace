@@ -21,10 +21,11 @@ class Registration extends CI_Controller
     public function register()
     {
         // Validate user input field constraints are not violated
-        $this->form_validation->set_rules('firstname', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
-        $this->form_validation->set_rules('lastname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required|matches[cpassword]|md5');
-        $this->form_validation->set_rules('password-confirm', 'Confirm Password', 'trim|required');
+        if($this->input->post('register-submit'))
+            $this->form_validation->set_rules('username', 'username', 'required');
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_email_check');
+            $this->form_validation->set_rules('password', 'password', 'required');
+            $this->form_validation->set_rules('password-confirm', 'confirm password', 'required|matches[password]');
 
         if ($this->form_validation->run() == FALSE)
         {
