@@ -80,7 +80,7 @@
                 <div class="row form-group required form-inline">
                     <div class="col-sm-4">
                         <label class="control-label" for="itemname">Title </label>
-                        <input type="text" class="form-control" id="itemName" value="<? echo set_value('username')?>" name="item-name">
+                        <input type="text" class="form-control" id="itemName" value="<?php echo set_value('item-name')?>" name="item-name">
                     </div>
 
                     <div class ="col-sm-4">
@@ -111,7 +111,7 @@
 
                 <div class="row form-group required">
                     <label class="control-label" for="description">Item Description</label>
-                    <textarea class="form-control" rows="5" id="description" value="<? echo set_value('description')?>"name="description"></textarea>
+                    <textarea class="form-control" rows="5" id="description" value="<?php echo set_value('description')?>"name="description"></textarea>
                 </div>
 
 
