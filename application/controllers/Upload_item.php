@@ -16,11 +16,21 @@ class Upload_item extends CI_Controller{
     public function index(){
 
         //loads upload_view.php
-        $title = array(
-            'title' => 'Sell An Item');
-        $this->load->view('header', $title);
-        $this->load->view('upload_view');
+        $this->load->view('header');
+
+        if (isset($this->session->login) && $this->session->login && isset($this->session->username)) {
+            $username = $this->session->username;
+            $this->load->view('upload_view');
+        } else {
+            $this->load->view('login_view');
+        }
+
         $this->load->view('footer');
+
+    }
+
+    public function upload_item(){
+
 
     }
 

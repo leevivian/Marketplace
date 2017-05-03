@@ -29,7 +29,6 @@ class Search_model extends CI_Model {
         {
             $this->db->like('name', $search);
             $this->db->or_like('description', $search);
-            $this->db->or_like('keywords', $search);
         }
         //gets results from above query
         $query = $this->db->get();
@@ -38,5 +37,20 @@ class Search_model extends CI_Model {
         return $query->result_array();
 
     }
+
+    /* Queries database, looking for the item with the
+     * unique itemid number it is given, returns result
+     * to the search model's load_details function*/
+    public function get_details($id){
+        $this->db->select('*');
+
+        $this->db->from('Items');
+        $this->db->where('itemid', $id);
+
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
+
 
 }
