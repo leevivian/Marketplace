@@ -73,7 +73,7 @@
                                      controller -->
                                 <form action = "load_details" method ="post">
                                     <input type="hidden" name=itemid value = "<?php echo $id ?>" />
-                                    <button class="btn btn-primary" type="submit" >More Info</button>
+                                   <a href="<?php echo base_url?>index.php/search/load_details?itemid=<?php echo $id?>"> <button class="btn btn-primary" type="submit" >More Info</button></a>
                                 </form>
 
 
