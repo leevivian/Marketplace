@@ -53,7 +53,7 @@ class Search extends CI_Controller{
      * function, and passes it to listingPage_view.php */
     public function load_details(){
 
-        $id = $this->uri->segment(2);
+        $id = $this->uri->segment(3);
         $data['results']= $this->search_model->get_details($id);
         $this->load->view('header');
         $this->load->view('listingPage_view', $data);
