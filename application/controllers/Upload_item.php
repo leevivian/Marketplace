@@ -29,4 +29,9 @@ class Upload_item extends CI_Controller{
 
     }
 
+    public function upload_item(){
+
+
+    }
+
 }

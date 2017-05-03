@@ -78,12 +78,12 @@
                 <div class="row form-group required form-inline">
                     <div class="col-sm-4">
                         <label class="control-label" for="itemname">Title </label>
-                        <input required=required type="text" class="form-control" id="itemName">
+                        <input required=required type="text" class="form-control" id="itemName" name="item-name">
                     </div>
 
                     <div class ="col-sm-4">
                         <label class ="control-label" for="categoryselect">Category</label>
-                        <select class="form-control" id="categoryselect">
+                        <select class="form-control" id="categoryselect" name="category-select">
                             <option value="" selected hidden>Select Category</option>
                             <option>Books</option>
                             <option>Furniture</option>
@@ -95,7 +95,7 @@
 
                     <div class ="col-sm-4">
                         <label class="control-label" for="itemcondition">Condition</label>
-                        <select class="form-control" id="itemcondition">
+                        <select class="form-control" id="itemcondition" name="item-condition">
                             <option value="" selected hidden>Select Condition</option>
                             <option>Brand New</option>
                             <option>Like New</option>
@@ -109,16 +109,9 @@
 
                 <div class="row form-group required">
                     <label class="control-label" for="description">Item Description</label>
-                    <textarea class="form-control" rows="5" id="description"></textarea>
+                    <textarea class="form-control" rows="5" id="description" name="description"></textarea>
                 </div>
 
-                <div class="row form-group form-inline">
-                    <label for="keywords">Keywords</label>
-                    <input type="text" class="form-control" id="keywords">
-                    <input type="text" class="form-control" id="keywords">
-                    <input type="text" class="form-control" id="keywords">
-                    <input type="text" class="form-control" id="keywords">
-                </div>
 
 
                 <div class="row form-group">
@@ -135,7 +128,7 @@
                 <div class="row form-group required form-inline">
                     <div class="col-sm-6">
                         <label class="control-label" for="price">Price</label>
-                        <input type="text" class="form-control" id="price">
+                        <input type="text" class="form-control" id="price" name="price">
                     </div>
 
                     <div class ="form-group required col-sm-6">
@@ -159,7 +152,7 @@
             <div align="right" class="container submitbuttons">
                 <div class="row" id="buttonrow">
                     <a href="<?php echo base_url()?>index.php/home" button class="btn btn-danger pull-left" type="button" id="Cancel">Cancel</button></a>
-                    <a href="<?php echo base_url()?>index.php/individual_listing" button class="btn btn-primary" type="button" id="submit">Submit</button></a>
+                    <button class="btn btn-primary" type="button" name="upload-item" id="submit">Submit</button>
                 </div>
             </div>
             <!-- end button row -->
