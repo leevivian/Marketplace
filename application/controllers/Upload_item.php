@@ -11,6 +11,7 @@ class Upload_item extends CI_Controller{
          *  Url helper is needed for bootstrap. */
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->model('Upload_model');
     }
 
     public function index(){
@@ -29,7 +30,20 @@ class Upload_item extends CI_Controller{
 
     }
 
-    public function upload_item(){
+    public function upload(){
+
+        $this->input->post('upload-item');
+
+        $data = array(
+            'name' => $this->input->post('item-name'),
+            'category' => $this->input->post('category-select'),
+            'condition' => $this->input->post('item-condition'),
+            'description' => $this->input->post('description'),
+            'price' => $this->input->post('price'),
+            'duration' => $this->input->post('listing-duration')
+        );
+
+        $this->Upload_model->insert_item($data);
 
 
     }

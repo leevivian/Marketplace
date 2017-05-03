@@ -73,7 +73,7 @@
 
             <!--Form's first row, containing title, condition, and category -->
 
-            <?php echo form_open('Upload_item')?>
+            <?php echo form_open('Upload_item/upload')?>
             <form>
                 <div class="row form-group required form-inline">
                     <div class="col-sm-4">
@@ -134,7 +134,7 @@
                     <div class ="form-group required col-sm-6">
                         <label class="control-label" for="listingduration">Duration</label>
 
-                        <select class="form-control" id="listingduration">
+                        <select class="form-control" id="listingduration" name="listing-duration">
                             <option>1 Day</option>
                             <option>2 Days</option>
                             <option>3 Days</option>
