@@ -152,7 +152,7 @@
             <div align="right" class="container submitbuttons">
                 <div class="row" id="buttonrow">
                     <a href="<?php echo base_url()?>index.php/home" button class="btn btn-danger pull-left" type="button" id="Cancel">Cancel</button></a>
-                    <button class="btn btn-primary" type="button" name="upload-item" id="submit">Submit</button>
+                    <button class="btn btn-primary" type="submit" name="upload-item" id="submit">Submit</button>
                 </div>
             </div>
             <!-- end button row -->
