@@ -1,6 +1,13 @@
 <?php
 
-class Upload_item extends CI_Controller{
+/**
+ * Created by PhpStorm.
+ * User: aculanay
+ * Date: 4/25/17
+ * Time: 6:46 AM
+ */
+
+class Send_message extends CI_Controller{
 
     public function __construct()
     {
@@ -16,21 +23,11 @@ class Upload_item extends CI_Controller{
     public function index(){
 
         //loads upload_view.php
-        $this->load->view('header');
-
-        if (isset($this->session->login) && $this->session->login && isset($this->session->username)) {
-            $username = $this->session->username;
-            $this->load->view('upload_view');
-        } else {
-            $this->load->view('login_view');
-        }
-
+        $title = array(
+            'title' => 'Send a message');
+        $this->load->view('header', $title);
+        $this->load->view('/messaging/sendMessage_view');
         $this->load->view('footer');
-
-    }
-
-    public function upload_item(){
-
 
     }
 

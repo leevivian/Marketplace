@@ -4,11 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <title>SFSUMarketplace</title>
 
-
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation" >
     <div class="navbar-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+        <div class="navbar-header" style="display: inline;">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -18,25 +17,91 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a class="navbar-brand2" href="<?php echo base_url()?>index.php/home"><img src="<?php echo base_url()?>images/logo.png" style="height: 45px;"></a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- Search Bar and Menu Buttons-->
 
-            <ul class="nav navbar-nav navbar-right">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+
+            <div style="margin: 0px auto; width: 60%; ">
+                <div class="col-sm-8" style="position:relative;  width:100%; color: black; text-align: center; padding-top: 10px;">
+                    <div class="dropdown" name="category">
+
+                    </div>
+                    <?php
+                    $this->load->helper('form');
+                    echo form_open('search/execute_search'); ?>
+                    <form>
+                        <select name="Condition" size="1" style="width: auto; height: 28px;">
+                            <option selected value="<?php
+                            if (isset($category)) {
+                                echo $category;
+                            } else {
+                                echo "New";
+                            }
+                            ?>">
+                                <?php
+                                if (isset($category)) {
+                                    echo $category;
+                                } else {
+                                    echo "New";
+                                }
+                                ?>
+                            </option>
+                            <option value="New">New</option>
+                            <option value="Old">Old</option>
+                            <option value="Refurbished">Refurbished</option>
+                        </select>
+                        <select name="Category" size="1" style="height: 28px;">
+                            <option selected value="<?php
+                            if (isset($category)) {
+                                echo $category;
+                            } else {
+                                echo "All";
+                            }
+                            ?>">
+                                <?php
+                                if (isset($category)) {
+                                    echo $category;
+                                } else {
+                                    echo "All";
+                                }
+                                ?>
+                            </option>
+                            <option value="All">All</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Books">Books</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <input type="text" style="width: 45%;" name="searchquery"/>
+                        <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
+                    </form>
+                </div>
+            </div>
+
+
+            <ul class="nav navbar-nav navbar-right" style="padding-top: 9px;">
                 <div class="btn-group" role="group" aria-label="...">
-                    <a class="btn btn-default" href="<?php echo base_url()?>index.php/upload_item">Sell</a></button>
-                    <a href="<?php echo base_url()?>index.php/messaging" type="button" class="btn btn-default">
+                    <a class="btn btn-sm btn-success" href="<?php echo base_url()?>index.php/upload_item">Sell</a></button>
+                    <a href="<?php echo base_url()?>index.php/messaging" type="button" class="btn btn-sm btn-default">
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </a>
 
                     <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             My Account
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo base_url()?>index.php/dashboard">Dashboard</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="<?php echo base_url()?>index.php/login">Login</a></li>
+                            
+                            <!-- I added this block of code to change the login button to logout when the user is currently logged in. -->
+                            <?php if(isset($this->session->login) && $this->session->login) : ?>
+                                <li><a href="<?php echo base_url()?>index.php/login/logout">Logout</a></li>
+                            <?php else : ?>
+                                <li><a href="<?php echo base_url()?>index.php/login">Login</a></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
@@ -49,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         .navbar-fluid {
             margin-right: auto;
             margin-left: auto;
-            width: 90%;
+            width: 95%;
         }
 
         .navbar-brand2 {
@@ -65,40 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </nav>
 
 
-    <!-- Search Bar and Menu Buttons-->
-    <div class="row">
-        <div class="col-sm-8" style="background-color: #757575 ; bottom: 10px; position:relative; width:100%; color: black; text-align: center; padding-top: 10px; padding-bottom: 10px;">
-            <div class="dropdown" name="category">
-
-            </div>
-            <?php
-            $this->load->helper('form');
-            echo form_open('search/execute_search'); ?>
-            <form>
-                <select name="Category" size="1" style="height: 40px;">
-                    <option selected value="<?php if (isset($category)) {
-                        echo $category;
-                    } else {
-                        echo "All";
-                    } ?>">
-                        <?php
-                        if (isset($category)) {
-                            echo $category;
-                        } else {
-                            echo "All";
-                        } ?>
-                    </option>
-                    <option value="All">All</option>
-                    <option value="Furniture">Furniture</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Books">Books</option>
-                    <option value="Other">Other</option>
-                </select>
-                <input type="text" style="width: 50%;" name="searchquery"/>
-                <input type="submit" name="submit" value="Search"/>
-            </form>
-        </div>
-    </div>
+  
 
 
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
@@ -142,7 +174,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             background-color: #ffffff; /* White */
             color: #555555;
         }
-
+        
         .bg-4 {
             background-color: #2f2f2f; /* Black Gray */
             color: #fff;

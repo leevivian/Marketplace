@@ -1,62 +1,122 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Nick_2
- * Date: 4/10/2017
- * Time: 7:35 PM
- *
- * Certain containers courtesy of w3schools.com
- */
-
-
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-
 <html>
     <style>
-        .form-control {
-            width: 50%;
-            text-align: center;
-
+        body{
+            color: black;
         }
+
+        .error{
+            font-size: small;
+            color: red;
+        }
+
+        label{
+            text-align: right;
+        }
+
+        #formrow{
+            margin-left: 23%;
+        }
+
+
+        input.form-control{
+            width: 50%;
+        }
+
+
+        .control-label{
+            font-size: 15px;
+        }
+
+
     </style>
 
+    <script>
+        function myFunction() {
+            document.getElementById("myText").placeholder = "Type name here..";
+        }
+    </script>
 
-<div class="container-fluid text-center">
-    <div class="row content">
-        <div class="col-sm-12 text-center", style="color:#000000">
-            <h1>Registration</h1>
-            <p>Please enter your account information below.</p>
-            <!--email input-->
-            <div class="form-group">
-                <label for="user_email">Email:</label>
-                <input type="text" class="form-control" id="user_email">
-            </div>
-            <!--username input -->
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" class="form-control" id="usernamer">
-            </div>
-            <!--password input-->
-            <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="pwd">
-            </div>
-            <!--password check-->
-            <div class="form-group">
-                <label for="pwd_check">Please Re-Enter Password:</label>
-                <input type="password" class="form-control" id="pwd_check">
-            </div>
-            <!--terms & agreements-->
-            <div class="checkbox">
-                <label><input type="checkbox" value="">I have read the terms & agreements.</label>
-            </div>
-            <!--clear form button-->
-            <button type="button" class="btn btn-primary">Clear</button>
-            <!--submit button-->
-            <button type="button" class="btn btn-primary">Submit</button>
+    <head>
+    <h3 style="text-align: center; margin-top: 0px; color:black;">
+        Registration
+    </h3>
+    <p style ="text-align: center;">Please enter your account information below</p>
+</head>
+
+<body>
+
+    <div id="registration-form" class="container">
+        <?php
+        $this->load->helper('form');
+        echo form_open('Registration');
+        ?>
+        <div class="col-md-8 col-md-offset-2" id="formrow" >
+
+            <form class="form-horizontal" method="post">
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="username">Username: </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="username">First Name: </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="first-name" name="firstname" placeholder="First Name">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="username">Last Name: </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="last-name" name="lastname" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="password">Password: </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="password" name="password" placeholder="Enter Password">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="password">Confirm Password: </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="password-confirm" name="password-confirm" placeholder="Confirm Password">
+                    </div>
+                </div>
+
+                <!--$this->input->$post can only find the name of the text field-->
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="email">SFSU Email: </label>
+                    <div class="col-md-8">
+                        <input style="text-align: left;" name="email" type="text" class="form-control" id="email" placeholder="Email"
+                               value="<?php echo set_value('email'); ?>">
+                                <?php echo form_error('email', '<div class="error">', '</div>'); ?>
+
+                    </div>
+                </div>
+
+                <div class="form-group row checkbox-inline" style="padding-left: 80px;">
+                    <label><input type="checkbox" style="height: 30px;" value="">I have read the terms & agreements.</label>
+                </div>
+
+                <div class="form-group row">
+                    <a href="<?php echo base_url() ?>index.php/home" class="btn btn-danger" type="button" id="Cancel" >Cancel</a></button>
+
+                    <!--<a href="<?php echo base_url() ?>index.php/registration/getInput" type="submit" id= "submit" class="btn btn-primary" style="float: right;">Create Account</a>-->
+                    <button style="float: right;" type="submit" id="submit" name="register-submit" class="btn btn-primary">Create Account</button>
+                </div>
+                <!--<input style="float: right;" type="submit" name="submit" value="Test"/>-->
+            </form>
+            <?php
+            echo form_close();
+            ?>
         </div>
     </div>
-</div>
 
+
+</body>
 </html>

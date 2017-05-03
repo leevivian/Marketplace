@@ -1,4 +1,5 @@
 <div class="container-fluid bg-3 text-left">
+    <a href="<?php echo base_url() ?>/index.php/messaging/send" class="btn btn-primary" style="float: right;">Send Message</a>
     <h2 style="text-decoration: underline">Inbox</h2>
     <?php
     if(isset($message)) {
@@ -15,7 +16,7 @@
             foreach($messages as $row) {
                 $dt = new DateTime();
                 $dt->setTimestamp($row['timestamp']);
-                $dt->setTimezone(new DateTimeZone('PDT'));
+                $dt->setTimezone(new DateTimeZone('America/Los_Angeles'));
                 $time = $dt->format('h:ia M j');
                 if($row['read'] == false) {
                     echo "<tr><th><a href='messaging/open/{$row['messageid']}'>O</a></th>";
