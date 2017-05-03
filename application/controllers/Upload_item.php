@@ -41,20 +41,34 @@ class Upload_item extends CI_Controller{
         $this->form_validation->set_rules('description','Description', 'required');
         $this->form_validation->set_rules('price', 'Price', 'required');
 
-        $data = array(
-            'username' => $this->session->username,
-            'name' => $this->input->post('item-name'),
-            'category' => $this->input->post('category-select'),
-            'condition' => $this->input->post('item-condition'),
-            'description' => $this->input->post('description'),
-            'price' => $this->input->post('price'),
-            'duration' => $this->input->post('listing-duration'),
-            'image' => "Admin_001.jpg",
-            'date' =>  date("Y-m-d")
-        );
+
         //$this->load->view('listingPage_view', $data);
 
-        $this->Upload_model->insert_item($data);
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('header');
+            $this->load->view('upload_view');
+            $this->load->view('footer');
+
+        }
+        else
+        {
+            $data = array(
+                'username' => $this->session->username,
+                'name' => $this->input->post('item-name'),
+                'category' => $this->input->post('category-select'),
+                'condition' => $this->input->post('item-condition'),
+                'description' => $this->input->post('description'),
+                'price' => $this->input->post('price'),
+                'duration' => $this->input->post('listing-duration'),
+                'image' => "Admin_001.jpg",
+                'date' =>  date("Y-m-d")
+            );
+
+            $this->Upload_model->insert_item($data);
+        }
+
+        //$this->Upload_model->insert_item($data);
 
 
     }
