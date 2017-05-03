@@ -42,6 +42,7 @@
                 ?>
             </p>
 
+
             <a href="<?php echo base_url()?>index.php/messaging" class="btn btn-default" style="width:80%; font-size: 20px; background-color: #4089d4; color: white;">Contact Seller</a>
 
         </div>

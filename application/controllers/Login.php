@@ -17,16 +17,53 @@ class Login extends CI_Controller{
          *  Url helper is needed for bootstrap. */
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->model('login_model');
+        
+        // These constants are used to pass what action was taken to login_view
+        define('SUCCESS', '1');
+        define('FAILURE', '-1');
+        define('LOGOUT', '2');
     }
 
     public function index(){
 
         //loads login_view.php
-        $title = array(
-            'title' => 'Log In');
-        $this->load->view('header', $title);
+        $this->load->view('header');
         $this->load->view('login_view');
         $this->load->view('footer');
-
+    }
+    
+    // This function logs the user out. It should only be called by the header's
+    // logout button.
+    public function logout() {
+        unset($this->session->username);
+        $this->session->login = false;
+        $data['login'] = LOGOUT;
+        
+        $this->load->view('header');
+        $this->load->view('login_view', $data);
+        $this->load->view('footer');
+        
+    }
+    
+    // This function takes the data from the login form and attempts to log the
+    // user in. Incorrect data will display an error message in the login_view.
+    public function submit() {
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        
+        if($this->login_model->verify($username, $password)) {
+            $this->session->username = $username;
+            $this->session->login = true;
+            $data['login'] = SUCCESS;
+            $this->load->view('header');
+            $this->load->view('login_view', $data);
+        } else {
+            $data['login'] = FAILURE;
+            $this->load->view('header');
+            $this->load->view('login_view', $data);
+        }
+        
+        $this->load->view('footer');
     }
 }

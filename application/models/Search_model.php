@@ -29,7 +29,6 @@ class Search_model extends CI_Model {
         {
             $this->db->like('name', $search);
             $this->db->or_like('description', $search);
-            $this->db->or_like('keywords', $search);
         }
         //gets results from above query
         $query = $this->db->get();
@@ -52,5 +51,6 @@ class Search_model extends CI_Model {
 
         return $query->result_array();
     }
+
 
 }
