@@ -95,7 +95,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo base_url()?>index.php/dashboard">Dashboard</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="<?php echo base_url()?>index.php/login">Login</a></li>
+                            
+                            <!-- I added this block of code to change the login button to logout when the user is currently logged in. -->
+                            <?php if(isset($this->session->login) && $this->session->login) : ?>
+                                <li><a href="<?php echo base_url()?>index.php/login/logout">Logout</a></li>
+                            <?php else : ?>
+                                <li><a href="<?php echo base_url()?>index.php/login">Login</a></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
