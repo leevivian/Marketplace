@@ -18,69 +18,69 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <!-- Search Bar and Menu Buttons-->
-        <div id="searchdiv" class="row" >
-            <div class="col-sm-8" style="bottom: 10px; position:relative;  width:100%; color: black; text-align: center; padding-top: 10px; padding-bottom: 10px;">
-                <div class="dropdown" name="category">
 
-                </div>
-                <?php
-                $this->load->helper('form');
-                echo form_open('search/execute_search');
-                ?>
-                <form>
-                    <select style="height: 28px;" class="myselect" name="Condition" size="1">
-                        <option selected value="<?php
-                        if (isset($category)) {
-                            echo $category;
-                        } else {
-                            echo "New";
-                        }
-                        ?>">
-                                    <?php
-                                    if (isset($category)) {
-                                        echo $category;
-                                    } else {
-                                        echo "New";
-                                    }
-                                    ?>
-                        </option>
-                        <option value="New">New</option>
-                        <option value="Old">Old</option>
-                        <option value="Refurbished">Refurbished</option>
-                    </select>
-                    <select style="height: 28px;" name="Category" size="1">
-                        <option selected value="<?php
-                        if (isset($category)) {
-                            echo $category;
-                        } else {
-                            echo "All";
-                        }
-                        ?>">
-                                    <?php
-                                    if (isset($category)) {
-                                        echo $category;
-                                    } else {
-                                        echo "All";
-                                    }
-                                    ?>
-                        </option>
-                        <option value="All">All</option>
-                        <option value="Furniture">Furniture</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Books">Books</option>
-                        <option value="Other">Other</option>
-                    </select>
-                    <input id="searchfield" type="text"  name="searchquery"/>
-                    <input type="submit" name="submit" value="Search"/>
-                </form>
-            </div>
-        </div>
-        
-   
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="width: auto;" >
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
 
-            <ul class="nav navbar-nav" id="navbtns" >
+            <div style="margin: 0px auto; width: 60%; ">
+                <div class="col-sm-8" style="position:relative;  width:100%; color: black; text-align: center; padding-top: 10px;">
+                    <div class="dropdown" name="category">
+
+                    </div>
+                    <?php
+                    $this->load->helper('form');
+                    echo form_open('search/execute_search'); ?>
+                    <form>
+                        <select name="Condition" size="1" style="width: auto; height: 28px;">
+                            <option selected value="<?php
+                            if (isset($category)) {
+                                echo $category;
+                            } else {
+                                echo "New";
+                            }
+                            ?>">
+                                <?php
+                                if (isset($category)) {
+                                    echo $category;
+                                } else {
+                                    echo "New";
+                                }
+                                ?>
+                            </option>
+                            <option value="New">New</option>
+                            <option value="Old">Old</option>
+                            <option value="Refurbished">Refurbished</option>
+                        </select>
+                        <select name="Category" size="1" style="height: 28px;">
+                            <option selected value="<?php
+                            if (isset($category)) {
+                                echo $category;
+                            } else {
+                                echo "All";
+                            }
+                            ?>">
+                                <?php
+                                if (isset($category)) {
+                                    echo $category;
+                                } else {
+                                    echo "All";
+                                }
+                                ?>
+                            </option>
+                            <option value="All">All</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Books">Books</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <input type="text" style="width: 45%;" name="searchquery"/>
+                        <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
+                    </form>
+                </div>
+            </div>
+
+
+            <ul class="nav navbar-nav navbar-right" style="padding-top: 9px;">
                 <div class="btn-group" role="group" aria-label="...">
                     <!--Sell-->
                     <a id="sell" class="btn btn btn-success" href="<?php echo base_url() ?>index.php/upload_item">Sell</a></button>
@@ -97,7 +97,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo base_url() ?>index.php/dashboard">Dashboard</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="<?php echo base_url() ?>index.php/login">Login</a></li>
+                            
+                            <!-- I added this block of code to change the login button to logout when the user is currently logged in. -->
+                            <?php if(isset($this->session->login) && $this->session->login) : ?>
+                                <li><a href="<?php echo base_url()?>index.php/login/logout">Logout</a></li>
+                            <?php else : ?>
+                                <li><a href="<?php echo base_url()?>index.php/login">Login</a></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
