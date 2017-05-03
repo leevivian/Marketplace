@@ -11,6 +11,7 @@ class Registration extends CI_Controller
         $this->load->library(array('session', 'form_validation', 'email'));
         $this->load->database();
         $this->load->model('Registration_model');
+        $this->load->model('Login_model');
     }
 
     public function index()
@@ -40,7 +41,7 @@ class Registration extends CI_Controller
                 'username' => $this->input->post('username'),
                 'firstname' => $this->input->post('firstname'),
                 'lastname' => $this->input->post('lastname'),
-                'password' => $this->input->post('password'),
+                'password' => $this->Login_model->encrypt($this->input->post('password')),
                 'email' => $this->input->post('email')
             );
 
