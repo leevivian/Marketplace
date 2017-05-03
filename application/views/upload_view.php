@@ -72,13 +72,15 @@
             </div>
 
             <!--Form's first row, containing title, condition, and category -->
+            <?php echo validation_errors(); ?>
+
 
             <?php echo form_open('Upload_item/upload')?>
             <form>
                 <div class="row form-group required form-inline">
                     <div class="col-sm-4">
                         <label class="control-label" for="itemname">Title </label>
-                        <input required=required type="text" class="form-control" id="itemName" name="item-name">
+                        <input type="text" class="form-control" id="itemName" value="<? echo set_value('username')?>" name="item-name">
                     </div>
 
                     <div class ="col-sm-4">
@@ -109,7 +111,7 @@
 
                 <div class="row form-group required">
                     <label class="control-label" for="description">Item Description</label>
-                    <textarea class="form-control" rows="5" id="description" name="description"></textarea>
+                    <textarea class="form-control" rows="5" id="description" value="<? echo set_value('description')?>"name="description"></textarea>
                 </div>
 
 

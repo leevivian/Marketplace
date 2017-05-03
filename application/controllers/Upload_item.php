@@ -11,6 +11,7 @@ class Upload_item extends CI_Controller{
          *  Url helper is needed for bootstrap. */
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->library('form_validation');
         $this->load->model('Upload_model');
     }
 
@@ -33,6 +34,12 @@ class Upload_item extends CI_Controller{
     public function upload(){
 
         $this->input->post('upload-item');
+
+        $this->form_validation->set_rules('item-name', 'Item name', array('required', 'max-length[50]'));
+        $this->form_validation->set_rules('category-select','Category', 'required');
+        $this->form_validation->set_rules('item-condition', 'Item Condition', 'required');
+        $this->form_validation->set_rules('description','Description', 'required');
+        $this->form_validation->set_rules('price', 'Price', 'required');
 
         $data = array(
             'username' => $this->session->username,
