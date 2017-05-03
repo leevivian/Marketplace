@@ -35,7 +35,7 @@ class Upload_item extends CI_Controller{
 
         $this->input->post('upload-item');
 
-        $this->form_validation->set_rules('item-name', 'Item name', array('required', 'max-length[50]'));
+        $this->form_validation->set_rules('item-name', 'Item name', 'required');
         $this->form_validation->set_rules('category-select','Category', 'required');
         $this->form_validation->set_rules('item-condition', 'Item Condition', 'required');
         $this->form_validation->set_rules('description','Description', 'required');
