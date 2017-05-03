@@ -16,9 +16,7 @@ class Registration extends CI_Controller
 
     public function index()
     {
-        $this->load->view('header');
-        $this->load->view('registration_view');
-        $this->load->view('footer');
+        $this->register();
     }
 
     public function register()
@@ -39,8 +37,10 @@ class Registration extends CI_Controller
 
         if ($this->form_validation->run() == FALSE)
         {
-            redirect('Registration');
-
+            // Load the registration view
+            $this->load->view('header');
+            $this->load->view('registration_view');
+            $this->load->view('footer');
         } else {
             // Group all registration fields together into an array
             $data = array(
