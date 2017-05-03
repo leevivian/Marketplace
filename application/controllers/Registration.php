@@ -30,11 +30,6 @@ class Registration extends CI_Controller
             $this->form_validation->set_rules('password', 'password', 'required');
             $this->form_validation->set_rules('password-confirm', 'confirm password', 'required|matches[password]');
 
-            $this->form_validation->set_message('firstname', 'Please enter your first name.');
-            $this->form_validation->set_message('lastname', 'Please enter your last name.');
-            $this->form_validation->set_message('password', 'Please enter a password.');
-            $this->form_validation->set_message('password-confirm', 'Passwords do not match!');
-
         if ($this->form_validation->run() == FALSE)
         {
             // Load the registration view
@@ -44,11 +39,11 @@ class Registration extends CI_Controller
         } else {
             // Group all registration fields together into an array
             $data = array(
-                'username' => $this->input->post('username'),
-                'firstname' => $this->input->post('firstname'),
-                'lastname' => $this->input->post('lastname'),
-                'password' => $this->Login_model->encrypt($this->input->post('password')),
-                'email' => $this->input->post('email')
+                'username' => $this->db->escape($this->input->post('username')),
+                'firstname' => $this->db->escape($this->input->post('firstname')),
+                'lastname' => $this->db->escape($this->input->post('lastname')),
+                'password' => $this->db->escape($this->Login_model->encrypt($this->input->post('password'))),
+                'email' => $this->db->escape($this->input->post('email'))
             );
 
             // If insertion is successful, the user is redirected to the Home Page
