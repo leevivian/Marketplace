@@ -35,20 +35,39 @@
 <body>
 
     <!-- This ugly block of code handles when the user logs in or out. Inside of the if/else statements can be changed to make it appear better -->
-    <?php
-    if(isset($login)) {
-        if($login == 1) {
-            // User has been logged in.
-            echo "Logged in successfully.";
-        } else if($login == 2) {
-            // User has been logged out.
-            echo "Logged out successfully.";
-        } else {
-            // User entered wrong username or password.
-            echo "Error logging in.";
-        }
-    } else {
-    ?>
+    <?php if(isset($login)): ?>
+        <?php if($login == 1): ?>
+            <!-- User has been logged in. -->
+            <div style="text-align: center">
+                Successfully Logged In.
+            </div>
+            <div style="text-align: center">
+            <a href="<?php echo base_url()?>index.php/" style="font-size: 15px;">Home</a>
+            </div>
+        <?php elseif($login == 2): ?>
+            <!-- User has been logged out. -->
+            <div style="text-align: center">
+                Successfully Logged Out.
+            </div>
+            <div style="text-align: center">
+            <a href="<?php echo base_url()?>index.php/login" style="font-size: 15px;">Login Again</a>
+            </div>
+            <div style="text-align: center">
+            <a href="<?php echo base_url()?>index.php/" style="font-size: 15px;">Home</a>
+            </div>
+        <?php else: ?>
+            <!-- User entered wrong username or password. -->
+            <div style="text-align: center">
+                Error Logging In, invalid username/password.
+            </div>
+            <div style="text-align: center">
+                <a href="<?php echo base_url()?>index.php/login" style="font-size: 15px;">Try Again</a>
+            </div>
+            <div style="text-align: center">
+                <a href="<?php echo base_url()?>index.php/" style="font-size: 15px;">Home</a>
+            </div>
+        <?php endif; ?>
+    <?php else: ?>
     
 <div id="loginform" class="container">
 
@@ -63,7 +82,7 @@
                 </div>
                 <div id="forgotinfo">
                     <div class="col-md-offset-2 col-md-10">
-                        <a href="#">Forgot your username?</a>
+                        <a href="<?php echo base_url()?>index.php/login/forgot/1">Forgot your username?</a>
                     </div>
                 </div>
             </div>
@@ -71,12 +90,12 @@
             <div class="form-group row">
                 <label class="control-label col-md-2" for="password">Password: </label>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" name="password" placeholder="Enter Password">
+                    <input type="password" class="form-control" name="password" placeholder="Enter Password">
                 </div>
 
                 <div id="forgotinfo">
                     <div class="col-md-offset-2 col-md-10">
-                        <a href="#">Forgot your password?</a>
+                        <a href="<?php echo base_url()?>index.php/login/forgot/2">Forgot your password?</a>
                     </div>
                 </div>
 
@@ -98,5 +117,5 @@
 </div>
 
 </body>
-    <?php } ?>
+ <?php endif; ?>
 </html>
