@@ -48,43 +48,48 @@
     <div id="registration-form" class="container">
         <?php
         $this->load->helper('form');
-        echo form_open('Registration');
+        echo form_open('Registration/register');
         ?>
         <div class="col-md-8 col-md-offset-2" id="formrow" >
 
             <form class="form-horizontal" method="post">
-                <div class="form-group row">
-                    <label class="control-label col-md-4" for="username">Username: </label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-                    </div>
-                </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">First Name: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="first-name" name="firstname" placeholder="First Name">
+                        <?php echo form_error('firstname'); ?>
+                        <input type="text" class="form-control" id="first-name" name="firstname" required="true" placeholder="First Name">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">Last Name: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="last-name" name="lastname" placeholder="Last Name">
+                        <?php echo form_error('lastname'); ?>
+                        <input type="text" class="form-control" id="last-name" name="lastname" required="true" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="username">Username: </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="username" name="username" required="true" placeholder="Username">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="password">Password: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="password" name="password" placeholder="Enter Password">
+                        <?php echo form_error('password'); ?>
+                        <input type="password" class="form-control" id="password" name="password" required="true" placeholder="Enter Password">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="password">Confirm Password: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="password-confirm" name="password-confirm" placeholder="Confirm Password">
+                        <?php echo form_error('password-confirm'); ?>
+                        <input type="password" class="form-control" id="password-confirm" name="password-confirm" required="true" placeholder="Confirm Password">
                     </div>
                 </div>
 
