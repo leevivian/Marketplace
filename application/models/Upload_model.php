@@ -14,7 +14,7 @@ class Upload_model extends CI_Model{
 
     public function insert_item($item){
 
-        $this->load->view('listingPage_view', $item);
+        return $this->db->insert('Items', $item);
 
     }
 
