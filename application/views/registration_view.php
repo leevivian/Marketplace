@@ -57,16 +57,16 @@
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">First Name: </label>
                     <div class="col-md-8">
-                        <?php echo form_error('firstname'); ?>
                         <input type="text" class="form-control" id="first-name" name="firstname" required="true" placeholder="First Name">
+                        <?php echo form_error('firstname', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">Last Name: </label>
                     <div class="col-md-8">
-                        <?php echo form_error('lastname'); ?>
                         <input type="text" class="form-control" id="last-name" name="lastname" required="true" placeholder="Last Name">
+                        <?php echo form_error('lastname', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
@@ -74,22 +74,23 @@
                     <label class="control-label col-md-4" for="username">Username: </label>
                     <div class="col-md-8">
                         <input type="text" class="form-control" id="username" name="username" required="true" placeholder="Username">
+                        <?php echo form_error('username', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="password">Password: </label>
                     <div class="col-md-8">
-                        <?php echo form_error('password'); ?>
                         <input type="password" class="form-control" id="password" name="password" required="true" placeholder="Enter Password">
+                        <?php echo form_error('password', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="password">Confirm Password: </label>
                     <div class="col-md-8">
-                        <?php echo form_error('password-confirm'); ?>
                         <input type="password" class="form-control" id="password-confirm" name="password-confirm" required="true" placeholder="Confirm Password">
+                        <?php echo form_error('password-confirm', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
