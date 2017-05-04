@@ -37,11 +37,11 @@ class Upload_item extends CI_Controller{
 
         $this->input->post('upload-item');
 
-        $this->form_validation->set_rules('item-name', 'Item name', 'required');
+        $this->form_validation->set_rules('item-name', 'Item name', 'trim|required|alpha_numeric_spaces|alpha_dash|max_length[20]');
         $this->form_validation->set_rules('category-select','Category', 'required');
         $this->form_validation->set_rules('item-condition', 'Item Condition', 'required');
         $this->form_validation->set_rules('description','Description', 'required');
-        $this->form_validation->set_rules('price', 'Price', 'required');
+        $this->form_validation->set_rules('price', 'Price', 'trim|required|integer|decimal');
 
 
         //$this->load->view('listingPage_view', $data);
