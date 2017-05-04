@@ -41,7 +41,7 @@ class Upload_item extends CI_Controller{
         $this->form_validation->set_rules('category-select','Category', 'required');
         $this->form_validation->set_rules('item-condition', 'Item Condition', 'required');
         $this->form_validation->set_rules('description','Description', 'required');
-        $this->form_validation->set_rules('price', 'Price', 'trim|required|integer|decimal');
+        $this->form_validation->set_rules('price', 'Price', 'trim|required|numeric');
 
 
         //$this->load->view('listingPage_view', $data);
