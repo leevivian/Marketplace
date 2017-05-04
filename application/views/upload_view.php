@@ -118,7 +118,21 @@
 
                 <div class="row form-group">
                     <label for="photoUpload">Upload photos</label>
-                    <button class="btn btn-default" type="button" id="browse">Browse...</button>
+                    <?php echo $error;?>
+                    <?php echo form_open_multipart('Upload_item/upload_img');?>
+                        <input type="file" name="itemPhoto" size="20" />
+
+                    <?php
+                    if (isset($upload_data)) {
+                        foreach($upload_data as $item => $value) {
+                    ?>
+                        <ul>
+                            <li><?php echo $item;?>: <?php echo $value;?></li>
+                        </ul>
+                        <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
 

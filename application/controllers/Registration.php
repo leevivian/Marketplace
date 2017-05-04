@@ -23,6 +23,8 @@ class Registration extends CI_Controller
     {
         // Validate user input field constraints are not violated
         if($this->input->post('register-submit'))
+            $this->form_validation->set_rules('firstname', 'firstname', 'required');
+            $this->form_validation->set_rules('lastname', 'lastname', 'required');
             $this->form_validation->set_rules('username', 'username', 'required');
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
             $this->form_validation->set_rules('password', 'password', 'required');
@@ -31,23 +33,24 @@ class Registration extends CI_Controller
         if ($this->form_validation->run() == FALSE)
         {
             // Load the registration view
-            $title = array(
-                'title' => 'Registration');
-            $this->load->view('header', $title);
+            $this->load->view('header');
             $this->load->view('registration_view');
             $this->load->view('footer');
         } else {
+            // Group all registration fields together into an array
             $data = array(
-                'username' => $this->input->post('username'),
-                'firstname' => $this->input->post('firstname'),
-                'lastname' => $this->input->post('lastname'),
-                'password' => $this->Login_model->encrypt($this->input->post('password')),
-                'email' => $this->input->post('email')
+                'username' => $this->db->escape($this->input->post('username')),
+                'firstname' => $this->db->escape($this->input->post('firstname')),
+                'lastname' => $this->db->escape($this->input->post('lastname')),
+                'password' => $this->db->escape($this->Login_model->encrypt($this->input->post('password'))),
+                'email' => $this->db->escape($this->input->post('email'))
             );
 
+            // If insertion is successful, the user is redirected to the Home Page
             if ($this->Registration_model->insertNewUser($data)) {
                 redirect('/');
             }
+            // If insertion is unsuccessful, error message appears on Registration Page
         }
     }
 }

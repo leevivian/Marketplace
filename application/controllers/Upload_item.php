@@ -23,7 +23,8 @@ class Upload_item extends CI_Controller{
 
         if (isset($this->session->login) && $this->session->login && isset($this->session->username)) {
             //$username = $this->session->username;
-            $this->load->view('upload_view');
+            $this->load->view('upload_view', array('error' => ' ' ));
+
         } else {
             $this->load->view('login_view');
         }
@@ -76,7 +77,32 @@ class Upload_item extends CI_Controller{
 
         //$this->Upload_model->insert_item($data);
 
+    }
 
+    // Codeigniter's documentation on file uploading:
+    // https://www.codeigniter.com/userguide3/libraries/file_uploading.html
+    public function upload_img()
+    {
+        $config['upload_path']          = './uploads/';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 100;
+        $config['max_width']            = 1000;
+        $config['max_height']           = 1000;
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->upload_img('userfile'))
+        {
+            $error = array('error' => $this->upload->display_errors());
+
+            $this->load->view('upload_view', $error);
+        }
+        else
+        {
+            $uploaded_img = array('upload_data' => $this->upload->data());
+
+            $this->load->view('upload_view', $uploaded_img);
+        }
     }
 
 }

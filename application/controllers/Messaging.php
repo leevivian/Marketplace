@@ -50,7 +50,7 @@ class Messaging extends CI_Controller {
             if (isset($itemName)) {
                 $data['subject'] = $subject;
             }
-            $this->load->view('messaging/send_message', $data);
+            $this->load->view('messaging/sendMessage_view', $data);
         } else {
             $this->load->view('login_view');
         }
@@ -68,7 +68,7 @@ class Messaging extends CI_Controller {
             $contents = $this->input->post('contents');
             
             $data['sent'] = $this->messaging_model->sendMessage($username, $recipient, $subject, $contents);
-            $this->load->view('messaging/send_message', $data);
+            $this->load->view('messaging/sendMessage_view', $data);
         } else {
             $this->load->view('login_view');
         }
