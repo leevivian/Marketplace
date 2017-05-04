@@ -54,6 +54,15 @@ class Upload_item extends CI_Controller{
         }
         else
         {
+            // image upload
+            $config['upload_path']          = './images/item_images/';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['max_size']             = 150;
+            $config['max_width']            = 1500;
+            $config['max_height']           = 1500;
+
+            $this->load->library('upload', $config);
+
             $data = array(
                 'username' => $this->session->username,
                 'name' => $this->input->post('item-name'),
@@ -62,7 +71,7 @@ class Upload_item extends CI_Controller{
                 'description' => $this->input->post('description'),
                 'price' => $this->input->post('price'),
                 'duration' => $this->input->post('listing-duration'),
-                'image' => $this->input->post('upload_img_path'),
+                'image' => $this->upload->data('full_path'),
                 'date' =>  date("Y-m-d")
             );
 
@@ -88,6 +97,7 @@ class Upload_item extends CI_Controller{
 
         $this->load->library('upload', $config);
 
+        // Removed error variable from view, so this might not be needed anymore..
         if ( ! $this->upload->upload_img('userfile'))
         {
             $error = array('error' => $this->upload->display_errors());
