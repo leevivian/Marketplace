@@ -122,10 +122,8 @@
                     <?php echo form_open_multipart('Upload_item/upload_img');?>
                         <input type="file" name="userfile" size="20" />
 
-                    <?php
-                        if (isset($upload_img_path)) {
-                            ?>
-                        <input type="hidden" name=itemid value = "<?php echo $upload_img_path ?>" />
+                    <?php if (isset($upload_img_path)) { ?>
+                        <input type="hidden" name="upload_img_path" value = "<?php echo $upload_img_path['full_path'] ?>" />
                     <?php
                     }
                     ?>
