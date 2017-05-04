@@ -118,7 +118,6 @@
 
                 <div class="row form-group">
                     <label for="photoUpload">Upload photos</label>
-                    <?php echo $error;?>
                     <?php echo form_open_multipart('Upload_item/upload_img');?>
                         <input type="file" name="userfile" size="20" />
 
