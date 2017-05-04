@@ -56,6 +56,8 @@
                             </div>
                         </div>
 
+                        <br>
+
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-1 text-center">Subject:</span>
                             <div class="col-md-8">
@@ -64,9 +66,11 @@
                             </div>
                         </div>
 
+                        <br>
+
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-2">
-                                <textarea class="form-control" id="contents" name="conents" placeholder="Enter your message here." rows="7"></textarea>
+                                <textarea class="form-control" id="contents" name="contents" placeholder="Enter your message here." rows="7"></textarea>
                             </div>
                         </div>
 
