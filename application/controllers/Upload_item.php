@@ -62,7 +62,7 @@ class Upload_item extends CI_Controller{
                 'description' => $this->input->post('description'),
                 'price' => $this->input->post('price'),
                 'duration' => $this->input->post('listing-duration'),
-                'image' => "Admin_001.jpg",
+                'image' => $this->input->post('upload_img_path'),
                 'date' =>  date("Y-m-d")
             );
 
@@ -96,9 +96,9 @@ class Upload_item extends CI_Controller{
         }
         else
         {
-            $uploaded_img_path = $this->upload->data('full_path');
+            $upload_data = array('upload_img' => $this->upload->data());
 
-            $this->load->view('upload_view', $uploaded_img_path);
+            $this->load->view('upload_view', $upload_data);
         }
     }
 
