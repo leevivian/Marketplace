@@ -35,7 +35,7 @@
         <div class="row text-center">
 
             <?php
-
+            if(isset($recent_listings)) {
                 foreach($recent_listings as $row) {
                     $id = $row['itemid'];
                     ?>
@@ -62,7 +62,7 @@
                 </div>
                 <?php
                 }
-
+            }
             ?>
 
         </div>
