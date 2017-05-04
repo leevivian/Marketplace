@@ -118,14 +118,12 @@
 
                 <div class="row form-group">
                     <label for="photoUpload">Upload photos</label>
-
+                    <?php echo form_open_multipart('Upload_item/do_upload');?>
                         <input type="file" name="userfile" size="20" />
+                    <?php if (isset($upload_data)) { ?>
+                        <input type="hidden" name="image_name" value = "<?php echo $upload_data['file_name'] ?>" />
+                    <?php } ?>
 
-                    <?php if (isset($upload_img)) { ?>
-                        <input type="hidden" name="upload_img_path" value = "<?php echo $upload_img['full_path'] ?>" />
-                    <?php
-                    }
-                    ?>
                 </div>
             </div>
 
