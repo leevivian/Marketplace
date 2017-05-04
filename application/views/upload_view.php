@@ -72,94 +72,94 @@
             </div>
 
             <!--Form's first row, containing title, condition, and category -->
-            <div class="row form-group required form-inline">
-                <div class="col-sm-4">
-                    <label class="control-label" for="itemname">Title </label>
-                    <input required=required type="text" class="form-control" id="itemName">
+            <?php echo validation_errors(); ?>
+
+
+            <?php echo form_open('Upload_item/upload')?>
+            <form>
+                <div class="row form-group required form-inline">
+                    <div class="col-sm-4">
+                        <label class="control-label" for="itemname">Title </label>
+                        <input type="text" class="form-control" id="itemName" value="<?php echo set_value('item-name')?>" name="item-name">
+                    </div>
+
+                    <div class ="col-sm-4">
+                        <label class ="control-label" for="categoryselect">Category</label>
+                        <select class="form-control" id="categoryselect" name="category-select">
+                            <option value="" selected hidden>Select Category</option>
+                            <option>Books</option>
+                            <option>Furniture</option>
+                            <option>Electronics</option>
+                            <option>Event Tickets</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class ="col-sm-4">
+                        <label class="control-label" for="itemcondition">Condition</label>
+                        <select class="form-control" id="itemcondition" name="item-condition">
+                            <option value="" selected hidden>Select Condition</option>
+                            <option>Brand New</option>
+                            <option>Like New</option>
+                            <option>Good</option>
+                            <option>Acceptable</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- End first row -->
+
+
+                <div class="row form-group required">
+                    <label class="control-label" for="description">Item Description</label>
+                    <textarea class="form-control" rows="5" id="description"  name="description"><?php echo set_value('description')?></textarea>
                 </div>
 
-                <div class ="col-sm-4">
-                    <label class ="control-label" for="categoryselect">Category</label>
-                    <select class="form-control" id="categoryselect">
-                        <option value="" selected hidden>Select Category</option>
-                        <option>Books</option>
-                        <option>Furniture</option>
-                        <option>Electronics</option>
-                        <option>Event Tickets</option>
-                        <option>Other</option>
-                    </select>
-                </div>
 
-                <div class ="col-sm-4">
-                    <label class="control-label" for="itemcondition">Condition</label>
-                    <select class="form-control" id="itemcondition">
-                        <option value="" selected hidden>Select Condition</option>
-                        <option>Brand New</option>
-                        <option>Like New</option>
-                        <option>Good</option>
-                        <option>Acceptable</option>
-                    </select>
+
+                <div class="row form-group">
+                    <label for="photoUpload">Upload photos</label>
+                    <button class="btn btn-default" type="button" id="browse">Browse...</button>
                 </div>
             </div>
-            <!-- End first row -->
 
-
-            <div class="row form-group required">
-                <label class="control-label" for="description">Item Description</label>
-                <textarea class="form-control" rows="5" id="description"></textarea>
-            </div>
-
-            <div class="row form-group form-inline">
-                <label for="keywords">Keywords</label>
-                <input type="text" class="form-control" id="keywords">
-                <input type="text" class="form-control" id="keywords">
-                <input type="text" class="form-control" id="keywords">
-                <input type="text" class="form-control" id="keywords">
-            </div>
-
-
-            <div class="row form-group">
-                <label for="photoUpload">Upload photos</label>
-                <button class="btn btn-default" type="button" id="browse">Browse...</button>
-            </div>
-        </div>
-
-        <!-- lower box for payment -->
-        <div class="container payment">
-            <div class="row">
-                <h4>Payment:</h4>
-            </div>
-            <div class="row form-group required form-inline">
-                <div class="col-sm-6">
-                    <label class="control-label" for="price">Price</label>
-                    <input type="text" class="form-control" id="price">
+            <!-- lower box for payment -->
+            <div class="container payment">
+                <div class="row">
+                    <h4>Payment:</h4>
                 </div>
+                <div class="row form-group required form-inline">
+                    <div class="col-sm-6">
+                        <label class="control-label" for="price">Price</label>
+                        <input type="text" class="form-control" id="price" name="price">
+                    </div>
 
-                <div class ="form-group required col-sm-6">
-                    <label class="control-label" for="listingduration">Duration</label>
+                    <div class ="form-group required col-sm-6">
+                        <label class="control-label" for="listingduration">Duration</label>
 
-                    <select class="form-control" id="listingduration">
-                        <option>1 Day</option>
-                        <option>2 Days</option>
-                        <option>3 Days</option>
-                        <option>4 Days</option>
-                        <option>5 Days</option>
-                        <option>6 Days</option>
-                        <option>7 Days</option>
-                    </select>
+                        <select class="form-control" id="listingduration" name="listing-duration">
+                            <option>1 Day</option>
+                            <option>2 Days</option>
+                            <option>3 Days</option>
+                            <option>4 Days</option>
+                            <option>5 Days</option>
+                            <option>6 Days</option>
+                            <option>7 Days</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- end payment box -->
+            <!-- end payment box -->
 
-        <!-- submit and cancel buttons -->
-        <div align="right" class="container submitbuttons">
-            <div class="row" id="buttonrow">
-                <a href="<?php echo base_url()?>index.php/home" button class="btn btn-danger pull-left" type="button" id="Cancel">Cancel</button></a>
-                <a href="<?php echo base_url()?>index.php/individual_listing" button class="btn btn-primary" type="button" id="submit">Submit</button></a>
+            <!-- submit and cancel buttons -->
+            <div align="right" class="container submitbuttons">
+                <div class="row" id="buttonrow">
+                    <a href="<?php echo base_url()?>index.php/home" button class="btn btn-danger pull-left" type="button" id="Cancel">Cancel</button></a>
+                    <button class="btn btn-primary" type="submit" name="upload-item" id="submit">Submit</button>
+                </div>
             </div>
-        </div>
-        <!-- end button row -->
+            <!-- end button row -->
+        </form>
+        <?php echo form_close() ?>
     </body>
 
 </html>

@@ -24,7 +24,7 @@
             $subject = "";
         }
         echo form_open('messaging/send_message'); ?>
-        <form>
+     <!--   <form>
         TO:
         <input type="text" name="recipient" value=<?php echo $recipient ?>><br>
         Subject:
@@ -32,6 +32,9 @@
         Contents:
         <input type="text" name="contents"><br>
         <input type="submit" name="submit" value="submit"/>
-        </form>
+        </form> -->
+
+
+
     <?php endif; ?>
 </div>
