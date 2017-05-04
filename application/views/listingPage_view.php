@@ -45,7 +45,7 @@
                 <?php
                 if(isset($results)){
                     foreach($results as $item){
-                        echo $item['price'];
+                        echo "$" . $row['price']  ;
                     }
                 }
                 ?>

@@ -13,6 +13,7 @@ class Upload_item extends CI_Controller{
         $this->load->helper('url');
         $this->load->library('form_validation');
         $this->load->model('Upload_model');
+        $this->load->model('Search_model');
     }
 
     public function index(){
@@ -65,8 +66,12 @@ class Upload_item extends CI_Controller{
                 'date' =>  date("Y-m-d")
             );
 
-            $this->Upload_model->insert_item($data);
+            $itemid = $this->Upload_model->insert_item($data);
 
+            $data['results']= $this->search_model->get_details($itemid);
+            $this->load->view('header');
+            $this->load->view('listingPage_view', $data);
+            $this->load->view('footer');
 
             // TODO: After inserting item, display a details page with new item
         }

@@ -17,11 +17,8 @@ class Upload_model extends CI_Model{
 
         $this->db->insert('Items', $item);
 
-        $itemid = $this->db->insert_id();
-        $data['results']= $this->search_model->get_details($itemid);
-        $this->load->view('header');
-        $this->load->view('listingPage_view', $data);
-        $this->load->view('footer');
+        return $this->db->insert_id();
+
     }
 
 }
