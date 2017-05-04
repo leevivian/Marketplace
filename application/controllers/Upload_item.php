@@ -68,9 +68,9 @@ class Upload_item extends CI_Controller{
 
             $itemid = $this->Upload_model->insert_item($data);
 
-            $data['results']= $this->search_model->get_details($itemid);
+            $item['results']= $this->Search_model->get_details($itemid);
             $this->load->view('header');
-            $this->load->view('listingPage_view', $data);
+            $this->load->view('listingPage_view', $item);
             $this->load->view('footer');
 
             // TODO: After inserting item, display a details page with new item

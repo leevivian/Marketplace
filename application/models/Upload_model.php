@@ -10,7 +10,6 @@ class Upload_model extends CI_Model{
     public function __construct() {
         parent::__construct();
         $this->load->database();
-        $this->load->model('Search_model');
     }
 
     public function insert_item($item){
