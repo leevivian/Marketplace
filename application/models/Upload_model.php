@@ -13,11 +13,10 @@ class Upload_model extends CI_Model{
     }
 
     public function insert_item($item){
-
         $this->db->insert('Items', $item);
 
         return $this->db->insert_id();
-
+        
     }
 
 }

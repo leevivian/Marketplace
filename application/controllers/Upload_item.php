@@ -55,6 +55,7 @@ class Upload_item extends CI_Controller{
         }
         else
         {
+
             $data = array(
                 'username' => $this->session->username,
                 'name' => $this->input->post('item-name'),
@@ -63,7 +64,7 @@ class Upload_item extends CI_Controller{
                 'description' => $this->input->post('description'),
                 'price' => $this->input->post('price'),
                 'duration' => $this->input->post('listing-duration'),
-                'image' => "Admin_001.jpg",
+                'image' => $this->input->post('image_name'),
                 'date' =>  date("Y-m-d")
             );
 
@@ -81,17 +82,18 @@ class Upload_item extends CI_Controller{
 
     // Codeigniter's documentation on file uploading:
     // https://www.codeigniter.com/userguide3/libraries/file_uploading.html
-    public function upload_img()
+    public function do_upload()
     {
-        $config['upload_path']          = './uploads/';
+        $config['upload_path']          = './images/item_images/';
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['max_size']             = 100;
-        $config['max_width']            = 1000;
-        $config['max_height']           = 1000;
+        $config['max_size']             = 150;
+        $config['max_width']            = 1500;
+        $config['max_height']           = 1500;
 
         $this->load->library('upload', $config);
 
-        if ( ! $this->upload->upload_img('userfile'))
+        // Removed error variable from view, so this might not be needed anymore..
+        if ( ! $this->upload->do_upload('userfile'))
         {
             $error = array('error' => $this->upload->display_errors());
 
@@ -99,9 +101,8 @@ class Upload_item extends CI_Controller{
         }
         else
         {
-            $uploaded_img = array('upload_data' => $this->upload->data());
-
-            $this->load->view('upload_view', $uploaded_img);
+            $upload_data = array('upload_img' => $this->upload->data());
+            return $upload_data;
         }
     }
 

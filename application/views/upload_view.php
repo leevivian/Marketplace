@@ -118,21 +118,12 @@
 
                 <div class="row form-group">
                     <label for="photoUpload">Upload photos</label>
-                    <?php echo $error;?>
-                    <?php echo form_open_multipart('Upload_item/upload_img');?>
-                        <input type="file" name="itemPhoto" size="20" />
+                    <?php echo form_open_multipart('Upload_item/do_upload');?>
+                        <input type="file" name="userfile" size="20" />
+                    <?php if (isset($upload_data)) { ?>
+                        <input type="hidden" name="image_name" value = "<?php echo $upload_data['file_name'] ?>" />
+                    <?php } ?>
 
-                    <?php
-                    if (isset($upload_data)) {
-                        foreach($upload_data as $item => $value) {
-                    ?>
-                        <ul>
-                            <li><?php echo $item;?>: <?php echo $value;?></li>
-                        </ul>
-                        <?php
-                        }
-                    }
-                    ?>
                 </div>
             </div>
 
