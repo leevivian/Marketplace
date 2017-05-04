@@ -80,11 +80,11 @@ class Upload_item extends CI_Controller{
     // https://www.codeigniter.com/userguide3/libraries/file_uploading.html
     public function upload_img()
     {
-        $config['upload_path']          = './uploads/';
+        $config['upload_path']          = './images/item_images/';
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['max_size']             = 100;
-        $config['max_width']            = 1000;
-        $config['max_height']           = 1000;
+        $config['max_size']             = 150;
+        $config['max_width']            = 1500;
+        $config['max_height']           = 1500;
 
         $this->load->library('upload', $config);
 
@@ -96,9 +96,9 @@ class Upload_item extends CI_Controller{
         }
         else
         {
-            $uploaded_img = array('upload_data' => $this->upload->data());
+            $uploaded_img_path = $this->upload->data('full_path');
 
-            $this->load->view('upload_view', $uploaded_img);
+            $this->load->view('upload_view', $uploaded_img_path);
         }
     }
 

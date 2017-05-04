@@ -120,17 +120,13 @@
                     <label for="photoUpload">Upload photos</label>
                     <?php echo $error;?>
                     <?php echo form_open_multipart('Upload_item/upload_img');?>
-                        <input type="file" name="itemPhoto" size="20" />
+                        <input type="file" name="userfile" size="20" />
 
                     <?php
-                    if (isset($upload_data)) {
-                        foreach($upload_data as $item => $value) {
-                    ?>
-                        <ul>
-                            <li><?php echo $item;?>: <?php echo $value;?></li>
-                        </ul>
-                        <?php
-                        }
+                        if (isset($upload_img_path)) {
+                            ?>
+                        <input type="hidden" name=itemid value = "<?php echo $upload_img_path ?>" />
+                    <?php
                     }
                     ?>
                 </div>
