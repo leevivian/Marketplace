@@ -66,6 +66,7 @@ class Upload_item extends CI_Controller{
             );
 
             $this->Upload_model->insert_item($data);
+            // TODO: After inserting item, display a details page with new item
         }
 
         //$this->Upload_model->insert_item($data);
