@@ -121,7 +121,6 @@
                     <?php echo $error;?>
                     <?php echo form_open_multipart('Upload_item/upload_img');?>
                         <input type="file" name="itemPhoto" size="20" />
-                        <input type="submit" value="upload" />
 
                     <?php
                     if (isset($upload_data)) {
