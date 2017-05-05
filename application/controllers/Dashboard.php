@@ -22,10 +22,13 @@ class Dashboard extends CI_Controller{
     public function index(){
 
         //loads upload_view.php
-        $title = array(
-            'title' => 'Dashboard');
-        $this->load->view('header', $title);
-        $this->load->view('dashboard_view');
+        $this->load->view('header');
+        if(isset($this->session->login) && $this->session->login) {
+            $this->load->view('dashboard_view');
+        } else {
+            $this->load->view('login_view');
+        }
+        
         $this->load->view('footer');
 
     }
