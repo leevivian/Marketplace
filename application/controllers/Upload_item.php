@@ -119,7 +119,7 @@ class Upload_item extends CI_Controller{
             $extension = pathinfo($tempfile, PATHINFO_EXTENSION);
 
             // concatenates unique file id with extension
-            $filename = $fileid . $extension;
+            $filename = $fileid . '.' . $extension;
 
             $data = array(
                 'username' => $this->session->username,
