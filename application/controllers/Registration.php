@@ -39,11 +39,11 @@ class Registration extends CI_Controller
         } else {
             // Group all registration fields together into an array
             $data = array(
-                'username' => $this->input->post($this->db->escape('username')),
-                'firstname' => $this->input->post($this->db->escape('firstname')),
-                'lastname' => $this->input->post($this->db->escape('lastname')),
-                'password' => $this->Login_model->encrypt($this->input->post($this->db->escape('password'))),
-                'email' => $this->input->post($this->db->escape('email'))
+                'username' => $this->input->post('username'),
+                'firstname' => $this->input->post('firstname'),
+                'lastname' => $this->input->post('lastname'),
+                'password' => $this->Login_model->encrypt($this->input->post('password')),
+                'email' => $this->input->post('email')
             );
 
             // If insertion is successful, the user is redirected to the Home Page
