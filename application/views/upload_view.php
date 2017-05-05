@@ -75,7 +75,7 @@
             <?php echo validation_errors(); ?>
 
 
-            <?php echo form_open('Upload_item/upload')?>
+            <?php echo form_open_multipart('Upload_item/do_upload');?>
             <form>
                 <div class="row form-group required form-inline">
                     <div class="col-sm-4">
@@ -83,26 +83,28 @@
                         <input type="text" class="form-control" id="itemName" value="<?php echo set_value('item-name')?>" name="item-name">
                     </div>
 
+                    <!--Category Dropdown -->
                     <div class ="col-sm-4">
                         <label class ="control-label" for="categoryselect">Category</label>
                         <select class="form-control" id="categoryselect" name="category-select">
                             <option value="" selected hidden>Select Category</option>
-                            <option>Books</option>
-                            <option>Furniture</option>
-                            <option>Electronics</option>
-                            <option>Event Tickets</option>
-                            <option>Other</option>
+                            <option value="Books" <?php echo set_select('category-select', 'Books'); ?>>Books</option>
+                            <option value="Furniture" <?php echo set_select('category-select', 'Furniture'); ?> >Furniture</option>
+                            <option value="Electronics" <?php echo set_select('category-select', 'Electronics'); ?>>Electronics</option>
+                            <option value="Clothing" <?php echo set_select('category-select', 'Clothing'); ?> >Clothing</option>
+                            <option value="Other" <?php echo set_select('category-select', 'Other'); ?>>Other</option>
                         </select>
                     </div>
 
+                    <!--Condition Dropdown-->
                     <div class ="col-sm-4">
                         <label class="control-label" for="itemcondition">Condition</label>
                         <select class="form-control" id="itemcondition" name="item-condition">
                             <option value="" selected hidden>Select Condition</option>
-                            <option>Brand New</option>
-                            <option>Like New</option>
-                            <option>Good</option>
-                            <option>Acceptable</option>
+                            <option value="Brand New" <?php echo set_select('item-condition', 'Brand New'); ?> >Brand New</option>
+                            <option value="Like New" <?php echo set_select('item-condition', 'Like New'); ?>>Like New</option>
+                            <option value="Good" <?php echo set_select('item-condition', 'Good'); ?>>Good</option>
+                            <option value="Acceptable" <?php echo set_select('item-condition', 'Acceptable'); ?>>Acceptable</option>
                         </select>
                     </div>
                 </div>
@@ -118,12 +120,10 @@
 
                 <div class="row form-group">
                     <label for="photoUpload">Upload photos</label>
-                    <?php echo form_open_multipart('Upload_item/do_upload');?>
                         <input type="file" name="userfile" size="20" />
                     <?php if (isset($upload_data)) { ?>
                         <input type="hidden" name="image_name" value = "<?php echo $upload_data['file_name'] ?>" />
                     <?php } ?>
-
                 </div>
             </div>
 
@@ -142,13 +142,10 @@
                         <label class="control-label" for="listingduration">Duration</label>
 
                         <select class="form-control" id="listingduration" name="listing-duration">
-                            <option>1 Day</option>
-                            <option>2 Days</option>
-                            <option>3 Days</option>
-                            <option>4 Days</option>
-                            <option>5 Days</option>
-                            <option>6 Days</option>
-                            <option>7 Days</option>
+                            <option>4 weeks</option>
+                            <option>3 weeks</option>
+                            <option>2 weeks</option>
+                            <option>1 week</option>
                         </select>
                     </div>
                 </div>

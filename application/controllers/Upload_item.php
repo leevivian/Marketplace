@@ -43,9 +43,6 @@ class Upload_item extends CI_Controller{
         $this->form_validation->set_rules('description','Description', 'required');
         $this->form_validation->set_rules('price', 'Price', 'trim|required|numeric');
 
-
-        //$this->load->view('listingPage_view', $data);
-
         if ($this->form_validation->run() == FALSE)
         {
             $this->load->view('header');
@@ -76,14 +73,15 @@ class Upload_item extends CI_Controller{
 
         }
 
-        //$this->Upload_model->insert_item($data);
 
     }
 
     // Codeigniter's documentation on file uploading:
     // https://www.codeigniter.com/userguide3/libraries/file_uploading.html
-    public function do_upload()
-    {
+    public function do_upload(){
+        $this->input->post('upload-item');
+
+
         $config['upload_path']          = './images/item_images/';
         $config['allowed_types']        = 'gif|jpg|png';
         $config['max_size']             = 150;
@@ -92,8 +90,14 @@ class Upload_item extends CI_Controller{
 
         $this->load->library('upload', $config);
 
+        $this->form_validation->set_rules('item-name', 'Item name', 'trim|required|alpha_numeric_spaces|alpha_dash|max_length[20]');
+        $this->form_validation->set_rules('category-select','Category', 'required');
+        $this->form_validation->set_rules('item-condition', 'Item Condition', 'required');
+        $this->form_validation->set_rules('description','Description', 'required');
+        $this->form_validation->set_rules('price', 'Price', 'trim|required|numeric');
+
         // Removed error variable from view, so this might not be needed anymore..
-        if ( ! $this->upload->do_upload('userfile'))
+        if ( ! $this->upload->do_upload('userfile') || $this->form_validation->run() == FALSE )
         {
             $error = array('error' => $this->upload->display_errors());
 
@@ -101,8 +105,22 @@ class Upload_item extends CI_Controller{
         }
         else
         {
-            $upload_data = array('upload_img' => $this->upload->data());
-            return $upload_data;
+            $data = array(
+                'username' => $this->session->username,
+                'name' => $this->input->post('item-name'),
+                'category' => $this->input->post('category-select'),
+                'condition' => $this->input->post('item-condition'),
+                'description' => $this->input->post('description'),
+                'price' => $this->input->post('price'),
+                'duration' => $this->input->post('listing-duration'),
+                'image' => $this->input->post('image_name'),
+                'date' =>  date("Y-m-d")
+            );
+
+            $itemid = $this->Upload_model->insert_item($data);
+
+            //redirects to the details page of the uploaded item
+            redirect(base_url() . "index.php/search/load_details/{$itemid}");
         }
     }
 
