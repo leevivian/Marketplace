@@ -12,7 +12,6 @@ class Upload_item extends CI_Controller{
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->library('form_validation');
-        $this->load->library('image_lib');
         $this->load->model('Upload_model');
         $this->load->model('Search_model');
     }
@@ -85,7 +84,7 @@ class Upload_item extends CI_Controller{
         // preferences for image upload
         $config['upload_path']          = './images/item_images/';
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['max_size']             = 150;
+        $config['max_size']             = 2048;
         $config['max_width']            = 1500;
         $config['max_height']           = 1500;
         $config['file_name']            = $this->input->post('image-name');
@@ -93,7 +92,7 @@ class Upload_item extends CI_Controller{
         $this->load->library('upload', $config);
 
         // form validation
-        $this->form_validation->set_rules('item-name', 'Item name', 'trim|required|alpha_numeric_spaces|alpha_dash|max_length[20]');
+        $this->form_validation->set_rules('item-name', 'Item name', 'trim|required|max_length[20]');
         $this->form_validation->set_rules('category-select','Category', 'required');
         $this->form_validation->set_rules('item-condition', 'Item Condition', 'required');
         $this->form_validation->set_rules('description','Description', 'required');
@@ -123,8 +122,6 @@ class Upload_item extends CI_Controller{
             // concatenates unique file id with extension
             $filename = $fileid . '.' . $extension;
 
-            $this->create_thumbnail($filename);
-
             $data = array(
                 'username' => $this->session->username,
                 'name' => $this->input->post('item-name'),
@@ -137,6 +134,8 @@ class Upload_item extends CI_Controller{
                 'date' =>  date("Y-m-d")
             );
 
+            $this->create_thumbnail($filename);
+
             $itemid = $this->Upload_model->insert_item($data);
 
             //redirects to the details page of the uploaded item
@@ -147,13 +146,12 @@ class Upload_item extends CI_Controller{
 
     public function create_thumbnail($filename){
 
-        $config['image_library'] = 'gd2';
-        $config['source_image'] = './images/item_images/' . $filename;
-        $config['new_image'] = './images/item_images/thumbnail_' . $filename;
-        $config['create_thumb'] = TRUE;
-        $config['maintain_ratio'] = TRUE;
-        $config['width']         = 75;
-        $config['height']       = 50;
+        $config['image_library']    = 'gd2';
+        $config['source_image']     = './images/item_images/' . $filename;
+        $config['new_image']        = './images/item_images/thumbnail_' . $filename;
+        $config['maintain_ratio']   = TRUE;
+        $config['width']            = 200;
+        $config['height']           = 200;
 
         $this->load->library('image_lib', $config);
 
