@@ -12,6 +12,7 @@ class Upload_item extends CI_Controller{
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->library('form_validation');
+        $this->load->library('image_lib');
         $this->load->model('Upload_model');
         $this->load->model('Search_model');
     }
@@ -81,7 +82,7 @@ class Upload_item extends CI_Controller{
     public function do_upload(){
         $this->input->post('upload-item');
 
-
+        // preferences for image upload
         $config['upload_path']          = './images/item_images/';
         $config['allowed_types']        = 'gif|jpg|png';
         $config['max_size']             = 150;
@@ -91,6 +92,7 @@ class Upload_item extends CI_Controller{
 
         $this->load->library('upload', $config);
 
+        // form validation
         $this->form_validation->set_rules('item-name', 'Item name', 'trim|required|alpha_numeric_spaces|alpha_dash|max_length[20]');
         $this->form_validation->set_rules('category-select','Category', 'required');
         $this->form_validation->set_rules('item-condition', 'Item Condition', 'required');
@@ -121,6 +123,8 @@ class Upload_item extends CI_Controller{
             // concatenates unique file id with extension
             $filename = $fileid . '.' . $extension;
 
+            $this->create_thumbnail($filename);
+
             $data = array(
                 'username' => $this->session->username,
                 'name' => $this->input->post('item-name'),
@@ -138,6 +142,22 @@ class Upload_item extends CI_Controller{
             //redirects to the details page of the uploaded item
             redirect(base_url() . "index.php/search/load_details/{$itemid}");
         }
+
+    }
+
+    public function create_thumbnail($filename){
+
+        $config['image_library'] = 'gd2';
+        $config['source_image'] = './images/item_images/' . $filename;
+        $config['new_image'] = './images/item_images/thumbnail_' . $filename;
+        $config['create_thumb'] = TRUE;
+        $config['maintain_ratio'] = TRUE;
+        $config['width']         = 75;
+        $config['height']       = 50;
+
+        $this->load->library('image_lib', $config);
+
+        $this->image_lib->resize();
     }
 
 }
