@@ -71,7 +71,7 @@
             <div class="form-group row">
                 <label class="control-label col-md-2" for="password">Password: </label>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" name="password" placeholder="Enter Password">
+                    <input type="password" class="form-control" name="password" placeholder="Enter Password">
                 </div>
 
                 <div id="forgotinfo">
