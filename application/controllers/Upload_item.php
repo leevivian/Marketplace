@@ -87,6 +87,7 @@ class Upload_item extends CI_Controller{
         $config['max_size']             = 150;
         $config['max_width']            = 1500;
         $config['max_height']           = 1500;
+        $config['file_name']            = $this->input->post('image-name');
 
         $this->load->library('upload', $config);
 
@@ -100,8 +101,10 @@ class Upload_item extends CI_Controller{
         if ( ! $this->upload->do_upload('userfile') || $this->form_validation->run() == FALSE )
         {
             $error = array('error' => $this->upload->display_errors());
-
+            $this->load->view('header');
             $this->load->view('upload_view', $error);
+            $this->load->view('footer');
+
         }
         else
         {
@@ -113,7 +116,7 @@ class Upload_item extends CI_Controller{
                 'description' => $this->input->post('description'),
                 'price' => $this->input->post('price'),
                 'duration' => $this->input->post('listing-duration'),
-                'image' => $this->input->post('image_name'),
+                'image' => $this->input->post('image-name'),
                 'date' =>  date("Y-m-d")
             );
 

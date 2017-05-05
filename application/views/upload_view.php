@@ -73,6 +73,7 @@
 
             <!--Form's first row, containing title, condition, and category -->
             <?php echo validation_errors(); ?>
+            <?php echo $error; ?>
 
 
             <?php echo form_open_multipart('Upload_item/do_upload');?>
@@ -121,9 +122,7 @@
                 <div class="row form-group">
                     <label for="photoUpload">Upload photos</label>
                         <input type="file" name="userfile" size="20" />
-                    <?php if (isset($upload_data)) { ?>
-                        <input type="hidden" name="image_name" value = "<?php echo $upload_data['file_name'] ?>" />
-                    <?php } ?>
+                        <input type="hidden" name="image-name" value = "<?php echo uniqid(); ?>" />
                 </div>
             </div>
 
