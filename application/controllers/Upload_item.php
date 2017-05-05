@@ -108,6 +108,19 @@ class Upload_item extends CI_Controller{
         }
         else
         {
+            // gets the name of the file uploaded by user
+            $uploaded_file = $this->upload->data();
+            $tempfile = $uploaded_file['file_name'];
+
+            // random string to be used for file name
+            $fileid = $this->input->post('image-name');
+
+            // extracts extension from the file name from user
+            $extension = pathinfo($tempfile, PATHINFO_EXTENSION);
+
+            // concatenates unique file id with extension
+            $filename = $fileid . $extension;
+
             $data = array(
                 'username' => $this->session->username,
                 'name' => $this->input->post('item-name'),
@@ -116,7 +129,7 @@ class Upload_item extends CI_Controller{
                 'description' => $this->input->post('description'),
                 'price' => $this->input->post('price'),
                 'duration' => $this->input->post('listing-duration'),
-                'image' => $this->input->post('image-name'),
+                'image' => $filename,
                 'date' =>  date("Y-m-d")
             );
 
