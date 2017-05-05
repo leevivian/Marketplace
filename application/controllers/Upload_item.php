@@ -28,9 +28,7 @@ class Upload_item extends CI_Controller{
         } else {
             $this->load->view('login_view');
         }
-
         $this->load->view('footer');
-
     }
 
     public function upload(){
@@ -52,7 +50,6 @@ class Upload_item extends CI_Controller{
         }
         else
         {
-
             $data = array(
                 'username' => $this->session->username,
                 'name' => $this->input->post('item-name'),
@@ -69,11 +66,7 @@ class Upload_item extends CI_Controller{
 
             //redirects to the details page of the uploaded item
             redirect(base_url() . "index.php/search/load_details/{$itemid}");
-
-
         }
-
-
     }
 
     // Codeigniter's documentation on file uploading:
@@ -98,7 +91,6 @@ class Upload_item extends CI_Controller{
         $this->form_validation->set_rules('description','Description', 'required');
         $this->form_validation->set_rules('price', 'Price', 'trim|required|numeric');
 
-        // Removed error variable from view, so this might not be needed anymore..
         if ( ! $this->upload->do_upload('userfile') || $this->form_validation->run() == FALSE )
         {
             $error = array('error' => $this->upload->display_errors());
