@@ -29,7 +29,7 @@ class Login extends CI_Controller{
 
         //loads login_view.php
         $this->load->view('header');
-        $this->load->view('login_view');
+        $this->load->view('login/login_view');
         $this->load->view('footer');
     }
     
@@ -41,7 +41,7 @@ class Login extends CI_Controller{
         $data['login'] = LOGOUT;
         
         $this->load->view('header');
-        $this->load->view('login_view', $data);
+        $this->load->view('login/login_view', $data);
         $this->load->view('footer');
         
     }
@@ -57,13 +57,39 @@ class Login extends CI_Controller{
             $this->session->login = true;
             $data['login'] = SUCCESS;
             $this->load->view('header');
-            $this->load->view('login_view', $data);
+            $this->load->view('login/login_view', $data);
         } else {
             $data['login'] = FAILURE;
             $this->load->view('header');
-            $this->load->view('login_view', $data);
+            $this->load->view('login/login_view', $data);
         }
         
+        $this->load->view('footer');
+    }
+    
+    public function forgot($choice  = null) {
+        $this->load->view('header');
+        if(isset($choice)) {
+            $data['choice'] = $choice;
+            $this->load->view('login/forgot', $data);
+        } else {
+            $email = $this->input->post('email');
+            $password = $this->input->post('password');
+            $username = $this->login_model->userdata($email);
+            if(isset($username)) {
+                if(isset($password) && strlen($password) > 1) {
+                    $this->login_model->updatepass($username, $password);
+                    $data['choice'] = 4;
+                    $this->load->view('login/forgot', $data);
+                } else {
+                    $data['username'] = $username;
+                    $this->load->view('login/forgot', $data);
+                }
+            } else {
+                $data['choice'] = 3;
+                $this->load->view('login/forgot', $data);
+            }
+        }
         $this->load->view('footer');
     }
 }

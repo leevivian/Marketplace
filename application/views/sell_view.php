@@ -96,8 +96,15 @@ $title = $category = $condition = $photos = $description = $price = "";
             <!-- Photos | Only images can be uploaded -->
             <label for="text">Photos: </label>
             <div class="filefield">
-                <input class="button" type='file' onchange="readURL(this);" multiple accept="image/*"/> 
-                <img id="itemPhoto" src="#" alt="Item" hidden /> 
+
+                <?php echo $error;?>
+                <?php echo form_open_multipart('Upload_item/upload_img');?>
+                    <input type="file" name="itemPhoto" size="20" />
+                    <br /><br />
+                    <input type="submit" value="upload" />
+                </form>
+
+
             </div>
             <br><br>
 

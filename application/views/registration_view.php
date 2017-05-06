@@ -48,43 +48,52 @@
     <div id="registration-form" class="container">
         <?php
         $this->load->helper('form');
-        echo form_open('Registration');
+        echo form_open('Registration/register');
         ?>
         <div class="col-md-8 col-md-offset-2" id="formrow" >
 
             <form class="form-horizontal" method="post">
-                <div class="form-group row">
-                    <label class="control-label col-md-4" for="username">Username: </label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-                    </div>
-                </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">First Name: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="first-name" name="firstname" placeholder="First Name">
+                        <input type="text" class="form-control" id="firstname" name="firstname" required="true" placeholder="First Name"
+                               value="<?php echo set_value('firstname');?>">
+                        <?php echo form_error('firstname', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">Last Name: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="last-name" name="lastname" placeholder="Last Name">
+                        <input type="text" class="form-control" id="lastname" name="lastname" required="true" placeholder="Last Name"
+                               value="<?php echo set_value('lastname');?>">
+                        <?php echo form_error('lastname', '<div class="error">', '</div>'); ?>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="username">Username: </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="username" name="username" required="true" placeholder="Username"
+                               value="<?php echo set_value('username');?>">
+                        <?php echo form_error('username', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="password">Password: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="password" name="password" placeholder="Enter Password">
+                        <input type="password" class="form-control" id="password" name="password" required="true" placeholder="Enter Password">
+                        <?php echo form_error('password', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="password">Confirm Password: </label>
                     <div class="col-md-8">
-                        <input type="text" class="form-control" id="password-confirm" name="password-confirm" placeholder="Confirm Password">
+                        <input type="password" class="form-control" id="password-confirm" name="password-confirm" required="true" placeholder="Confirm Password">
+                        <?php echo form_error('password-confirm', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
@@ -100,7 +109,7 @@
                 </div>
 
                 <div class="form-group row checkbox-inline" style="padding-left: 80px;">
-                    <label><input type="checkbox" style="height: 30px;" value="">I have read the terms & agreements.</label>
+                    <label><input type="checkbox" required="true" style="height: 30px;" value="">I have read the terms & agreements.</label>
                 </div>
 
                 <div class="form-group row">
