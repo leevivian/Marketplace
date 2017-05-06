@@ -112,8 +112,12 @@
                 </div>
 
                 <div class="form-group row checkbox-inline" style="padding-left: 80px;">
-                    <label><input type="checkbox" value="">I have read the terms & agreements.</label>
+                    <label><input name="accept_terms" type="checkbox"
+                                  value="1" <?php echo set_checkbox("accept_terms", "1") ?>>
+                        I have read the terms & agreements.</label>
+                    <?php echo form_error('accept_terms', '<div class="error">', '</div>') ?>
                 </div>
+  
 
                 <div class="form-group row">
                     <a href="<?php echo base_url() ?>index.php/home" class="btn btn-danger" type="button" id="Cancel" >Cancel</a></button>

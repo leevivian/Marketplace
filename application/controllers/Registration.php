@@ -61,15 +61,21 @@ class Registration extends CI_Controller {
         $this->form_validation->set_rules('lastname', 'Last Name', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'required|trim|matches[password]');
+        $this->form_validation->set_rules('accept_terms', '', 'callback_accept_terms');
 
 
-        //Second argument is the displayable name used for error messages
+
+        //Call validate_input to protect against XSS attacks
         $email = $this->validate_input($this->input->post('email'));
         $username = $this->validate_input($this->input->post('username'));
         $firstname = $this->validate_input($this->input->post('firstname'));
         $lastname = $this->validate_input($this->input->post('lastname'));
         $password = $this->validate_input($this->input->post('password'));
         $pass_confirm = $this->validate_input($this->input->post('confirmpassword'));
+        $agreeToTerms = $this->input->post('accept_terms');
+        /*if(isset($agreeToTerms)){
+            var_dump((int) $agreeToTerms);
+        }*/
 
         if ($this->form_validation->run() == FALSE) {
             //If the email (and all other variables) had an incorrect format, do the following: 
@@ -111,6 +117,7 @@ class Registration extends CI_Controller {
         } else {
             return false;
         }
+        
 
         /*if ($str == 'test@sfsu.edu') {
             $this->form_validation->set_message('email_unique', 'The {field} field can not be the word "test"');
@@ -118,6 +125,16 @@ class Registration extends CI_Controller {
         } else {
             return TRUE;
         }*/
+    }
+    
+    function accept_terms($str) {
+        if (isset($str)) {
+            return true;
+        }
+
+        //var_dump((int) $str);
+        $this->form_validation->set_message('accept_terms', 'Please read and accept the terms and conditions.');
+        return false;
     }
 
 }
