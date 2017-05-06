@@ -138,6 +138,7 @@ class Upload_item extends CI_Controller{
 
     public function create_thumbnail($filename){
 
+        // preferences for image resizing.
         $config['image_library']    = 'gd2';
         $config['source_image']     = './images/item_images/' . $filename;
         $config['new_image']        = './images/item_images/thumbnail_' . $filename;
