@@ -3,10 +3,11 @@
 /**
  * Created by PhpStorm.
  * User: aculanay
- * Date: 4/16/17
- * Time: 8:59 PM
+ * Date: 4/25/17
+ * Time: 6:46 AM
  */
-class Dashboard extends CI_Controller{
+
+class Send_message extends CI_Controller{
 
     public function __construct()
     {
@@ -22,13 +23,10 @@ class Dashboard extends CI_Controller{
     public function index(){
 
         //loads upload_view.php
-        $this->load->view('header');
-        if(isset($this->session->login) && $this->session->login) {
-            $this->load->view('dashboard_view');
-        } else {
-            $this->load->view('login_view');
-        }
-        
+        $title = array(
+            'title' => 'Send a message');
+        $this->load->view('header', $title);
+        $this->load->view('/messaging/sendMessage_view');
         $this->load->view('footer');
 
     }

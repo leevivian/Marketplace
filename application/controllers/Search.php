@@ -34,11 +34,11 @@ class Search extends CI_Controller{
         // receives the input from the form
         $keyword = $this->input->post('searchquery');
         $category = $this->input->post('Category');
+        $condition = $this->input->post('Condition');
 
         /* passes the search keyword to get_items()
         and stores the data in an array named 'results' */
-        $data['category'] = $category;
-        $data['results'] = $this->search_model->get_items($keyword, $category);
+        $data['results'] = $this->search_model->get_items($keyword, $category, $condition);
 
         // loads the search_view page, passing it data from get_items()
         $title = array(
@@ -46,6 +46,19 @@ class Search extends CI_Controller{
         $this->load->view('header', $title);
         $this->load->view('listing_view', $data);
         $this->load->view('footer');
+    }
+
+    /* Gets itemid from listing_view.php, and calls get_details function
+     * in the Search model. Takes data that returns from get_details
+     * function, and passes it to listingPage_view.php */
+    public function load_details(){
+
+        $id = $this->uri->segment(3);
+        $data['results']= $this->search_model->get_details($id);
+        $this->load->view('header');
+        $this->load->view('listingPage_view', $data);
+        $this->load->view('footer');
+
     }
     
     public function load_description(){

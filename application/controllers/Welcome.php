@@ -7,13 +7,20 @@ class Welcome extends CI_Controller {
      *  placed on each side, sandwiching the content in the middle. header.php will load bootstrap, and takes the
      *  title of the page as an argument. footer.php includes the legal stuff at the bottom of the page. */
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->helper('form');
+        $this->load->helper('url');
+        $this->load->model('Home_model');
+    }
+
     public function index()
     {
         $this->load->helper('url');
-        $title = array(
-            'title' => 'SFSU Buy/Sell');
-        $this->load->view('header', $title);
-        $this->load->view('home_view');
+        $this->load->view('header');
+        $data['recent_listings'] = $this->Home_model->getRecentListings();
+        $this->load->view('home_view', $data);
         $this->load->view('footer');
     }
 }

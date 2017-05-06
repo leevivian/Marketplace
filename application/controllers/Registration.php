@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Nick_2
- * Date: 4/10/2017
- * Time: 7:30 PM
- */
 
 class Registration extends CI_Controller
 {
@@ -12,22 +6,51 @@ class Registration extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-
-        /**
-         * and form helper
-         * Url helper is needed for bootstrap.
-         */
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->library(array('session', 'form_validation', 'email'));
+        $this->load->database();
+        $this->load->model('Registration_model');
+        $this->load->model('Login_model');
     }
 
     public function index()
     {
-        //loads seach_view.php
-        $title = array(
-            'title' => 'Registration');
-        $this->load->view('header', $title);
-        $this->load->view('registration_view');
-        $this->load->view('footer');
+        $this->register();
+    }
+
+    public function register()
+    {
+        // Validate user input field constraints are not violated
+        if($this->input->post('register-submit'))
+            $this->form_validation->set_rules('firstname', 'firstname', 'required');
+            $this->form_validation->set_rules('lastname', 'lastname', 'required');
+            $this->form_validation->set_rules('username', 'username', 'required');
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+            $this->form_validation->set_rules('password', 'password', 'required');
+            $this->form_validation->set_rules('password-confirm', 'confirm password', 'required|matches[password]');
+
+        if ($this->form_validation->run() == FALSE)
+        {
+            // Load the registration view
+            $this->load->view('header');
+            $this->load->view('registration_view');
+            $this->load->view('footer');
+        } else {
+            // Group all registration fields together into an array
+            $data = array(
+                'username' => $this->db->escape($this->input->post('username')),
+                'firstname' => $this->db->escape($this->input->post('firstname')),
+                'lastname' => $this->db->escape($this->input->post('lastname')),
+                'password' => $this->db->escape($this->Login_model->encrypt($this->input->post('password'))),
+                'email' => $this->db->escape($this->input->post('email'))
+            );
+
+            // If insertion is successful, the user is redirected to the Home Page
+            if ($this->Registration_model->insertNewUser($data)) {
+                redirect('/');
+            }
+            // If insertion is unsuccessful, error message appears on Registration Page
+        }
     }
 }
