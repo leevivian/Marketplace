@@ -31,24 +31,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $this->load->helper('form');
                     echo form_open('search/execute_search'); ?>
                     <form>
+                        <!-- Dropdown for condition -->
                         <select name="Condition" size="1" style="width: auto; height: 28px;">
-
                             <option selected="selected" value="Any">Select Condition</option>
-                            <option value="Any">Any</option>
-                            <option value="Brand New">Brand New</option>
-                            <option value="Like New">Like New</option>
-                            <option value="Good">Good</option>
-                            <option value="Acceptable">Acceptable</option>
+                            <option value="Any"<?php echo set_select('Condition', 'Any'); ?> >Any</option>
+                            <option value="Brand New" <?php echo set_select('Condition', 'Brand New'); ?> >Brand New</option>
+                            <option value="Like New" <?php echo set_select('Condition', 'Like New'); ?> >Like New</option>
+                            <option value="Good" <?php echo set_select('Condition', 'Good'); ?> >Good</option>
+                            <option value="Acceptable" <?php echo set_select('Condition', 'Acceptable'); ?> >Acceptable</option>
                         </select>
+
+                        <!-- Dropdown for category -->
                         <select name="Category" size="1" style="height: 28px;">
 
                             <option selected="selected" value="All">Select Category</option>
-                            <option value="All">All</option>
-                            <option value="Books">Books</option>
-                            <option value="Furniture">Furniture</option>
-                            <option value="Electronics">Electronics</option>
-                            <option value="Clothing">Clothing</option>
-                            <option value="Other">Other</option>
+                            <option value="All" <?php echo set_select('Category', 'Brand New'); ?> >All</option>
+                            <option value="Books" <?php echo set_select('Category', 'Books'); ?>>Books</option>
+                            <option value="Furniture" <?php echo set_select('Category', 'Furniture'); ?>>Furniture</option>
+                            <option value="Electronics" <?php echo set_select('Category', 'Electronics'); ?>>Electronics</option>
+                            <option value="Clothing" <?php echo set_select('Category', 'Clothing'); ?>>Clothing</option>
+                            <option value="Other" <?php echo set_select('Category', 'Other'); ?>>Other</option>
                         </select>
                         <input type="text" value="<?php echo set_value('searchquery')?>" style="width: 45%;" name="searchquery"/>
                         <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
