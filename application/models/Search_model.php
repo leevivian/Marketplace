@@ -7,10 +7,10 @@ class Search_model extends CI_Model {
     }
 
 
-    public function get_items($search, $category){
+    public function get_items($search, $category, $condition){
         $search = trim($search);
 
-        //searches the database's 'items' table for similarity in 'name' and 'category' columns
+       /* //searches the database's 'items' table for similarity in 'name' and 'category' columns
         if($category=="All")
         {
             $this->db->select('*');
@@ -34,7 +34,30 @@ class Search_model extends CI_Model {
         $query = $this->db->get();
 
         //returns query results in an array
-        return $query->result_array();
+        return $query->result_array();*/
+
+       // SELECT * FROM Items
+       $this->db->select('*');
+       $this->db->from('Items');
+
+       if($category === "All" && $condition === "All"){
+           // WHERE 'name' LIKE '%search%'
+           $this->db->like('name', $search);
+       }else if($category !== "All" && $condition === "All"){
+           $this->db->where('category', $category);
+           $this->db->like('name',$search);
+       }else if($condition !== "All" && $category === "All"){
+           $this->db->where('condition', $condition);
+           $this->db->like('name',$search);
+       }else{
+           $this->db->where('category', $category);
+           $this->db->where('condition', $condition);
+           $this->db->like('name', $search);
+       }
+
+       $query = $this->db->get();
+
+       return $query->result_array();
 
     }
 

@@ -32,45 +32,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     echo form_open('search/execute_search'); ?>
                     <form>
                         <select name="Condition" size="1" style="width: auto; height: 28px;">
-                            <option selected value="<?php
-                            if (isset($category)) {
-                                echo $category;
-                            } else {
-                                echo "New";
-                            }
-                            ?>">
-                                <?php
-                                if (isset($category)) {
-                                    echo $category;
-                                } else {
-                                    echo "New";
-                                }
-                                ?>
-                            </option>
-                            <option value="New">New</option>
-                            <option value="Old">Old</option>
-                            <option value="Refurbished">Refurbished</option>
+
+                            <option selected="selected" value="Any">Any</option>
+                            <option value="Brand New">Brand New</option>
+                            <option value="Like New">Like New</option>
+                            <option value="Good">Good</option>
+                            <option value="Acceptable">Acceptable</option>
                         </select>
                         <select name="Category" size="1" style="height: 28px;">
-                            <option selected value="<?php
-                            if (isset($category)) {
-                                echo $category;
-                            } else {
-                                echo "All";
-                            }
-                            ?>">
-                                <?php
-                                if (isset($category)) {
-                                    echo $category;
-                                } else {
-                                    echo "All";
-                                }
-                                ?>
-                            </option>
-                            <option value="All">All</option>
+
+                            <option selected="selected" value="All">All</option>
+                            <option value="Books">Books</option>
                             <option value="Furniture">Furniture</option>
                             <option value="Electronics">Electronics</option>
-                            <option value="Books">Books</option>
+                            <option value="Clothing">Clothing</option>
                             <option value="Other">Other</option>
                         </select>
                         <input type="text" value="<?php echo set_value('searchquery')?>" style="width: 45%;" name="searchquery"/>
