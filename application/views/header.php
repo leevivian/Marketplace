@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <select name="Category" size="1" style="height: 28px;">
 
                             <option selected="selected" value="All">Select Category</option>
-                            <option value="All" <?php echo set_select('Category', 'Brand New'); ?> >All</option>
+                            <option value="All" <?php echo set_select('Category', 'All'); ?> >All</option>
                             <option value="Books" <?php echo set_select('Category', 'Books'); ?>>Books</option>
                             <option value="Furniture" <?php echo set_select('Category', 'Furniture'); ?>>Furniture</option>
                             <option value="Electronics" <?php echo set_select('Category', 'Electronics'); ?>>Electronics</option>
