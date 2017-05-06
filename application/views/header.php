@@ -33,7 +33,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <form>
                         <select name="Condition" size="1" style="width: auto; height: 28px;">
 
-                            <option selected="selected" value="Any">Any</option>
+                            <option selected="selected" value="Any">Select Condition</option>
+                            <option value="Any">Any</option>
                             <option value="Brand New">Brand New</option>
                             <option value="Like New">Like New</option>
                             <option value="Good">Good</option>
@@ -41,7 +42,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </select>
                         <select name="Category" size="1" style="height: 28px;">
 
-                            <option selected="selected" value="All">All</option>
+                            <option selected="selected" value="All">Select Category</option>
+                            <option value="All">All</option>
                             <option value="Books">Books</option>
                             <option value="Furniture">Furniture</option>
                             <option value="Electronics">Electronics</option>

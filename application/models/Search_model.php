@@ -40,16 +40,20 @@ class Search_model extends CI_Model {
        $this->db->select('*');
        $this->db->from('Items');
 
-       if($category === "All" && $condition === "All"){
-           // WHERE 'name' LIKE '%search%'
+       if($category === "All" && $condition === "Any"){
+           // WHERE name LIKE $search
            $this->db->like('name', $search);
        }else if($category !== "All" && $condition === "All"){
+
+           // WHERE category = $category AND WHERE name LIKE $search
            $this->db->where('category', $category);
            $this->db->like('name',$search);
-       }else if($condition !== "All" && $category === "All"){
+       }else if($condition !== "Any" && $category === "All"){
+           // WHERE condition = $condition AND WHERE name LIKE $search
            $this->db->where('condition', $condition);
            $this->db->like('name',$search);
        }else{
+           // WHERE category = $category AND WHERE condition = $condition AND WHERE 'name' LIKE $search
            $this->db->where('category', $category);
            $this->db->where('condition', $condition);
            $this->db->like('name', $search);
