@@ -65,19 +65,6 @@
         <div class="col-lg-12">
             <h3 class=""></h3>
         </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="<?php echo base_url()?>images/temp_images/s1.jpg" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="<?php echo base_url()?>images/temp_images/s2.png" alt="">
-            </a>
-        </div>
-
     </div>
     <!-- /.row -->
 
