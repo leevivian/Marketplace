@@ -33,5 +33,19 @@ class Login_model extends CI_Model {
             return false;
         }
     }
+    
+    public function userdata($email) {
+        $this->load->database();
+        $results = $this->db->query("SELECT username FROM Users WHERE email = ".$this->db->escape($email))->result_array();
+        if(isset($results[0]['username'])) {
+            return $results[0]['username'];
+        } else {
+            return null;
+        }
+    }
 
+    public function updatepass($username, $password) {
+        $this->load->database();
+        $this->db->query("UPDATE Users SET PASSWORD = '".$this->encrypt($password)."' WHERE username = ".$this->db->escape($username));
+    }
 }

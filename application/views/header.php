@@ -31,49 +31,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $this->load->helper('form');
                     echo form_open('search/execute_search'); ?>
                     <form>
+                        <!-- Dropdown for condition -->
                         <select name="Condition" size="1" style="width: auto; height: 28px;">
-                            <option selected value="<?php
-                            if (isset($category)) {
-                                echo $category;
-                            } else {
-                                echo "New";
-                            }
-                            ?>">
-                                <?php
-                                if (isset($category)) {
-                                    echo $category;
-                                } else {
-                                    echo "New";
-                                }
-                                ?>
-                            </option>
-                            <option value="New">New</option>
-                            <option value="Old">Old</option>
-                            <option value="Refurbished">Refurbished</option>
+                            <option selected="selected" value="Any">Select Condition</option>
+                            <option value="Any"<?php echo set_select('Condition', 'Any'); ?> >Any</option>
+                            <option value="Brand New" <?php echo set_select('Condition', 'Brand New'); ?> >Brand New</option>
+                            <option value="Like New" <?php echo set_select('Condition', 'Like New'); ?> >Like New</option>
+                            <option value="Good" <?php echo set_select('Condition', 'Good'); ?> >Good</option>
+                            <option value="Acceptable" <?php echo set_select('Condition', 'Acceptable'); ?> >Acceptable</option>
                         </select>
+
+                        <!-- Dropdown for category -->
                         <select name="Category" size="1" style="height: 28px;">
-                            <option selected value="<?php
-                            if (isset($category)) {
-                                echo $category;
-                            } else {
-                                echo "All";
-                            }
-                            ?>">
-                                <?php
-                                if (isset($category)) {
-                                    echo $category;
-                                } else {
-                                    echo "All";
-                                }
-                                ?>
-                            </option>
-                            <option value="All">All</option>
-                            <option value="Furniture">Furniture</option>
-                            <option value="Electronics">Electronics</option>
-                            <option value="Books">Books</option>
-                            <option value="Other">Other</option>
+
+                            <option selected="selected" value="All">Select Category</option>
+                            <option value="All" <?php echo set_select('Category', 'All'); ?> >All</option>
+                            <option value="Books" <?php echo set_select('Category', 'Books'); ?>>Books</option>
+                            <option value="Furniture" <?php echo set_select('Category', 'Furniture'); ?>>Furniture</option>
+                            <option value="Electronics" <?php echo set_select('Category', 'Electronics'); ?>>Electronics</option>
+                            <option value="Clothing" <?php echo set_select('Category', 'Clothing'); ?>>Clothing</option>
+                            <option value="Other" <?php echo set_select('Category', 'Other'); ?>>Other</option>
                         </select>
-                        <input type="text" style="width: 45%;" name="searchquery"/>
+                        <input type="text" value="<?php echo set_value('searchquery')?>" style="width: 45%;" name="searchquery"/>
                         <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
                     </form>
                 </div>

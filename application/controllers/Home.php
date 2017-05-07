@@ -13,13 +13,14 @@ class Home extends CI_Controller
         parent::__construct();
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->model('Home_model');
     }
 
     public function index()
     {
-        $title = array('title' => 'Home Page');
         $this->load->view('header');
-        $this->load->view('home_view');
+        $data['recent_listings'] = $this->Home_model->getRecentListings();
+        $this->load->view('home_view', $data);
         $this->load->view('footer');
     }
 }

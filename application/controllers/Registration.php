@@ -19,63 +19,61 @@ class Registration extends CI_Controller {
         $this->load->helper('url');
     }
     
+    //needs to be called before outputting any variable to any view
     public function validate_input($data) {
-        return $this->security->xss_clean($data);
+        $data = htmlspecialchars($data);
+        $data = stripslashes($data);
+        $data = $this->security->xss_clean($data);
+        return $data;
     }
 
     public function index() {
         //Codeigniter preprocesses input for security
         $this->load->helper(array('form'));
         $this->load->library('form_validation');
+        $this->load->database(); //Required to use is_unique
                 
         //Email rules
         $this->form_validation->set_rules(
-                'email', 'Email', 'required|trim|valid_email', array(
+                'email', 'Email', 'required|trim|valid_email|is_unique[Users.email]', array(
             'is_unique' => 'This %s already exists.'
                 )
         );
-        /*WIP
-        if ($this->form_validation->run() == TRUE) {
-            //email_check('email')
-            $this->form_validation->set_rules('email', 'Email', 'callback_email_unique');
-        }*/
-        //Enforce hierachy: Default error messages first, custom error message second
+        //Default error messages first, SFSU address message second
         if ($this->form_validation->run() == TRUE) {
             //email_check('email')
             $this->form_validation->set_rules('email', 'Email', 'callback_email_format');
         }
-
-
+        
         //Username rules
         $this->form_validation->set_rules(
-                'username', 'Username', 'required|min_length[5]|max_length[12]'
-        );
-        /*$this->form_validation->set_rules(
-                'username', 'Username', array(
-            'required',
-            array($this->Registration_Model, 'email_unique')
+                'username', 'Username', 'required|min_length[5]|max_length[12]|is_unique[Users.username]', array(
+                    'is_unique' => 'This %s already exists.'
                 )
-        );*/
+        );
 
         $this->form_validation->set_rules('firstname', 'First Name', 'required|trim');
-        $this->form_validation->set_rules('lastname', 'Last Name', 'required');
+        $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
         $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'required|trim|matches[password]');
         $this->form_validation->set_rules('accept_terms', '', 'callback_accept_terms');
-
-
-
-        //Call validate_input to protect against XSS attacks
-        $email = $this->validate_input($this->input->post('email'));
+        
+        //The following variable need to be filtered through validate_input before being output
+        /*$email = $this->validate_input($this->input->post('email'));
         $username = $this->validate_input($this->input->post('username'));
         $firstname = $this->validate_input($this->input->post('firstname'));
         $lastname = $this->validate_input($this->input->post('lastname'));
         $password = $this->validate_input($this->input->post('password'));
         $pass_confirm = $this->validate_input($this->input->post('confirmpassword'));
-        $agreeToTerms = $this->input->post('accept_terms');
-        /*if(isset($agreeToTerms)){
-            var_dump((int) $agreeToTerms);
-        }*/
+        $agreeToTerms = $this->input->post('accept_terms');*/
+        
+        //Security: In index.php, define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+        //needs to be changed to 'production' once SFSU Marketplace is ready for release.
+        //This will prevent harmful information from being printed through PHP's native error message
+        //system. 
+        //validate_input only needs to be called only right before output, in order to prevent slashes being removed from passwords. 
+        //htmlspecialchars() is automatically called as an intermediate function of set_value in registration_view. 
+        //Database insertion: escape data before inserting it CI's three escape functions.
 
         if ($this->form_validation->run() == FALSE) {
             //If the email (and all other variables) had an incorrect format, do the following: 
@@ -106,33 +104,11 @@ class Registration extends CI_Controller {
         return false;
     }
     
-    public function email_unique($str) {
-        $this->load->database();
-        $query = $this->db->get('Users');
-        $query = $this->db->where('email', $str);
- 
-        if ($query->num_rows() > 0) {
-            //echo $query;
-            return true;
-        } else {
-            return false;
-        }
-        
-
-        /*if ($str == 'test@sfsu.edu') {
-            $this->form_validation->set_message('email_unique', 'The {field} field can not be the word "test"');
-            return FALSE;
-        } else {
-            return TRUE;
-        }*/
-    }
-    
     function accept_terms($str) {
         if (isset($str)) {
             return true;
         }
 
-        //var_dump((int) $str);
         $this->form_validation->set_message('accept_terms', 'Please read and accept the terms and conditions.');
         return false;
     }

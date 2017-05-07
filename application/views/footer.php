@@ -10,6 +10,7 @@
 
         <div>
             <p style="text-align: right">SFSU CSC 648-2 Team 12 Class Project</p>
+            <p style="text-align: right">This is for demonstration only</p>
         </div>
 
 </footer>

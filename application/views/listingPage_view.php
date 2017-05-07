@@ -41,7 +41,16 @@
                 }
                 ?>
             </p>
+            <h3>
+                <?php
+                if(isset($results)){
+                    foreach($results as $item){
+                        echo "$" . $item['price']  ;
+                    }
+                }
+                ?>
 
+            </h3>
 
             <a href="<?php echo base_url()?>index.php/messaging" class="btn btn-default" style="width:80%; font-size: 20px; background-color: #4089d4; color: white;">Contact Seller</a>
 
