@@ -7,7 +7,7 @@ class Search_model extends CI_Model {
     }
 
 
-    public function get_items($search, $category, $condition){
+    public function get_items($search, $category, $condition, $sort){
         $search = trim($search);
 
         // SELECT * FROM Items
@@ -35,6 +35,8 @@ class Search_model extends CI_Model {
         if($search !== ""){
             $this->db->like('name', $search);
         }
+
+        $this->db->order_by('price', $sort);
 
         $query = $this->db->get();
 

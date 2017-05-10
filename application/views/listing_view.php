@@ -22,15 +22,29 @@
                     <div class="tab-box ">
 
                         <!--Sorting Function -->
+                        <?php echo form_open('search/execute_search'); ?>
+                        <form>
                         <div class="tab-filter">
-                            <div class="selecter select-short-by closed" tabindex="0"><select
-                                        class="selectpicker selecter-element" data-style="btn-select" data-width="auto"
-                                        tabindex="-1">
+                            <div class="selecter select-short-by closed" tabindex="0">
+                                <select class="selectpicker selecter-element" name="sort" data-style="btn-select" onchange="this.form.submit()" data-width="auto" tabindex="-1">
                                     <option value="Sort by">Sort by</option>
-                                    <option value="Price: Low to High">Price: Low to High</option>
-                                    <option value="Price: High to Low">Price: High to Low</option>
-                                </select></div>
+                                    <option value="'ASC'">Price: Low to High</option>
+                                    <option value="'DESC'">Price: High to Low</option>
+                                </select>
+
+                                <?php
+                                    if(isset($query)){ ?>
+
+                                        <input type="hidden" name="searchquery" value = <?php echo $query['query'] ?> >
+                                        <input type="hidden" name="Category" value = <?php echo $query['cat'] ?> >
+                                        <input type="hidden" name="Condition" value = <?php echo $query['con'] ?> >
+
+                                    <?php   } ?>
+
+
+                            </div>
                         </div>
+                        </form>
 
                         <div class="menu-overly-mask"></div>
                     </div>
