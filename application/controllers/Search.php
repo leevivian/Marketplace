@@ -35,22 +35,16 @@ class Search extends CI_Controller{
         $keyword = $this->input->post('searchquery');
         $category = $this->input->post('Category');
         $condition = $this->input->post('Condition');
-        $sort = $this->input->post('sort');
 
         /* passes the search keyword to get_items()
         and stores the data in an array named 'results' */
-        $data['results'] = $this->search_model->get_items($keyword, $category, $condition, $sort);
-        $query = array(
-            'query' => $keyword,
-            'cat'   => $category,
-            'con'   => $condition
-        );
+        $data['results'] = $this->search_model->get_items($keyword, $category, $condition);
 
         // loads the search_view page, passing it data from get_items()
         $title = array(
             'title' => 'Vertical Prototype');
         $this->load->view('header', $title);
-        $this->load->view('listing_view', $data, $query);
+        $this->load->view('listing_view', $data);
         $this->load->view('footer');
     }
 
