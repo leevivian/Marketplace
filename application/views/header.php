@@ -7,14 +7,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <nav class="navbar navbar-default" role="navigation" >
     <div class="navbar-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header" style="display: inline;">
+        <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand2" href="<?php echo base_url()?>index.php/home"><img src="<?php echo base_url()?>images/logo.png" style="height: 45px;"></a>
+            <a class="navbar-brand2" href="<?php echo base_url() ?>index.php/home"><img src="<?php echo base_url() ?>images/logo.png" style="height: 45px;"></a>
         </div>
 
         <!-- Search Bar and Menu Buttons-->
@@ -61,18 +61,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <ul class="nav navbar-nav navbar-right" style="padding-top: 9px;">
                 <div class="btn-group" role="group" aria-label="...">
-                    <a class="btn btn-sm btn-success" href="<?php echo base_url()?>index.php/upload_item">Sell</a></button>
-                    <a href="<?php echo base_url()?>index.php/messaging" type="button" class="btn btn-sm btn-default">
+                    <!--Sell-->
+                    <a class="btn btn btn-success" href="<?php echo base_url() ?>index.php/upload_item">Sell</a></button>
+                    <!--Messaging-->
+                    <a href="<?php echo base_url() ?>index.php/messaging" type="button" class="btn btn btn-default">
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </a>
-
                     <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!--My Account-->
+                        <button type="button" class="btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             My Account
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo base_url()?>index.php/dashboard">Dashboard</a></li>
+                            <li><a href="<?php echo base_url() ?>index.php/dashboard">Dashboard</a></li>
                             <li role="separator" class="divider"></li>
                             
                             <!-- I added this block of code to change the login button to logout when the user is currently logged in. -->
@@ -85,11 +87,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
             </ul>
-        </div><!-- /.navbar-collapse -->
+        </div><!-- /.navbar-collapse  -->
     </div>
-
+</nav>
 
     <style>
+
         .navbar-fluid {
             margin-right: auto;
             margin-left: auto;
@@ -104,9 +107,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             line-height: 20px;
         }
 
+        .myselect{
+            height: 5px;
+        }
     </style>
 
-</nav>
+
 
 
   
@@ -124,6 +130,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="<?php echo base_url('assets/js/jquery-3.1.1.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
+    <script>
+        /*$('#myaccount').on('hidden.bs.collapse', function (e) {
+            document.getElementById("demo").innerHTML = e.currentTarget.id;
+        })*/
+        
+    //For testing
+    /*$(document).ready(function(){
+        $("#hide").click(function(){
+            document.getElementById("demo").innerHTML = "$( window ).width() )";
+        });
+    });*/
+    
+    $('#viewport').html($(window).width());
+
+    $(window).resize(function () {
+        var viewportWidth = $(window).width();
+        $('#viewport').html(viewportWidth + "px");
+    });
+           
+    function setSearchfieldLength() {
+        var w = $(window).width();
+        //768px: Default collapse width for bootstrap
+        if(w<916){
+            $("#searchfield").css('width', 50);
+            //document.getElementById("demo").innerHTML = w;
+        }
+        else if (w>=916 && w<1072){
+            $("#searchfield").css('width', '30%');
+            //document.getElementById("demo").innerHTML = w;
+        }
+        else if(w>=1072){
+            $("#searchfield").css('width', '40%');
+            //document.getElementById("demo").innerHTML = w;
+        }   
+    }
+   
+    $(window).ready(setSearchfieldLength);
+    $(window).load(setSearchfieldLength);
+    $(window).resize(setSearchfieldLength);
+        
+    </script>
     <style>
         body {
             font: 20px Montserrat, sans-serif;
