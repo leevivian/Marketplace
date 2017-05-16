@@ -1,3 +1,6 @@
+<?php include_once("analyticstracking.php") ?>
+
+
 <html>
     <style>
         body{
