@@ -6,11 +6,22 @@
  * Date: 4/10/2017
  * Time: 7:30 PM
  */
+
+//Note on Security (to be deleted): In index.php, define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+//needs to be changed to 'production' once SFSU Marketplace is ready for release.
+//This will prevent harmful information from being printed through PHP's native error message
+//system. 
+//validate_input needs to be called only right before output, in order to prevent slashes being removed from passwords.
+//If it's called right after input, this may lead to data corruption and
+//difficulties with comparing data. 
+//htmlspecialchars() is automatically called as an intermediate function of set_value in registration_view. 
+//$config['csrf_protection'] = TRUE; needs to be set in the config to protect against
+//cross-site request forgery. 
+
 class Registration extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-
         /**
          * and form helper
          * Url helper is needed for bootstrap.
@@ -60,17 +71,6 @@ class Registration extends CI_Controller {
         $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'required|trim|matches[password]');
         $this->form_validation->set_rules('accept_terms', '', 'callback_accept_terms');
-
-        //Security: In index.php, define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-        //needs to be changed to 'production' once SFSU Marketplace is ready for release.
-        //This will prevent harmful information from being printed through PHP's native error message
-        //system. 
-        //validate_input needs to be called only right before output, in order to prevent slashes being removed from passwords.
-        //If it's called right after input, this may lead to data corruption and
-        //difficulties with comparing data. 
-        //htmlspecialchars() is automatically called as an intermediate function of set_value in registration_view. 
-        //$config['csrf_protection'] = TRUE; needs to be set in the config to protect against
-        //cross-site request forgery. 
         
         if ($this->form_validation->run() == FALSE) {
             //If the email (and all other variables) had an incorrect format, do the following: 
@@ -106,14 +106,7 @@ class Registration extends CI_Controller {
                 $this->load->view('registration_success');
                 $this->load->view('footer');
                 header("refresh:5;url=" . base_url() . "index.php/Home");
-            }
-            /*// If insertion is successful, the user is redirected to the Home Page
-            if ($this->Registration_model->insertNewUser($data)) {
-                $this->load->view('header');
-                $this->load->view('registration_success');
-                $this->load->view('footer');
-            }*/
-            
+            }         
         }
     }
 
