@@ -62,14 +62,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <ul class="nav navbar-nav navbar-right" style="padding-top: 9px;">
                 <div class="btn-group" role="group" aria-label="...">
                     <!--Sell-->
-                    <a id="sell" class="btn btn btn-success" href="<?php echo base_url() ?>index.php/upload_item">Sell</a></button>
+                    <a class="btn btn btn-success" href="<?php echo base_url() ?>index.php/upload_item">Sell</a></button>
                     <!--Messaging-->
-                    <a id="messaging" href="<?php echo base_url() ?>index.php/messaging" type="button" class="btn btn btn-default">
+                    <a href="<?php echo base_url() ?>index.php/messaging" type="button" class="btn btn btn-default">
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </a>
                     <div class="btn-group" role="group">
                         <!--My Account-->
-                        <button id="myaccount" type="button" class="btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             My Account
                             <span class="caret"></span>
                         </button>
@@ -91,49 +91,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 </nav>
 
-
     <style>
-        /*Collapse navbar at 
-        @media (max-width: 1200px) {
-            .navbar-header {
-                float: none;
-            }
-            .navbar-toggle {
-                display: block;
-            }
-            .navbar-collapse {
-                border-top: 1px solid transparent;
-                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            }
-            .navbar-collapse.collapse {
-                display: none!important;
-            }
-            .navbar-nav {
-                float: none!important;
-                margin: 7.5px -15px;
-            }
-            .navbar-nav>li {
-                float: none;
-            }
-            .navbar-nav>li>a {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-        }*/
 
-        
-        #searchdiv {
-            left: 185px;
-            position: fixed;
-            top: 16px;
-            z-index: 999;
-            width: 100%;
-            /*margin: 0px auto;*/
-            display: inline-block; 
-            width: 60%;
-            /*style="display:inline-block; margin: 0 auto; width: 51%; "*/
-        }
-        
         .navbar-fluid {
             margin-right: auto;
             margin-left: auto;
