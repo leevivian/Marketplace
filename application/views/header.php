@@ -1,7 +1,13 @@
+<?php include_once("analyticstracking.php") ?>
+
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
+
+
+
 <title>SFSUMarketplace</title>
 
 <nav class="navbar navbar-default" role="navigation" >
