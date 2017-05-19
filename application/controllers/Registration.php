@@ -34,7 +34,7 @@ class Registration extends CI_Controller {
         $this->load->helper(array('form'));
         $this->load->library('form_validation');
         $this->load->database(); //Required to use is_unique
-        $data['tos'] = false; //false by default
+        $TOS = 'FALSE'; //false by default
                 
         //Email rules
         $this->form_validation->set_rules(
