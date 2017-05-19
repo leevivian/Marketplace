@@ -27,7 +27,7 @@ class Registration_model extends CI_Model{
         $data["lastname"] = $this->db->escape($data["lastname"]);
         $data["email"] = $this->db->escape($data["email"]);
         $data["tos"] = $this->db->escape($data["tos"]);
-        var_dump($data["tos"]); //Debugging
+        //var_dump($data["tos"]); //Debugging
         $this->db->insert("Users", $data);
         return true;
     }
