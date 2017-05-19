@@ -34,6 +34,7 @@ class Registration extends CI_Controller {
         $this->load->helper(array('form'));
         $this->load->library('form_validation');
         $this->load->database(); //Required to use is_unique
+        $data['tos'] = false; //false by default
                 
         //Email rules
         $this->form_validation->set_rules(
@@ -80,18 +81,21 @@ class Registration extends CI_Controller {
             $this->load->view('footer');
         } else {
             //Otherwise, load a 'registration succeeded' page
+            
             $username = $this->input->post('username');
             $firstname = $this->input->post('firstname');
             $lastname = $this->input->post('lastname');
             $password = $this->Login_model->encrypt($this->input->post('password'));
             $email = $this->input->post('email');
+            $TOS = 'TRUE'; //This will only be executed if the TOS checkbox was checked
                             
             $data = array(
                 'username' => $username,
                 'firstname' => $firstname,
                 'lastname' => $lastname,
                 'password' => $password,
-                'email' => $email
+                'email' => $email,
+                'tos' => $TOS
             );
 
             //Redirect to Home after 5 seconds if db_submit was successful
