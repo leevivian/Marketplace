@@ -54,23 +54,6 @@
 
             <form class="form-horizontal">
                 <!--$this->input->$post can only find the name of the text field-->
-                <div class="form-group row"> 
-                    <label class="control-label col-md-4" for="email">SFSU Email: </label>
-                    <div class="col-md-8">
-                        <input style="text-align: left;" name="email" type="text" class="form-control" id="email" placeholder="Email"
-                               value="<?php echo set_value('email'); ?>">
-                               <?php echo form_error('email', '<div class="error">', '</div>'); ?>     
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label class="control-label col-md-4" for="username">Username: </label>
-                    <div class="col-md-8">
-                        <input name="username" type="text" class="form-control" id="username" placeholder="Username"
-                               value="<?php echo set_value('username'); ?>">
-                               <?php echo form_error('username', '<div class="error">', '</div>'); ?> 
-                    </div>
-                </div>
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">First Name: </label>
@@ -87,6 +70,24 @@
                         <input name="lastname" type="text" class="form-control" id="last-name" placeholder="Last Name"
                                value="<?php echo set_value('lastname'); ?>">
                                <?php echo form_error('lastname', '<div class="error">', '</div>'); ?> 
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="email">SFSU Email: </label>
+                    <div class="col-md-8">
+                        <input style="text-align: left;" name="email" type="text" class="form-control" id="email" placeholder="Email"
+                               value="<?php echo set_value('email'); ?>">
+                        <?php echo form_error('email', '<div class="error">', '</div>'); ?>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-4" for="username">Username: </label>
+                    <div class="col-md-8">
+                        <input name="username" type="text" class="form-control" id="username" placeholder="Username"
+                               value="<?php echo set_value('username'); ?>">
+                        <?php echo form_error('username', '<div class="error">', '</div>'); ?>
                     </div>
                 </div>
 
