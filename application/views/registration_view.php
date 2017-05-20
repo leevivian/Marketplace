@@ -53,7 +53,6 @@
         <div class="col-md-8 col-md-offset-2" id="formrow" >
 
             <form class="form-horizontal">
-                <!--$this->input->$post can only find the name of the text field-->
 
                 <div class="form-group row">
                     <label class="control-label col-md-4" for="username">First Name: </label>
@@ -102,7 +101,8 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="control-label col-md-4" for="password">Confirm Password: </label>
+                    <label class="control-label col
+                    -md-4" for="password">Confirm Password: </label>
                     <div class="col-md-8">
                         <input name="confirmpassword" type="password" class="form-control" id="password-confirm" placeholder="Confirm Password"
                                value="<?php echo set_value('confirmpassword'); ?>">
@@ -122,17 +122,13 @@
                 <div class="form-group row">
                     <a href="<?php echo base_url() ?>index.php/home" class="btn btn-danger" type="button" id="Cancel" >Cancel</a></button>
 
-                    <!--<a href="<?php echo base_url() ?>index.php/registration/getInput" type="submit" id= "submit" class="btn btn-primary" style="float: right;">Create Account</a>-->
                     <button style="float: right;" type="submit" id="submit" class="btn btn-primary">Create Account</button>
                 </div>
-                <!--<input style="float: right;" type="submit" name="submit" value="Test"/>-->
             </form>
             <?php
             echo form_close();
             ?>
         </div>
     </div>
-
-
 </body>
 </html>

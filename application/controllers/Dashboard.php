@@ -26,7 +26,7 @@ class Dashboard extends CI_Controller{
         if(isset($this->session->login) && $this->session->login) {
             $this->load->view('dashboard_view');
         } else {
-            $this->load->view('login_view');
+            $this->load->view('login/login_view');
         }
         
         $this->load->view('footer');

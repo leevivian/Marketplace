@@ -73,8 +73,6 @@
                                      controller -->
                                    <a href="<?php echo base_url()?>index.php/search/load_details/<?php echo $id?>"> <button class="btn btn-primary" type="submit" >More Info</button></a>
 
-
-
                             </div>
                         </div>
                         <?php
@@ -82,7 +80,6 @@
                 }
                 ?>
             </div>
-
 
             <!--Pagination-->
             <div class="pagination-bar text-center">

@@ -112,12 +112,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
     </style>
 
-
-
-
-  
-
-
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
      and jquery are loaded. It also has the different backgrounds we are using for the site. This will be loaded by
      the controller as the head part of a page, along with the opening body tag. The footer file will close the body.-->
