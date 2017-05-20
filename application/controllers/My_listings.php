@@ -19,7 +19,7 @@ class My_listings extends CI_Controller {
         if (isset($this->session->login) && $this->session->login && isset($this->session->username)) {
             $username = $this->session->username;
             $data['myListings'] = $this->Listings_model->getMyListings($username);
-            $this->load->view('myListings_view');
+            $this->load->view('myListings_view', $data);
         } else {
             $this->load->view('login_view');
         }
