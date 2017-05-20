@@ -10,8 +10,8 @@ class Listings_Model extends CI_Model
     // Sends back an array containing six most recent listings to be displayed
     // on the Home Page
 
-    public function getMyListings() {
-        $query = $this->db->query("SELECT * FROM Items WHERE username = 'username';");
+    public function getMyListings($username) {
+        $query = $this->db->query("SELECT * FROM Items WHERE username = '$username';");
         return $query->result_array();
     }
 }
