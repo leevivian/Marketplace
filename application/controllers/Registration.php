@@ -7,17 +7,6 @@
  * Time: 7:30 PM
  */
 
-//Note on Security (to be deleted): In index.php, define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-//needs to be changed to 'production' once SFSU Marketplace is ready for release.
-//This will prevent harmful information from being printed through PHP's native error message
-//system. 
-//validate_input needs to be called only right before output, in order to prevent slashes being removed from passwords.
-//If it's called right after input, this may lead to data corruption and
-//difficulties with comparing data. 
-//htmlspecialchars() is automatically called as an intermediate function of set_value in registration_view. 
-//$config['csrf_protection'] = TRUE; needs to be set in the config to protect against
-//cross-site request forgery. 
-
 class Registration extends CI_Controller {
 
     public function __construct()
@@ -65,8 +54,12 @@ class Registration extends CI_Controller {
                 )
         );
 
-        $this->form_validation->set_rules('firstname', 'First Name', 'required|trim');
-        $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
+        $this->form_validation->set_rules('firstname', 'First Name', 'required|trim|alpha');
+        
+//Allow dashes, a-z and A-Z
+        $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim|regex_match[/^([-a-z])+$/i]', array(
+            'regex_match' => 'Last name must consist of alphabetic characters and dashes'
+        ));
         $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'required|trim|matches[password]');
         $this->form_validation->set_rules('accept_terms', '', 'callback_accept_terms');
@@ -80,7 +73,6 @@ class Registration extends CI_Controller {
             $this->load->view('footer');
         } else {
             //Otherwise, load a 'registration succeeded' page
-            
             $username = $this->input->post('username');
             $firstname = $this->input->post('firstname');
             $lastname = $this->input->post('lastname');
@@ -129,5 +121,4 @@ class Registration extends CI_Controller {
         $this->form_validation->set_message('accept_terms', 'Please read and accept the terms and conditions.');
         return false;
     }
-
 }
