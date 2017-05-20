@@ -20,15 +20,14 @@
 
 class Registration extends CI_Controller {
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
-        /**
-         * and form helper
-         * Url helper is needed for bootstrap.
-         */
-        $this->load->model('Registration_model');
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->library(array('session', 'form_validation', 'email'));
+        $this->load->database();
+        $this->load->model('Registration_model');
         $this->load->model('Login_model');
     }
     
@@ -58,7 +57,7 @@ class Registration extends CI_Controller {
             //email_check('email')
             $this->form_validation->set_rules('email', 'Email', 'callback_email_format');
         }
-        
+
         //Username rules
         $this->form_validation->set_rules(
                 'username', 'Username', 'required|min_length[5]|max_length[12]|is_unique[Users.username]', array(
@@ -73,7 +72,7 @@ class Registration extends CI_Controller {
         $this->form_validation->set_rules('accept_terms', '', 'callback_accept_terms');
         
         if ($this->form_validation->run() == FALSE) {
-            //If the email (and all other variables) had an incorrect format, do the following: 
+            //If the email (and all other variables) had an incorrect format, do the following:
             $title = array(
                 'title' => 'Registration');
             $this->load->view('header', $title);
@@ -113,7 +112,7 @@ class Registration extends CI_Controller {
     //Pass 'email' as $str through the callback
     public function email_format($str) {
 
-        //Checks if the given pattern is found in 'email' 
+        //Checks if the given pattern is found in 'email'
         if (stristr($str, '@mail.sfsu.edu') !== false || stristr($str, '@sfsu.edu') !== false) {
             return true;
         }
@@ -121,7 +120,7 @@ class Registration extends CI_Controller {
         $this->form_validation->set_message('email_format', 'Please provide a SFSU email address');
         return false;
     }
-    
+
     function accept_terms($str) {
         if (isset($str)) {
             return true;
