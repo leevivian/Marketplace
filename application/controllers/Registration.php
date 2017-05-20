@@ -8,15 +8,15 @@
  */
 class Registration extends CI_Controller {
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
-
-        /**
-         * and form helper
-         * Url helper is needed for bootstrap.
-         */
         $this->load->helper('form');
         $this->load->helper('url');
+        $this->load->library(array('session', 'form_validation', 'email'));
+        $this->load->database();
+        $this->load->model('Registration_model');
+        $this->load->model('Login_model');
     }
     
     //needs to be called before outputting any variable to any view
