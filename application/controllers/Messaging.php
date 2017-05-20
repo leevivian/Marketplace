@@ -30,7 +30,7 @@ class Messaging extends CI_Controller {
         if (isset($this->session->login) && $this->session->login && isset($this->session->username)) {
             $username = $this->session->username;
             $data['message'] = $this->messaging_model->openMessage($messageid, $username);
-            $this->load->view('messaging/messaging_view', $data);
+            $this->load->view('messaging/reply_view', $data);
         } else {
             $this->load->view('login_view');
         }

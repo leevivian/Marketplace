@@ -26,7 +26,7 @@ class Upload_item extends CI_Controller{
             $this->load->view('upload_view', array('error' => ' ' ));
 
         } else {
-            $this->load->view('login_view');
+            $this->load->view('login/login_view');
         }
         $this->load->view('footer');
     }
