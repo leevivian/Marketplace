@@ -30,7 +30,9 @@ class My_listings extends CI_Controller {
         $this->load->view('header');
         if (isset($this->session->login) && $this->session->login && isset($this->session->username)) {
             $id = $this->uri->segment(3);
-            $data['my_listing_id'] = $this->Listings_model->remove_listing($id);
+            $username = $this->session->username;
+            $data['myListings'] = $this->Listings_model->getMyListings($username);
+            $this->Listings_model->remove_listing($id);
             $this->load->view('myListings_view', $data);
         } else {
             $this->load->view('login/login_view');
