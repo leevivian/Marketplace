@@ -1,5 +1,13 @@
 <html>
 
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
 
 <body>
 
@@ -71,8 +79,42 @@
     <hr>
 </body>
 
-<style>
+<body>
+<!-- Preferred Meetup Places -->
+<h3>Preferred Safe Meetup Place</h3>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var uluru = {lat: 37.722358, lng: -122.478664};
+        var cesarChavez = {lat: 37.722167, lng: -122.478452};
+        var quad = {lat: 37.722293, lng: -122.477607};
+        var sucGardens = {lat: 37.723090, lng: -122.477343};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+        var marker2 = new google.maps.Marker({
+            position: cesarChavez,
+            map: map
+        });
+        var marker3 = new google.maps.Marker({
+            position: quad,
+            map: map
+        });
+        var marker4 = new google.maps.Marker({
+            position: sucGardens,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZo144k1-N4Tb2MIp47EfPDJB-r1LcBcE&callback=initMap">
+</script>
 
-</style>
+
 
 </html>
