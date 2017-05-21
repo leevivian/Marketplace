@@ -34,7 +34,7 @@
             foreach($recent_listings as $row) {
                 $id = $row['itemid'];
                 ?>
-                <div class='col-md-2 col-sm-6 hero-feature' style="padding-bottom: 300px;">
+                <div class='col-md-2 col-sm-6 hero-feature' style="min-height: 300px;">
                     <div class='thumbnail'>
                         <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>" alt="Image not found">
                         <div class="caption" style="176px;">
