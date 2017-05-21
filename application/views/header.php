@@ -3,165 +3,120 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 <!DOCTYPE html>
-<title>SFSUMarketplace</title>
+<html>
+<head>
+    <title>SFSUMarketplace</title>
 
-<nav class="navbar navbar-default" role="navigation" >
-    <div class="navbar-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand2" href="http://sfsuse.com/~vlee1/index.php/home"><img src="http://sfsuse.com/~vlee1/images/logo.png" style="height: 45px;"></a>
-        </div>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand2" href="http://sfsuse.com/~vlee1/index.php/home" style="padding-left: 10px;">
+                    <img src="http://sfsuse.com/~vlee1/images/logo.png" style="height: 45px;"></a>
+            </div>
 
-        <!-- Search Bar and Menu Buttons-->
+            <!-- Search Bar and Menu Buttons-->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-            <div style="margin: 0px auto; width: 60%; ">
-                <div style="position:relative;  width:100%; color: black; text-align: center; padding-top: 10px;">
-                    <div class="dropdown" name="category">
+                <div style="margin: 0px auto;width: 96%;">
+                    <ul class="nav navbar-nav navbar-right" style="padding-top: 9px;">
+                        <div class="btn-group" role="group" aria-label="..." style="">
+                            <!--Sell-->
+                            <a class="btn btn btn-success"
+                               href="http://sfsuse.com/~vlee1/index.php/upload_item">Sell</a>
+                            <!--Messaging-->
+                            <a href="http://sfsuse.com/~vlee1/index.php/messaging" type="button"
+                               class="btn btn btn-default">
+                                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                            </a>
+                            <div class="btn-group" role="group">
+                                <!--My Account-->
+                                <button type="button" class="btn btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    My Account
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="http://sfsuse.com/~vlee1/index.php/dashboard">Dashboard</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="http://sfsuse.com/~vlee1/index.php/login/logout">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                    <div style="position:relative;width: 80%;color: black;text-align: center;padding-top: 10px;">
+                        <div class="dropdown" name="category">
 
-                    </div>
-                    <form action="http://sfsuse.com/~vlee1/index.php/search/execute_search" method="post" accept-charset="utf-8">
-                        <input type="hidden" name="csrf_test_name" value="d362d0088ed24d7355fe37322e02558e" />
-                        <form>
+                        </div>
+                        <form action="http://sfsuse.com/~vlee1/index.php/search/execute_search" method="post"
+                              accept-charset="utf-8">
+                            <input type="hidden" name="csrf_test_name" value="d362d0088ed24d7355fe37322e02558e">
+
                             <!-- Dropdown for condition -->
                             <select name="Condition" size="1" style="width: auto; height: 28px;">
                                 <option selected="selected" value="Any">Select Condition</option>
-                                <option value="Any" >Any</option>
-                                <option value="Brand New"  >Brand New</option>
-                                <option value="Like New"  >Like New</option>
-                                <option value="Good"  >Good</option>
-                                <option value="Acceptable"  >Acceptable</option>
+                                <option value="Any">Any</option>
+                                <option value="Brand New">Brand New</option>
+                                <option value="Like New">Like New</option>
+                                <option value="Good">Good</option>
+                                <option value="Acceptable">Acceptable</option>
                             </select>
 
                             <!-- Dropdown for category -->
                             <select name="Category" size="1" style="height: 28px;">
 
                                 <option selected="selected" value="All">Select Category</option>
-                                <option value="All"  >All</option>
-                                <option value="Books" >Books</option>
-                                <option value="Furniture" >Furniture</option>
-                                <option value="Electronics" >Electronics</option>
-                                <option value="Clothing" >Clothing</option>
-                                <option value="Other" >Other</option>
+                                <option value="All">All</option>
+                                <option value="Books">Books</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Other">Other</option>
                             </select>
-                            <input type="text" value="" style="width: 45%;" name="searchquery"/>
-                            <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
+                            <input type="text" value="" style="width: 45%;" name="searchquery">
+                            <input style="display: inline-block;" type="submit" name="submit" value="Search">
                         </form>
-                </div>
-            </div>
-
-
-            <ul class="nav navbar-nav navbar-right" style="padding-top: 9px;">
-                <div class="btn-group" role="group" aria-label="...">
-                    <!--Sell-->
-                    <a class="btn btn btn-success" href="http://sfsuse.com/~vlee1/index.php/upload_item">Sell</a></button>
-                    <!--Messaging-->
-                    <a href="http://sfsuse.com/~vlee1/index.php/messaging" type="button" class="btn btn btn-default">
-                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                    </a>
-                    <div class="btn-group" role="group">
-                        <!--My Account-->
-                        <button type="button" class="btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            My Account
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="http://sfsuse.com/~vlee1/index.php/dashboard">Dashboard</a></li>
-                            <li role="separator" class="divider"></li>
-
-                            <!-- I added this block of code to change the login button to logout when the user is currently logged in. -->
-                            <li><a href="http://sfsuse.com/~vlee1/index.php/login/logout">Logout</a></li>
-                        </ul>
                     </div>
                 </div>
-            </ul>
-        </div><!-- /.navbar-collapse  -->
-    </div>
-</nav>
-
-<style>
-
-    .navbar-fluid {
-        margin-right: auto;
-        margin-left: auto;
-        width: 95%;
-    }
-
-    .navbar-brand2 {
-        float: left;
-        height: 50px;
-        /* padding: 15px 15px; */
-        font-size: 18px;
-        line-height: 20px;
-    }
-
-    .myselect{
-        height: 5px;
-    }
-</style>
-
-<!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
-     and jquery are loaded. It also has the different backgrounds we are using for the site. This will be loaded by
-     the controller as the head part of a page, along with the opening body tag. The footer file will close the body.-->
-
-<head>
-    <title>
-        <div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
-
-            <h4>A PHP Error was encountered</h4>
-
-            <p>Severity: Notice</p>
-            <p>Message:  Undefined variable: title</p>
-            <p>Filename: views/header.php</p>
-            <p>Line Number: 120</p>
 
 
-            <p>Backtrace:</p>
+            </div><!-- /.navbar-collapse  -->
+        </div>
+    </nav>
 
+    <style>
 
+        .navbar-fluid {
+            margin-right: auto;
+            margin-left: auto;
+            width: 95%;
+        }
 
+        .navbar-brand2 {
+            float: left;
+            height: 50px;
+            font-size: 18px;
+            line-height: 20px;
+        }
 
+        .myselect {
+            height: 5px;
+        }
+    </style>
 
+    <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
+         and jquery are loaded. It also has the different backgrounds we are using for the site. This will be loaded by
+         the controller as the head part of a page, along with the opening body tag. The footer file will close the body.-->
 
-            <p style="margin-left:10px">
-                File: /home/vlee1/public_html/application/views/header.php<br />
-                Line: 120<br />
-                Function: _error_handler			</p>
-
-
-
-
-
-
-
-
-            <p style="margin-left:10px">
-                File: /home/vlee1/public_html/application/controllers/Home.php<br />
-                Line: 21<br />
-                Function: view			</p>
-
-
-
-
-
-
-            <p style="margin-left:10px">
-                File: /home/vlee1/public_html/index.php<br />
-                Line: 315<br />
-                Function: require_once			</p>
-
-
-
-
-        </div></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://sfsuse.com/~vlee1/assets/css/bootstrap.css">
@@ -169,16 +124,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="http://sfsuse.com/~vlee1/assets/js/jquery-3.1.1.min.js"></script>
     <script src="http://sfsuse.com/~vlee1/assets/js/bootstrap.min.js"></script>
     <script>
-        /*$('#myaccount').on('hidden.bs.collapse', function (e) {
-         document.getElementById("demo").innerHTML = e.currentTarget.id;
-         })*/
-
-        //For testing
-        /*$(document).ready(function(){
-         $("#hide").click(function(){
-         document.getElementById("demo").innerHTML = "$( window ).width() )";
-         });
-         });*/
 
         $('#viewport').html($(window).width());
 
@@ -190,15 +135,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         function setSearchfieldLength() {
             var w = $(window).width();
             //768px: Default collapse width for bootstrap
-            if(w<916){
+            if (w < 916) {
                 $("#searchfield").css('width', 50);
                 //document.getElementById("demo").innerHTML = w;
             }
-            else if (w>=916 && w<1072){
+            else if (w >= 916 && w < 1072) {
                 $("#searchfield").css('width', '30%');
                 //document.getElementById("demo").innerHTML = w;
             }
-            else if(w>=1072){
+            else if (w >= 1072) {
                 $("#searchfield").css('width', '40%');
                 //document.getElementById("demo").innerHTML = w;
             }
