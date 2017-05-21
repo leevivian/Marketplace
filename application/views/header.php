@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand2" href="<?php echo base_url() ?>index.php/home">
-                <img src="<?php echo base_url() ?>images/logo.png" style="height: 45px;"></a>
+                <img src="<?php echo base_url() ?>images/logo.png"></a>
         </div>
 
         <!-- Search Bar and Menu Buttons-->
@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
 
-            <div style="margin: 0px auto; width: 96%; ">
+            <div style="margin: 0px auto; width: 100%; ">
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 9px;">
                     <div class="btn-group" role="group" aria-label="...">
                         <!--Sell-->
@@ -57,8 +57,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     </div>
                     <?php
-                        $this->load->helper('form');
-                        echo form_open('search/execute_search');
+                    $this->load->helper('form');
+                    echo form_open('search/execute_search');
                     ?>
                     <form>
                         <!-- Dropdown for condition -->
@@ -92,26 +92,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 </nav>
 
-    <style>
+<style>
 
-        .navbar-fluid {
-            margin-right: auto;
-            margin-left: auto;
-            width: 95%;
-        }
+    .navbar-fluid {
+        margin-right: auto;
+        margin-left: auto;
+        width: 95%;
+    }
 
-        .navbar-brand2 {
-            float: left;
-            height: 50px;
-            /* padding: 15px 15px; */
-            font-size: 18px;
-            line-height: 20px;
-        }
+    .navbar-brand2 {
+        float: left;
+        height: 50px;
+        /* padding: 15px 15px; */
+        font-size: 18px;
+        line-height: 20px;
+    }
 
-        .myselect{
-            height: 5px;
-        }
-    </style>
+    .myselect{
+        height: 5px;
+    }
+</style>
 
 <!-- This file contains all the necessary links and information for a standard web page in our project. Bootstrap, fonts
      and jquery are loaded. It also has the different backgrounds we are using for the site. This will be loaded by
@@ -127,43 +127,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
     <script>
         /*$('#myaccount').on('hidden.bs.collapse', function (e) {
-            document.getElementById("demo").innerHTML = e.currentTarget.id;
-        })*/
+         document.getElementById("demo").innerHTML = e.currentTarget.id;
+         })*/
 
-    //For testing
-    /*$(document).ready(function(){
-        $("#hide").click(function(){
-            document.getElementById("demo").innerHTML = "$( window ).width() )";
+        //For testing
+        /*$(document).ready(function(){
+         $("#hide").click(function(){
+         document.getElementById("demo").innerHTML = "$( window ).width() )";
+         });
+         });*/
+
+        $('#viewport').html($(window).width());
+
+        $(window).resize(function () {
+            var viewportWidth = $(window).width();
+            $('#viewport').html(viewportWidth + "px");
         });
-    });*/
 
-    $('#viewport').html($(window).width());
-
-    $(window).resize(function () {
-        var viewportWidth = $(window).width();
-        $('#viewport').html(viewportWidth + "px");
-    });
-
-    function setSearchfieldLength() {
-        var w = $(window).width();
-        //768px: Default collapse width for bootstrap
-        if(w<916){
-            $("#searchfield").css('width', 50);
-            //document.getElementById("demo").innerHTML = w;
+        function setSearchfieldLength() {
+            var w = $(window).width();
+            //768px: Default collapse width for bootstrap
+            if(w<916){
+                $("#searchfield").css('width', 50);
+                //document.getElementById("demo").innerHTML = w;
+            }
+            else if (w>=916 && w<1072){
+                $("#searchfield").css('width', '30%');
+                //document.getElementById("demo").innerHTML = w;
+            }
+            else if(w>=1072){
+                $("#searchfield").css('width', '40%');
+                //document.getElementById("demo").innerHTML = w;
+            }
         }
-        else if (w>=916 && w<1072){
-            $("#searchfield").css('width', '30%');
-            //document.getElementById("demo").innerHTML = w;
-        }
-        else if(w>=1072){
-            $("#searchfield").css('width', '40%');
-            //document.getElementById("demo").innerHTML = w;
-        }
-    }
 
-    $(window).ready(setSearchfieldLength);
-    $(window).load(setSearchfieldLength);
-    $(window).resize(setSearchfieldLength);
+        $(window).ready(setSearchfieldLength);
+        $(window).load(setSearchfieldLength);
+        $(window).resize(setSearchfieldLength);
 
     </script>
     <style>
