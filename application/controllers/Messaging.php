@@ -18,7 +18,7 @@ class Messaging extends CI_Controller {
             $data['messages'] = $this->messaging_model->getMessages($username);
             $this->load->view('messaging/messaging_view', $data);
         } else {
-            $this->load->view('login_view');
+            $this->load->view('login/login_view');
         }
 
         $this->load->view('footer');
