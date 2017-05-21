@@ -1,5 +1,13 @@
 <html>
 
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
 
 <body>
 
@@ -107,8 +115,6 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZo144k1-N4Tb2MIp47EfPDJB-r1LcBcE&callback=initMap">
 </script>
 
-<style>
 
-</style>
 
 </html>
