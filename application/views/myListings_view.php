@@ -43,7 +43,7 @@
                                 <?php
                                 echo "<br>";
                                 ?>
-                                <a class="btn btn-primary" target="_blank" href="<?php echo base_url()?>index.php/messaging"> Contact </a>
+                                <a class="btn btn-primary" target="_blank" href="<?php echo base_url()?>index.php/My_listings/delete_listing<?php echo $id?>"> Delete </a>
 
                                 <!-- Creates a form with a hidden field that has the itemid number in it.
                                      When button is clicked, calls the load_details function in the Search

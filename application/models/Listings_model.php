@@ -14,4 +14,9 @@ class Listings_Model extends CI_Model
         $query = $this->db->query("SELECT * FROM Items WHERE username = '$username';");
         return $query->result_array();
     }
+
+    public function remove_listing($id) {
+        $this->db->query("DELETE FROM Items WHERE itemid = '$id';");
+    }
+
 }
