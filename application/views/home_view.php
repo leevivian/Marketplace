@@ -26,7 +26,7 @@
         <!-- Title -->
         <div class="row">
             <div class="col-lg-12">
-                <h3 style="color:black">Recent Listings</h3>
+                <h3 style="color:black">Most Recent Listings</h3>
             </div>
         </div>
         <!-- /.row -->
@@ -40,7 +40,7 @@
                     $id = $row['itemid'];
                     ?>
                     <div class='col-md-2 col-sm-6 hero-feature'>
-                        <div class='thumbnail' style='min-height: 386px; max-height: 386px;''>
+                        <div class='thumbnail'>
                         <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>" alt="Image not found">
                         <div class="caption" style="176px;">
                             <h4><?php
