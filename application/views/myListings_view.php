@@ -44,7 +44,7 @@
                                 echo "<br>";
                                 ?>
                                 <a href="<?php echo base_url()?>index.php/My_listings/delete_listing/<?php echo $id?>">
-                                     <button class="btn btn-primary" type="submit"> Delete </a></a>
+                                    <button class="btn btn-primary" type="submit"> Delete </button></a>
 
                                 <!-- Creates a form with a hidden field that has the itemid number in it.
                                      When button is clicked, calls the load_details function in the Search
