@@ -80,7 +80,7 @@ class Search extends CI_Controller{
 
     public function category_books() {
 
-        $data['results'] = $this->search_model->get_items('', 'books');
+        $data['results'] = $this->search_model->get_items('', 'books', 'Any', null);
 
         $this->load->view('header');
         $this->load->view('listing_view', $data);
@@ -89,7 +89,7 @@ class Search extends CI_Controller{
 
     public function category_furniture() {
 
-        $data['results'] = $this->search_model->get_items('', 'furniture');
+        $data['results'] = $this->search_model->get_items('', 'furniture', 'Any', null);
 
         $this->load->view('header');
         $this->load->view('listing_view', $data);
@@ -98,7 +98,7 @@ class Search extends CI_Controller{
 
     public function category_electronics() {
 
-        $data['results'] = $this->search_model->get_items('', 'electronics');
+        $data['results'] = $this->search_model->get_items('', 'electronics', 'Any', null);
 
         $this->load->view('header');
         $this->load->view('listing_view', $data);
