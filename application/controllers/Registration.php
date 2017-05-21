@@ -1,7 +1,12 @@
 <?php
 
-class Registration extends CI_Controller
-{
+/**
+ * Created by PhpStorm.
+ * User: Nick_2
+ * Date: 4/10/2017
+ * Time: 7:30 PM
+ */
+class Registration extends CI_Controller {
 
     public function __construct()
     {
@@ -13,7 +18,7 @@ class Registration extends CI_Controller
         $this->load->model('Registration_model');
         $this->load->model('Login_model');
     }
-
+    
     //needs to be called before outputting any variable to any view
     public function validate_input($data) {
         $data = htmlspecialchars($data);
@@ -56,10 +61,14 @@ class Registration extends CI_Controller
         //Security: In index.php, define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
         //needs to be changed to 'production' once SFSU Marketplace is ready for release.
         //This will prevent harmful information from being printed through PHP's native error message
-        //system.
-        //validate_input only needs to be called only right before output, in order to prevent slashes being removed from passwords.
+        //system. 
+        //validate_input needs to be called only right before output, in order to prevent slashes being removed from passwords.
+        //If it's called right after input, this may lead to data corruption and
+        //difficulties with comparing data.
         //htmlspecialchars() is automatically called as an intermediate function of set_value in registration_view.
-
+        //$config['csrf_protection'] = TRUE; needs to be set in the config to protect against
+        //cross-site request forgery.
+        
         if ($this->form_validation->run() == FALSE) {
             //If the email (and all other variables) had an incorrect format, do the following:
             $title = array(
@@ -68,22 +77,37 @@ class Registration extends CI_Controller
             $this->load->view('registration_view');
             $this->load->view('footer');
         } else {
-            // Group all registration fields together into an array
+            //Otherwise, load a 'registration succeeded' page
+            $username = $this->input->post('username');
+            $firstname = $this->input->post('firstname');
+            $lastname = $this->input->post('lastname');
+            $password = $this->Login_model->encrypt($this->input->post('password'));
+            $email = $this->input->post('email');
+
             $data = array(
-                'username' => $this->input->post('username'),
-                'firstname' => $this->input->post('firstname'),
-                'lastname' => $this->input->post('lastname'),
-                'password' => $this->Login_model->encrypt($this->input->post('password')),
-                'email' => $this->input->post('email')
+                'username' => $username,
+                'firstname' => $firstname,
+                'lastname' => $lastname,
+                'password' => $password,
+                'email' => $email
             );
 
-            // If insertion is successful, the user is redirected to the Home Page
+            //Redirect to Home after 5 seconds if db_submit was successful
+            if ($this->Registration_model->db_submit($data)) {
+                $title = array(
+                    'title' => 'Registration success');
+                $this->load->view('header', $title);
+                $this->load->view('registration_success');
+                $this->load->view('footer');
+                header("refresh:5;url=" . base_url() . "index.php/Home");
+            }
+            /*// If insertion is successful, the user is redirected to the Home Page
             if ($this->Registration_model->insertNewUser($data)) {
                 $this->load->view('header');
                 $this->load->view('registration_success');
                 $this->load->view('footer');
-            }
-            // If insertion is unsuccessful, error message appears on Registration Page
+            }*/
+
         }
     }
 

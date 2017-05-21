@@ -35,11 +35,19 @@ class Search extends CI_Controller{
         $keyword = $this->input->post('searchquery');
         $category = $this->input->post('Category');
         $condition = $this->input->post('Condition');
+        $sort = $this->input->post('sort-select');
 
         /* passes the search keyword to get_items()
         and stores the data in an array named 'results' */
-        $data['results'] = $this->search_model->get_items($keyword, $category, $condition);
+        $res['results'] = $this->search_model->get_items($keyword, $category, $condition, $sort);
 
+        $query = array(
+            'searchquery' => $keyword,
+            'category'    => $category,
+            'condition'   => $condition
+        );
+
+        $data = $res + $query;
         // loads the search_view page, passing it data from get_items()
         $title = array(
             'title' => 'Vertical Prototype');
@@ -72,7 +80,7 @@ class Search extends CI_Controller{
 
     public function category_books() {
 
-        $data['results'] = $this->search_model->get_items('', 'books');
+        $data['results'] = $this->search_model->get_items('', 'books', 'Any', null);
 
         $this->load->view('header');
         $this->load->view('listing_view', $data);
@@ -81,7 +89,7 @@ class Search extends CI_Controller{
 
     public function category_furniture() {
 
-        $data['results'] = $this->search_model->get_items('', 'furniture');
+        $data['results'] = $this->search_model->get_items('', 'furniture', 'Any', null);
 
         $this->load->view('header');
         $this->load->view('listing_view', $data);
@@ -90,7 +98,7 @@ class Search extends CI_Controller{
 
     public function category_electronics() {
 
-        $data['results'] = $this->search_model->get_items('', 'electronics');
+        $data['results'] = $this->search_model->get_items('', 'electronics', 'Any', null);
 
         $this->load->view('header');
         $this->load->view('listing_view', $data);
