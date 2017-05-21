@@ -38,8 +38,15 @@ class Search extends CI_Controller{
 
         /* passes the search keyword to get_items()
         and stores the data in an array named 'results' */
-        $data['results'] = $this->search_model->get_items($keyword, $category, $condition);
+        $res['results'] = $this->search_model->get_items($keyword, $category, $condition);
 
+        $query = array(
+            'searchquery' => $keyword,
+            'category'    => $category,
+            'condition'   => $condition
+        );
+
+        $data = $res + $query;
         // loads the search_view page, passing it data from get_items()
         $title = array(
             'title' => 'Vertical Prototype');

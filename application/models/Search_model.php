@@ -36,6 +36,12 @@ class Search_model extends CI_Model {
             $this->db->like('name', $search);
         }
 
+        if( isset($sort) && strcmp($sort, "ASC") == 0){
+            $this->db->order_by('price', 'ASC');
+        }else if ( isset($sort) && strcmp($sort, "DESC") == 0 ){
+            $this->db->order_by('price', 'DESC');
+        }
+
         $query = $this->db->get();
 
         return $query->result_array();
