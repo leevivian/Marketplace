@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <option value="Clothing" <?php echo set_select('Category', 'Clothing'); ?>>Clothing</option>
                             <option value="Other" <?php echo set_select('Category', 'Other'); ?>>Other</option>
                         </select>
-                        <input type="text" value="<?php echo set_value('searchquery')?>" style="width: 45%;" name="searchquery"/>
+                        <input type="text" value="<?php echo set_value('searchquery')?>" style="width: 40%;" name="searchquery"/>
                         <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
                     </form>
                 </div>
