@@ -25,7 +25,7 @@
 
         <!-- Title -->
         <div class="row">
-            <div class="col-lg-12">
+            <div>
                 <h3 style="color:black">Most Recent Listings</h3>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 foreach($recent_listings as $row) {
                     $id = $row['itemid'];
                     ?>
-                    <div class='col-md-2 col-sm-6 hero-feature'>
+                    <div class='col-md-2 col-sm-6 hero-feature' style="min-height: 300px;">
                         <div class='thumbnail'>
                         <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>" alt="Image not found">
                         <div class="caption" style="176px;">

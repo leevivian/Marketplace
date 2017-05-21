@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
 
             <div style="margin: 0px auto; width: 60%; ">
-                <div class="col-sm-8" style="position:relative;  width:100%; color: black; text-align: center; padding-top: 10px;">
+                <div style="position:relative;  width:100%; color: black; text-align: center; padding-top: 10px;">
                     <div class="dropdown" name="category">
 
                     </div>
