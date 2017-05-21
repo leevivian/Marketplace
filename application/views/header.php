@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a class="btn btn btn-success" href="<?php echo base_url() ?>index.php/upload_item">Sell</a></button>
                         <!--Messaging-->
                         <a href="<?php echo base_url() ?>index.php/messaging" type="button" class="btn btn btn-default">
-                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-envelope" style="height: 20px;" aria-hidden="true"></span>
                         </a>
                         <div class="btn-group" role="group">
                             <!--My Account-->
