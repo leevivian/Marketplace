@@ -35,10 +35,11 @@ class Search extends CI_Controller{
         $keyword = $this->input->post('searchquery');
         $category = $this->input->post('Category');
         $condition = $this->input->post('Condition');
+        $sort = $this->input->post('sort-select');
 
         /* passes the search keyword to get_items()
         and stores the data in an array named 'results' */
-        $res['results'] = $this->search_model->get_items($keyword, $category, $condition);
+        $res['results'] = $this->search_model->get_items($keyword, $category, $condition, $sort);
 
         $query = array(
             'searchquery' => $keyword,

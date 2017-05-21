@@ -7,7 +7,7 @@ class Search_model extends CI_Model {
     }
 
 
-    public function get_items($search, $category, $condition){
+    public function get_items($search, $category, $condition, $sort){
         $search = trim($search);
 
         // SELECT * FROM Items
