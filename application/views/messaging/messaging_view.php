@@ -33,7 +33,7 @@
 
     <div class="row" id="button-row">
         <div class="col-6-lg pull-left">
-            <a href="<?php echo base_url() ?>/index.php/messaging/send" class="btn btn-primary" style="float: right;">Send Message</a>
+            <a href="<?php echo base_url() ?>index.php/messaging/send" class="btn btn-primary" style="float: right;">Send Message</a>
         </div>
 
     </div>
