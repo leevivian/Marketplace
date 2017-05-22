@@ -45,10 +45,11 @@ class Messaging extends CI_Controller {
         if (isset($this->session->login) && $this->session->login && isset($this->session->username)) {
             $data['sender'] = $this->session->username;
             if (isset($recipient)) {
-                $data['recipient'] = $recipient;
+                $data['recipient'] = urldecode($recipient);
             }
-            if (isset($itemName)) {
-                $data['subject'] = $subject;
+            if (isset($subject)) {
+                $sub = "I want to buy your " . urldecode($subject);
+                $data['subject'] = $sub;
             }
             $this->load->view('messaging/sendMessage_view', $data);
         } else {

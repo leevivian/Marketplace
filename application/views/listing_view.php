@@ -53,6 +53,7 @@
                     echo "<br>";
                     foreach ($results as $row) {
                         $id = $row['itemid'];
+                        $username = $row['username'];
                         ?>
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
@@ -74,7 +75,7 @@
                                     <?php
                                     echo "<br>";
                                     ?>
-                                <a class="btn btn-primary" target="_blank" href="<?php echo base_url()?>index.php/messaging"> Contact </a>
+                                <a class="btn btn-primary" target="_blank" href="<?php echo base_url()?>index.php/messaging/send/<?php echo $username;?>/<?php echo $row['name']; ?>""> Contact </a>
 
                                 <!-- Creates a form with a hidden field that has the itemid number in it.
                                      When button is clicked, calls the load_details function in the Search
