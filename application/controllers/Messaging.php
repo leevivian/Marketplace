@@ -48,7 +48,8 @@ class Messaging extends CI_Controller {
                 $data['recipient'] = $recipient;
             }
             if (isset($subject)) {
-                $data['subject'] = "I want to buy your " . $subject;
+                $sub = "I want to buy your " . $subject;
+                $data['subject'] = $sub;
             }
             $this->load->view('messaging/sendMessage_view', $data);
         } else {
