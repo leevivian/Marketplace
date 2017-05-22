@@ -41,6 +41,38 @@
         <div class="col-md-4">
             <h3>About the Product</h3>
             <p>
+                Sold By:
+                <?php
+                if(isset($results)){
+                    foreach($results as $item){
+                        echo $item['username'];
+                    }
+                }
+                ?>
+            </p>
+            <p>
+                Duration:
+                <?php
+                if(isset($results)){
+                    foreach($results as $item){
+                        echo $item['duration'];
+                    }
+                }
+                ?>
+
+            </p>
+            <p>
+                Condition:
+                <?php
+                if(isset($results)){
+                    foreach($results as $item){
+                        echo $item['condition'];
+                    }
+                }
+                ?>
+
+            </p>
+            <p>
                 <?php
                 if(isset($results)){
                     foreach($results as $item){
@@ -110,9 +142,15 @@
             map: map
         });
     }
+
+    google.maps.event.addListener(map, 'click', function(event){
+        this.setOptions({scrollwheel:true});
+    });
 </script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZo144k1-N4Tb2MIp47EfPDJB-r1LcBcE&callback=initMap">
+
+
 </script>
 
 
