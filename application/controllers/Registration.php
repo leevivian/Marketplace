@@ -32,7 +32,7 @@ class Registration extends CI_Controller {
         $this->load->helper(array('form'));
         $this->load->library('form_validation');
         $this->load->database(); //Required to use is_unique
-        $TOS = 'FALSE'; //false by default
+        $TOS = FALSE; //false by default
 
         //Email rules
         $this->form_validation->set_rules(
@@ -88,7 +88,7 @@ class Registration extends CI_Controller {
             $lastname = $this->input->post('lastname');
             $password = $this->Login_model->encrypt($this->input->post('password'));
             $email = $this->input->post('email');
-            $TOS = 'TRUE'; //This will only be executed if the TOS checkbox was checked
+            $TOS = TRUE; //This will only be executed if the TOS checkbox was checked
 
             $data = array(
                 'username' => $username,
