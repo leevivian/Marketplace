@@ -19,9 +19,7 @@ class Registration_model extends CI_Model {
 
     public function db_submit($data){
         //Password is not escaped, since it is not a string and should not be modified
-        //escape() adds single quotes around string
-        $this->db->insert('Users', $data);
+        $this->db->insert("Users", $data);
         return true;
     }
 }
-

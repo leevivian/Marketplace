@@ -23,9 +23,8 @@
 
                         <!--Sorting Function -->
                         <div class="tab-filter">
-                            <form action="execute_search" method="post">
+                            <form action="execute_search" method="GET">
                                 <?php if (isset($searchquery)) :?>
-                                    <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                     <input type="hidden" value="<?php echo $searchquery?>" name="searchquery">
                                     <input type="hidden" value="<?php echo $condition?>" name="Condition">
                                     <input type="hidden" value="<?php echo $category?>" name="Category">
@@ -91,7 +90,7 @@
             </div>
 
             <!--Pagination-->
-            <div class="pagination-bar text-center">
+          <!--  <div class="pagination-bar text-center">
                 <ul class="pagination">
                     <li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
@@ -99,7 +98,7 @@
                     <li><a href="#"> ...</a></li>
                     <li><a class="pagination-btn" href="#">Next »</a></li>
                 </ul>
-            </div>
+            </div> -->
             <!--/MainPage-->
         </div>
     </div>

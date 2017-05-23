@@ -18,16 +18,10 @@ class Login_model extends CI_Model {
 
     public function verify($username, $password) {
         $this->load->database();
-        $this->db->select("COUNT(*) AS count");
-        $this->db->from('Users');
-        $this->db->where('Username', $username);
-        $usercheck = $this->db->get();
+        $usercheck = $this->db->query("SELECT COUNT(*) AS count FROM Users WHERE username = " . $this->db->escape($username));
         $usercheck = $usercheck->result_array();
         if ($usercheck[0]['count'] > 0) {
-            $this->db->select('password');
-            $this->db->from('Users');
-            $this->db->where('Username', $username);
-            $query = $this->db->get();
+            $query = $this->db->query("SELECT password FROM Users WHERE username = '$username'");
             $query = $query->result_array();
             $realPass = $query[0]['password'];
             if (password_verify($password, $realPass)) {
