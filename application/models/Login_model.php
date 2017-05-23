@@ -18,15 +18,11 @@ class Login_model extends CI_Model {
 
     public function verify($username, $password) {
         $this->load->database();
-        $esc_username = $this->db->escape($username); //Adds '' around the username to ensure correct comparison
-        //Previous version (OLD), in case rollback is needed
-        //$usercheck = $this->db->query("SELECT COUNT(*) AS count FROM Users WHERE username = " . $this->db->escape($username));
-        $usercheck = $this->db->query("SELECT COUNT(*) AS count FROM Users WHERE username = " . $this->db->escape($esc_username));
+        $username = $this->db->escape($username); //Adds '' around the username to ensure correct comparison
+        $usercheck = $this->db->query("SELECT COUNT(*) AS count FROM Users WHERE username = " . $username);
         $usercheck = $usercheck->result_array();
         if ($usercheck[0]['count'] > 0) {
-            //Previous version (OLD), in case rollback is needed
-            //$query = $this->db->query("SELECT password FROM Users WHERE username = '$myusername'");
-            $query = $this->db->query("SELECT password FROM Users WHERE username = " .  $this->db->escape($esc_username));
+            $query = $this->db->query("SELECT password FROM Users WHERE username = " .  $username);
             $query = $query->result_array();
             $realPass = $query[0]['password'];
             if (password_verify($password, $realPass)) {
@@ -51,8 +47,6 @@ class Login_model extends CI_Model {
 
     public function updatepass($username, $password) {
         $this->load->database();
-        //Old code
-        //$this->db->query("UPDATE Users SET PASSWORD = '".$this->encrypt($password)."' WHERE username = ".$this->db->escape($username));
         $this->db->query("UPDATE Users SET PASSWORD = '".$this->encrypt($password)."' WHERE username = ".$this->db->escape($username));
     }
 }
