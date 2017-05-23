@@ -19,7 +19,7 @@ class Registration extends CI_Controller {
         $this->load->model('Login_model');
     }
     
-    //needs to be called before outputting any variable to any view
+    //Needs to be called before outputting any data to avoid executing XSS scripts
     public function validate_input($data) {
         $data = htmlspecialchars($data);
         $data = stripslashes($data);
@@ -32,6 +32,7 @@ class Registration extends CI_Controller {
         $this->load->helper(array('form'));
         $this->load->library('form_validation');
         $this->load->database(); //Required to use is_unique
+        $TOS = 'FALSE'; //false by default
 
         //Email rules
         $this->form_validation->set_rules(
@@ -52,8 +53,12 @@ class Registration extends CI_Controller {
                 )
         );
 
-        $this->form_validation->set_rules('firstname', 'First Name', 'required|trim');
-        $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
+        $this->form_validation->set_rules('firstname', 'First Name', 'required|trim|alpha');
+
+        //Allow dashes, a-z and A-Z
+        $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim|regex_match[/^([-a-z])+$/i]', array(
+            'regex_match' => 'Last name must consist of alphabetic characters and dashes'
+        ));
         $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'required|trim|matches[password]');
         $this->form_validation->set_rules('accept_terms', '', 'callback_accept_terms');
@@ -64,10 +69,10 @@ class Registration extends CI_Controller {
         //system. 
         //validate_input needs to be called only right before output, in order to prevent slashes being removed from passwords.
         //If it's called right after input, this may lead to data corruption and
-        //difficulties with comparing data.
-        //htmlspecialchars() is automatically called as an intermediate function of set_value in registration_view.
+        //difficulties with comparing data. 
+        //htmlspecialchars() is automatically called as an intermediate function of set_value in registration_view. 
         //$config['csrf_protection'] = TRUE; needs to be set in the config to protect against
-        //cross-site request forgery.
+        //cross-site request forgery. 
         
         if ($this->form_validation->run() == FALSE) {
             //If the email (and all other variables) had an incorrect format, do the following:
@@ -83,13 +88,15 @@ class Registration extends CI_Controller {
             $lastname = $this->input->post('lastname');
             $password = $this->Login_model->encrypt($this->input->post('password'));
             $email = $this->input->post('email');
+            $TOS = 'TRUE'; //This will only be executed if the TOS checkbox was checked
 
             $data = array(
                 'username' => $username,
                 'firstname' => $firstname,
                 'lastname' => $lastname,
                 'password' => $password,
-                'email' => $email
+                'email' => $email,
+                'tos' => $TOS
             );
 
             //Redirect to Home after 5 seconds if db_submit was successful
@@ -131,5 +138,4 @@ class Registration extends CI_Controller {
         $this->form_validation->set_message('accept_terms', 'Please read and accept the terms and conditions.');
         return false;
     }
-
 }
