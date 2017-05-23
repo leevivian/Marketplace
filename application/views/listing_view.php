@@ -23,9 +23,8 @@
 
                         <!--Sorting Function -->
                         <div class="tab-filter">
-                            <form action="execute_search" method="post">
+                            <form action="execute_search" method="GET">
                                 <?php if (isset($searchquery)) :?>
-                                    <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                     <input type="hidden" value="<?php echo $searchquery?>" name="searchquery">
                                     <input type="hidden" value="<?php echo $condition?>" name="Condition">
                                     <input type="hidden" value="<?php echo $category?>" name="Category">

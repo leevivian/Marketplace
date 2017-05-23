@@ -62,34 +62,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="dropdown" name="category">
 
                     </div>
-                    <?php
-                    $this->load->helper('form');
-                    echo form_open('search/execute_search');
-                    ?>
-                    <form>
+
+                    <form action="<?php echo base_url();?>index.php/search/execute_search" method = "GET">
                         <!-- Dropdown for condition -->
                         <select name="Condition" size="1" style="width: auto; height: 28px;">
                             <option selected="selected" value="Any">Select Condition</option>
-                            <option value="Any"<?php echo set_select('Condition', 'Any'); ?> >Any</option>
-                            <option value="Brand New" <?php echo set_select('Condition', 'Brand New'); ?> >Brand New</option>
-                            <option value="Like New" <?php echo set_select('Condition', 'Like New'); ?> >Like New</option>
-                            <option value="Good" <?php echo set_select('Condition', 'Good'); ?> >Good</option>
-                            <option value="Acceptable" <?php echo set_select('Condition', 'Acceptable'); ?> >Acceptable</option>
+                            <option value="Any"<?php if(isset($_GET['Condition']) && $_GET['Condition'] == 'Any'){echo 'selected="selected"';} ?>  >Any</option>
+                            <option value="Brand New" <?php if(isset($_GET['Condition']) && $_GET['Condition'] == 'Brand New'){echo 'selected="selected"';} ?>  >Brand New</option>
+                            <option value="Like New" <?php if(isset($_GET['Condition']) && $_GET['Condition'] == 'Like New'){echo 'selected="selected"';} ?>  >Like New</option>
+                            <option value="Good" <?php if(isset($_GET['Condition']) && $_GET['Condition'] == 'Good'){echo 'selected="selected"';} ?>  >Good</option>
+                            <option value="Acceptable" <?php if(isset($_GET['Condition']) && $_GET['Condition'] == 'Acceptable'){echo 'selected="selected"';} ?> >Acceptable</option>
                         </select>
 
                         <!-- Dropdown for category -->
                         <select name="Category" size="1" style="height: 28px;">
 
                             <option selected="selected" value="All">Select Category</option>
-                            <option value="All" <?php echo set_select('Category', 'All'); ?> >All</option>
-                            <option value="Books" <?php echo set_select('Category', 'Books'); ?>>Books</option>
-                            <option value="Furniture" <?php echo set_select('Category', 'Furniture'); ?>>Furniture</option>
-                            <option value="Electronics" <?php echo set_select('Category', 'Electronics'); ?>>Electronics</option>
-                            <option value="Clothing" <?php echo set_select('Category', 'Clothing'); ?>>Clothing</option>
-                            <option value="Other" <?php echo set_select('Category', 'Other'); ?>>Other</option>
+                            <option value="All"<?php if(isset($_GET['Category']) && $_GET['Category'] == 'All'){echo 'selected="selected"';} ?> >All</option>
+                            <option value="Books" <?php if(isset($_GET['Category']) && $_GET['Category'] == 'Books'){echo 'selected="selected"';} ?>>Books</option>
+                            <option value="Furniture" <?php if(isset($_GET['Category']) && $_GET['Category'] == 'Furniture'){echo 'selected="selected"';} ?>>Furniture</option>
+                            <option value="Electronics" <?php if(isset($_GET['Category']) && $_GET['Category'] == 'Electronics'){echo 'selected="selected"';} ?>>Electronics</option>
+                            <option value="Clothing" <?php if(isset($_GET['Category']) && $_GET['Category'] == 'Clothing'){echo 'selected="selected"';} ?>>Clothing</option>
+                            <option value="Other" <?php if(isset($_GET['Category']) && $_GET['Category'] == 'Other'){echo 'selected="selected"';} ?>>Other</option>
                         </select>
-                        <input type="text" value="<?php echo set_value('searchquery')?>" style="width: 40%;" name="searchquery"/>
-                        <input style="display: inline-block;" type="submit" name="submit" value="Search"/>
+                        <input type="text" value='<?php if(isset($_GET['searchquery'])){echo $_GET['searchquery'];} ?>' style="width: 40%;" name="searchquery"/>
+                        <input style="display: inline-block;" type="submit" name="submit"/>
                     </form>
                 </div>
             </div>

@@ -91,11 +91,22 @@ class Upload_item extends CI_Controller{
         $this->form_validation->set_rules('description','Description', 'required');
         $this->form_validation->set_rules('price', 'Price', 'trim|required|numeric');
 
-        if ( ! $this->upload->do_upload('userfile') || $this->form_validation->run() == FALSE )
+        $this->upload->do_upload('userfile');
+        $error = array('error' => $this->upload->display_errors());
+
+        if (empty($_FILES['userfile']['name']))
         {
-            $error = array('error' => $this->upload->display_errors());
+            $this->form_validation->set_rules('userfile', 'Image', 'required',
+                array('required' => $error['error']));
+        }
+
+
+        if ($this->form_validation->run() == FALSE )
+        {
             $this->load->view('header');
-            $this->load->view('upload_view', $error);
+
+            $this->load->view('upload_view');
+
             $this->load->view('footer');
 
         }

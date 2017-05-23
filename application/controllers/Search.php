@@ -32,10 +32,14 @@ class Search extends CI_Controller{
     public function execute_search()
     {
         // receives the input from the form
-        $keyword = $this->input->post('searchquery');
-        $category = $this->input->post('Category');
-        $condition = $this->input->post('Condition');
-        $sort = $this->input->post('sort-select');
+        $keyword = $_GET['searchquery'];//$this->input->post('searchquery');
+        $category = $_GET['Category']; //$this->input->post('Category');
+        $condition = $_GET['Condition']; //$this->input->post('Condition');
+        if( isset( $_GET['sort-select'])){
+            $sort = $_GET['sort-select'];
+        }else{
+            $sort = null;
+        }
 
         /* passes the search keyword to get_items()
         and stores the data in an array named 'results' */
