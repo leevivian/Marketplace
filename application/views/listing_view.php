@@ -90,7 +90,7 @@
             </div>
 
             <!--Pagination-->
-            <div class="pagination-bar text-center">
+          <!--  <div class="pagination-bar text-center">
                 <ul class="pagination">
                     <li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
@@ -98,7 +98,7 @@
                     <li><a href="#"> ...</a></li>
                     <li><a class="pagination-btn" href="#">Next »</a></li>
                 </ul>
-            </div>
+            </div> -->
             <!--/MainPage-->
         </div>
     </div>
