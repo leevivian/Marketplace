@@ -101,8 +101,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="control-label col
-                    -md-4" for="password">Confirm Password: </label>
+                    <label class="control-label col-md-4" for="password">Confirm Password: </label>
                     <div class="col-md-8">
                         <input name="confirmpassword" type="password" class="form-control" style="font:small-caption;font-size:14px;" id="password-confirm" placeholder="Confirm Password"
                                value="<?php echo set_value('confirmpassword'); ?>">
