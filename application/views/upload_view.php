@@ -73,7 +73,6 @@
 
             <!--Form's first row, containing title, condition, and category -->
             <?php echo validation_errors(); ?>
-            <?php echo $error; ?>
 
 
             <?php echo form_open_multipart('Upload_item/do_upload');?>
