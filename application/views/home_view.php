@@ -41,7 +41,7 @@
                     <div class='col-md-2 col-sm-6 hero-feature'>
                         <div class='thumbnail''>
                         <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>" alt="Image not found">
-                        <div class="caption" style="176px;">
+                        <div class="caption" style="height:155px;">
                             <h4><?php
                                 echo $row['name'];
                                 ?>
@@ -53,7 +53,7 @@
                             </p>
                             <p>
                                 <a href="<?php echo base_url()?>index.php/search/load_details/<?php echo $id?>">
-                                    <button class="btn btn-primary" type="submit" >More Info</button></a>
+                                    <button class="btn btn-primary" style="position: absolute; bottom: 45px; left: 66px;" type="submit" >More Info</button></a>
                             </p>
                         </div>
                     </div>
