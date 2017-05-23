@@ -18,7 +18,7 @@ class Messaging extends CI_Controller {
             $data['messages'] = $this->messaging_model->getMessages($username);
             $this->load->view('messaging/messaging_view', $data);
         } else {
-            $this->load->view('login_view');
+            $this->load->view('login/login_view');
         }
 
         $this->load->view('footer');
@@ -30,9 +30,9 @@ class Messaging extends CI_Controller {
         if (isset($this->session->login) && $this->session->login && isset($this->session->username)) {
             $username = $this->session->username;
             $data['message'] = $this->messaging_model->openMessage($messageid, $username);
-            $this->load->view('messaging/messaging_view', $data);
+            $this->load->view('messaging/reply_view', $data);
         } else {
-            $this->load->view('login_view');
+            $this->load->view('login/login_view');
         }
 
         $this->load->view('footer');
@@ -45,14 +45,15 @@ class Messaging extends CI_Controller {
         if (isset($this->session->login) && $this->session->login && isset($this->session->username)) {
             $data['sender'] = $this->session->username;
             if (isset($recipient)) {
-                $data['recipient'] = $recipient;
+                $data['recipient'] = urldecode($recipient);
             }
-            if (isset($itemName)) {
-                $data['subject'] = $subject;
+            if (isset($subject)) {
+                $sub = "I want to buy your " . urldecode($subject);
+                $data['subject'] = $sub;
             }
             $this->load->view('messaging/sendMessage_view', $data);
         } else {
-            $this->load->view('login_view');
+            $this->load->view('login/login_view');
         }
         
         $this->load->view('footer');
@@ -70,7 +71,7 @@ class Messaging extends CI_Controller {
             $data['sent'] = $this->messaging_model->sendMessage($username, $recipient, $subject, $contents);
             $this->load->view('messaging/sendMessage_view', $data);
         } else {
-            $this->load->view('login_view');
+            $this->load->view('login/login_view');
         }
         
         $this->load->view('footer');

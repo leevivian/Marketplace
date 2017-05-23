@@ -66,9 +66,6 @@
     </head>
 
     <body>
-
-
-
         <div class="container">
             <div id="welcome-message">
                 <h3>Welcome, <?php echo $this->session->username ?>!</h3>
@@ -89,7 +86,6 @@
                             </div>
                         </a>
                     </div>
-
                 </div>
 
                 <div class="col-md-5 panel listings-panel">
@@ -98,7 +94,7 @@
                             <i class="fa fa-list-ul fa-3x" aria-hidden="true"></i>
                         </div>
 
-                        <a href="<?php echo base_url() ?>/index.php/listing" class="col-xs-9 icon-description">
+                        <a href="<?php echo base_url() ?>/index.php/My_listings" class="col-xs-9 icon-description">
 
                             <div>
                                 <span class="pull-left panel-description">My Listings</span>

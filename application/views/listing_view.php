@@ -23,13 +23,21 @@
 
                         <!--Sorting Function -->
                         <div class="tab-filter">
-                            <div class="selecter select-short-by closed" tabindex="0"><select
-                                        class="selectpicker selecter-element" data-style="btn-select" data-width="auto"
-                                        tabindex="-1">
+                            <form action="execute_search" method="post">
+                                <?php if (isset($searchquery)) :?>
+                                    <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+                                    <input type="hidden" value="<?php echo $searchquery?>" name="searchquery">
+                                    <input type="hidden" value="<?php echo $condition?>" name="Condition">
+                                    <input type="hidden" value="<?php echo $category?>" name="Category">
+                                <?php endif; ?>
+
+                                <select name ="sort-select" id="sort-select" onchange="this.form.submit()">
                                     <option value="Sort by">Sort by</option>
-                                    <option value="Price: Low to High">Price: Low to High</option>
-                                    <option value="Price: High to Low">Price: High to Low</option>
-                                </select></div>
+                                    <option value="ASC">Price: Low to High</option>
+                                    <option value="DESC">Price: High to Low</option>
+                                </select>
+                            </form>
+
                         </div>
 
                         <div class="menu-overly-mask"></div>
@@ -45,6 +53,7 @@
                     echo "<br>";
                     foreach ($results as $row) {
                         $id = $row['itemid'];
+                        $username = $row['username'];
                         ?>
                         <div class="col-sm-4 col-lg-4 col-md-4">
                             <div class="thumbnail">
@@ -66,14 +75,12 @@
                                     <?php
                                     echo "<br>";
                                     ?>
-                                <a class="btn btn-primary" target="_blank" href="<?php echo base_url()?>index.php/messaging"> Contact </a>
+                                <a class="btn btn-primary" target="_blank" href="<?php echo base_url()?>index.php/messaging/send/<?php echo $username;?>/<?php echo $row['name']; ?>""> Contact </a>
 
                                 <!-- Creates a form with a hidden field that has the itemid number in it.
                                      When button is clicked, calls the load_details function in the Search
                                      controller -->
                                    <a href="<?php echo base_url()?>index.php/search/load_details/<?php echo $id?>"> <button class="btn btn-primary" type="submit" >More Info</button></a>
-
-
 
                             </div>
                         </div>
@@ -82,7 +89,6 @@
                 }
                 ?>
             </div>
-
 
             <!--Pagination-->
             <div class="pagination-bar text-center">

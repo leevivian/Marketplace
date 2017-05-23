@@ -1,5 +1,4 @@
 <html>
-
 <title>SFSUMarketplace</title>
 
 <head>
@@ -40,9 +39,8 @@
                     $id = $row['itemid'];
                     ?>
                     <div class='col-md-2 col-sm-6 hero-feature'>
-                        <div class='thumbnail' style='min-height: 386px; max-height: 386px;''>
-                        <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>" alt="Image not found"
-                             style="height: 200px">
+                        <div class='thumbnail''>
+                        <img src="<?php echo base_url('images/item_images/' . 'thumbnail_' . $row['image']); ?>" alt="Image not found">
                         <div class="caption" style="176px;">
                             <h4><?php
                                 echo $row['name'];

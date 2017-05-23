@@ -62,7 +62,7 @@
                             <span class="col-md-1 col-md-offset-1 text-center">Subject:</span>
                             <div class="col-md-8">
                                 <input id="subject-field" name="subject" type="text" placeholder="Subject" class="form-control"
-                                    value=<?php echo $subject ?>>
+                                    value="<?php echo $subject ?>">
                             </div>
                         </div>
 
