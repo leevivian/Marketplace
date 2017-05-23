@@ -49,8 +49,7 @@
                             </p>
                             <p>
                                 <a href="<?php echo base_url()?>index.php/search/load_details/<?php echo $id?>">
-                                    <button class="btn btn-primary" style="position: absolute; bottom: 45px; left: 66px;" type="submit" >More Info</button></a>
-                            </p>
+                                    <button class="btn btn-primary" type="submit" >More Info</button></a>                            </p>
                         </div>
                     </div>
                 </div>
