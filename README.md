@@ -1,2 +1,3 @@
-# CSC 648 TEAM 12
-Repo for our SFSU Buy/Sell web app
+# Marketplace
+
+An E-commerce Web Application implemented with PHP Framework - CodeIgniter, HTML/CSS/JavaScript, and utlizies SQL for the database.
